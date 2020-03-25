@@ -69,16 +69,16 @@ Czyli kaskadowe arkusze stylów (od ang. Cascading Style Sheets) to język używ
 ![Przypadków użycia](https://user-images.githubusercontent.com/37274710/77594557-1e25e980-6ef7-11ea-802b-86b8467b6d98.PNG)
 
 ### Przypadków klas
-![Przypadków klas](https://github.com/JGrzybowski08/I20L1GR4/tree/master/UML/UMLK.PNG)
+![Przypadków klas](https://user-images.githubusercontent.com/37274710/77594616-4877a700-6ef7-11ea-8ef5-c004e817e0a9.PNG)
 
 ### Przypadków związków encji
-![Przypadków związków encji](https://github.com/JGrzybowski08/I20L1GR4/tree/master/UML/UMLE.PNG)
+![Przypadków związków encji](https://user-images.githubusercontent.com/37274710/77594615-47df1080-6ef7-11ea-95e9-6714ef6e59a4.PNG)
 
 ### Przypadków aktywności
-![Przypadków aktywności](https://github.com/JGrzybowski08/I20L1GR4/tree/master/UML/UMLA.PNG)
+![Przypadków aktywności](https://user-images.githubusercontent.com/37274710/77594612-47467a00-6ef7-11ea-95c5-6e71e9e9038b.PNG)
 
 ### Przypadków stanów
-![Przypadków stanów](https://github.com/JGrzybowski08/I20L1GR4/tree/master/UML/UMLS.PNG)
+![Przypadków stanów](https://user-images.githubusercontent.com/37274710/77594619-49103d80-6ef7-11ea-845f-7e6d553109eb.PNG)
 
 ### Przypadków sekwencji
-![Przypadków sekwencji](https://github.com/JGrzybowski08/I20L1GR4/tree/master/UML/UMLSEK.png)
+![Przypadków sekwencji](https://user-images.githubusercontent.com/37274710/77594621-49103d80-6ef7-11ea-989c-151fc76a20f7.PNG)
