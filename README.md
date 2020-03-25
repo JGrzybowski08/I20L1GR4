@@ -66,7 +66,7 @@ Czyli kaskadowe arkusze stylów (od ang. Cascading Style Sheets) to język używ
 ## Diagramy UML
 
 ### Przypadków użycia
-![Przypadków użycia](https://github.com/JGrzybowski08/I20L1GR4/tree/master/UML/UMLPU.PNG)
+![Przypadków użycia](https://user-images.githubusercontent.com/37274710/77594557-1e25e980-6ef7-11ea-802b-86b8467b6d98.PNG)
 
 ### Przypadków klas
 ![Przypadków klas](https://github.com/JGrzybowski08/I20L1GR4/tree/master/UML/UMLK.PNG)
