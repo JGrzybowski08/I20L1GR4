@@ -10,11 +10,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="background2" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Przychodnia.Controller.EdytujDaneController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="background2" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Przychodnia.Controller.EdytujDaneController">
    <top>
       <Pane prefHeight="50.0" prefWidth="600.0" styleClass="background" stylesheets="@style.css" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="567.0" layoutY="15.0" text="Edytowanie Danych" textFill="WHITE">
+            <Label layoutX="567.0" layoutY="15.0" text="Panel Dodania Lekarza" textFill="WHITE">
                <font>
                   <Font name="Ebrima Bold" size="16.0" />
                </font>
@@ -31,16 +31,16 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="50.0" layoutY="436.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="69.0" prefWidth="203.0" ripplerFill="#6fb5ff" styleClass="loginBtn" text="Dodaj Wizytę" textAlignment="RIGHT">
+            <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="50.0" layoutY="436.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="69.0" prefWidth="203.0" ripplerFill="#6fb5ff" styleClass="loginBtn" text="Dodaj Lekarza" textAlignment="RIGHT">
                <font>
                   <Font name="Ebrima Bold" size="12.0" />
                </font>
                <stylesheets>
-                  <URL value="@../../Przychodnia/FXML/style.css" />
+                  <URL value="@style.css" />
                   <URL value="@style.css" />
                </stylesheets>
             </JFXButton>
-            <Label layoutX="118.0" layoutY="90.0" prefHeight="27.0" prefWidth="55.0" styleClass="czcionka" stylesheets="@../../Przychodnia/FXML/style.css" text="Imie:" textFill="WHITE">
+            <Label layoutX="95.0" layoutY="79.0" prefHeight="27.0" prefWidth="55.0" styleClass="czcionka" stylesheets="@style.css" text="Imie:" textFill="WHITE">
                <font>
                   <Font name="Ebrima" size="23.0" />
                </font>
@@ -50,7 +50,7 @@
                   <Font name="Ebrima Bold" size="12.0" />
                </font>
                <stylesheets>
-                  <URL value="@../../Przychodnia/FXML/style.css" />
+                  <URL value="@style.css" />
                   <URL value="@style.css" />
                </stylesheets>
             </JFXButton>
@@ -59,35 +59,41 @@
                   <Font name="Ebrima Bold" size="12.0" />
                </font>
                <stylesheets>
-                  <URL value="@../../Przychodnia/FXML/style.css" />
+                  <URL value="@style.css" />
                   <URL value="@style.css" />
                </stylesheets>
             </JFXButton>
-            <Label layoutX="118.0" layoutY="152.0" prefHeight="34.0" prefWidth="114.0" styleClass="czcionka" stylesheets="@../../Przychodnia/FXML/style.css" text="Nazwisko:" textFill="WHITE">
+            <Label layoutX="95.0" layoutY="135.0" prefHeight="34.0" prefWidth="114.0" styleClass="czcionka" stylesheets="@style.css" text="Nazwisko:" textFill="WHITE">
                <font>
                   <Font name="Ebrima" size="23.0" />
                </font>
             </Label>
-            <Label layoutX="118.0" layoutY="205.0" prefHeight="34.0" prefWidth="100.0" styleClass="czcionka" stylesheets="@../../Przychodnia/FXML/style.css" text="Pesel:" textFill="WHITE">
+            <Label layoutX="95.0" layoutY="191.0" prefHeight="34.0" prefWidth="100.0" styleClass="czcionka" stylesheets="@style.css" text="Pesel:" textFill="WHITE">
                <font>
                   <Font name="Ebrima" size="23.0" />
                </font>
             </Label>
-            <Label layoutX="118.0" layoutY="262.0" prefHeight="34.0" prefWidth="88.0" styleClass="czcionka" stylesheets="@../../Przychodnia/FXML/style.css" text="Telefon:" textFill="WHITE">
+            <Label layoutX="95.0" layoutY="241.0" prefHeight="34.0" prefWidth="88.0" styleClass="czcionka" stylesheets="@style.css" text="Telefon:" textFill="WHITE">
                <font>
                   <Font name="Ebrima" size="23.0" />
                </font>
             </Label>
-            <Label layoutX="124.0" layoutY="323.0" prefHeight="34.0" prefWidth="88.0" styleClass="czcionka" stylesheets="@../../Przychodnia/FXML/style.css" text="Adres:" textFill="WHITE">
+            <Label layoutX="95.0" layoutY="281.0" prefHeight="34.0" prefWidth="88.0" styleClass="czcionka" stylesheets="@style.css" text="Adres:" textFill="WHITE">
                <font>
                   <Font name="Ebrima" size="23.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="258.0" layoutY="88.0" prefHeight="31.0" prefWidth="379.0" styleClass="jfx-text-field" stylesheets="@../../Przychodnia/FXML/style.css" unFocusColor="WHITE" />
-            <JFXTextField layoutX="258.0" layoutY="203.0" prefHeight="31.0" prefWidth="379.0" styleClass="jfx-text-field" stylesheets="@../../Przychodnia/FXML/style.css" unFocusColor="WHITE" />
-            <JFXTextField layoutX="258.0" layoutY="150.0" prefHeight="31.0" prefWidth="379.0" styleClass="jfx-text-field" stylesheets="@../../Przychodnia/FXML/style.css" unFocusColor="WHITE" />
-            <JFXTextField layoutX="258.0" layoutY="260.0" prefHeight="31.0" prefWidth="379.0" styleClass="jfx-text-field" stylesheets="@../../Przychodnia/FXML/style.css" unFocusColor="WHITE" />
-            <JFXTextField layoutX="258.0" layoutY="321.0" prefHeight="31.0" prefWidth="379.0" styleClass="jfx-text-field" stylesheets="@../../Przychodnia/FXML/style.css" unFocusColor="WHITE" />
+            <JFXTextField layoutX="258.0" layoutY="59.0" prefHeight="31.0" prefWidth="379.0" styleClass="jfx-text-field" stylesheets="@style.css" unFocusColor="WHITE" />
+            <JFXTextField layoutX="258.0" layoutY="168.0" prefHeight="31.0" prefWidth="379.0" styleClass="jfx-text-field" stylesheets="@style.css" unFocusColor="WHITE" />
+            <JFXTextField layoutX="258.0" layoutY="115.0" prefHeight="31.0" prefWidth="379.0" styleClass="jfx-text-field" stylesheets="@style.css" unFocusColor="WHITE" />
+            <JFXTextField layoutX="258.0" layoutY="225.0" prefHeight="31.0" prefWidth="379.0" styleClass="jfx-text-field" stylesheets="@style.css" unFocusColor="WHITE" />
+            <JFXTextField layoutX="258.0" layoutY="279.0" prefHeight="31.0" prefWidth="379.0" styleClass="jfx-text-field" stylesheets="@style.css" unFocusColor="WHITE" />
+            <Label layoutX="95.0" layoutY="336.0" prefHeight="34.0" prefWidth="147.0" styleClass="czcionka" stylesheets="@style.css" text="Specjalizacja:" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima" size="23.0" />
+               </font>
+            </Label>
+            <JFXTextField layoutX="258.0" layoutY="335.0" prefHeight="31.0" prefWidth="379.0" styleClass="jfx-text-field" stylesheets="@style.css" unFocusColor="WHITE" />
          </children>
       </AnchorPane>
    </center>

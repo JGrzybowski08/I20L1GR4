@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.172-ea" fx:controller="Przychodnia.Controller.EdytujWizyteController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Przychodnia.Controller.EdytujWizyteController">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="498.0" minWidth="10.0" prefWidth="489.0" />
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="111.0" />
@@ -26,12 +26,12 @@
                 <TableColumn prefWidth="75.0" text="Status" />
             </columns>
         </TableView>
-        <Button id="ExitBT" mnemonicParsing="false" onAction="#handleExitBTAction" text="Wyjdź" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+        <Button id="ExitBT" fx:id="WyjdzBT" mnemonicParsing="false" onAction="#handleExitBTAction" text="Wyjdź" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
             <GridPane.margin>
                 <Insets bottom="50.0" />
             </GridPane.margin>
         </Button>
-      <Button id="EdytujBT" mnemonicParsing="false" text="Edytuj" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP" onAction="#handleEdytujBTAction">
+      <Button id="EdytujBT" fx:id="EdytujBT" mnemonicParsing="false" onAction="#handleEdytujBTAction" text="Edytuj" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
          <GridPane.margin>
             <Insets top="50.0" />
          </GridPane.margin>

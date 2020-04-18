@@ -1,54 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Przychodnia.Controller.LekarzGlownaController">
-    <columnConstraints>
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-    </columnConstraints>
-    <rowConstraints>
-        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-    </rowConstraints>
-    <children>
-        <Button id="EdytujWizyteBT" mnemonicParsing="false" text="Edytuj wizytę" GridPane.halignment="CENTER" onAction="#handleEdytujWizyteBTAction"/>
-        <Button id="ZobaczWizytyBT" mnemonicParsing="false" text="Zobacz wizyty" GridPane.halignment="CENTER" GridPane.rowIndex="1" onAction="#handleZobaczWizytyBTAction"/>
-        <Button id="HistoriaWizytBT" mnemonicParsing="false" text="Historia wizyt" GridPane.halignment="CENTER" GridPane.rowIndex="2" onAction="#handleHistoriaWizytBTAction"/>
-        <Button mnemonicParsing="false" text="Edytuj dane" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" onAction="#handleEdytujDaneBTAction"/>
-        <Label text="Nazwisko:" GridPane.columnIndex="1" GridPane.valignment="TOP">
-            <GridPane.margin>
-                <Insets bottom="10.0" top="30.0" />
-            </GridPane.margin>
-        </Label>
-        <Label text="Imie: " GridPane.columnIndex="1" GridPane.valignment="TOP">
-            <GridPane.margin>
-                <Insets top="10.0" />
-            </GridPane.margin>
-        </Label>
-        <Label text="PESEL:" GridPane.columnIndex="1" GridPane.valignment="TOP">
-            <GridPane.margin>
-                <Insets top="50.0" />
-            </GridPane.margin>
-        </Label>
-        <Label text="Telefon:" GridPane.columnIndex="1" GridPane.valignment="TOP">
-            <GridPane.margin>
-                <Insets bottom="10.0" top="70.0" />
-            </GridPane.margin>
-        </Label>
-        <Label text="Adres:" GridPane.columnIndex="1" GridPane.valignment="TOP">
-            <GridPane.margin>
-                <Insets top="90.0" />
-            </GridPane.margin>
-        </Label>
-        <Button id="LogoutBT" mnemonicParsing="false" onAction="#handleLogoutBTAction" text="Wyloguj" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-
-    </children>
-</GridPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="background2" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Przychodnia.Controller.LekarzGlownaController">
+   <top>
+      <Pane prefHeight="50.0" prefWidth="600.0" styleClass="background" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="567.0" layoutY="15.0" text="Panel Lekarza" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="16.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="TIMES" layoutX="759.0" layoutY="29.0" size="18" />
+            <Label layoutX="14.0" layoutY="4.0" prefHeight="29.0" prefWidth="265.0" styleClass="czcionka" stylesheets="@style.css" text="Przychodnia Familia" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="545.0" prefHeight="550.0" prefWidth="255.0" style="-fx-background-color: WHITE;" styleClass="background" stylesheets="@style.css">
+               <children>
+                  <ImageView fitHeight="159.0" fitWidth="169.0" layoutX="43.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <!-- <Image url="@pacjent.jpg" /> -->
+                     </image>
+                  </ImageView>
+                  <Label layoutX="42.0" layoutY="209.0" text="Imię:">
+                     <font>
+                        <Font name="System Italic" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="40.0" layoutY="241.0" text="Nazwisko:">
+                     <font>
+                        <Font name="System Italic" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="42.0" layoutY="275.0" text="PESEL:">
+                     <font>
+                        <Font name="System Italic" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="38.0" layoutY="307.0" text="Telefon">
+                     <font>
+                        <Font name="System Italic" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="44.0" layoutY="337.0" text="Adres:">
+                     <font>
+                        <Font name="System Italic" size="22.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="LogoutBT" alignment="CENTER" buttonType="RAISED" layoutX="55.0" layoutY="475.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleLogoutBTAction" prefHeight="44.0" prefWidth="145.0" ripplerFill="#6fb5ff" styleClass="loginBtn" text="WYLOGUJ SIĘ" textAlignment="RIGHT">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                     <stylesheets>
+                        <URL value="@style.css" />
+                        <URL value="@style.css" />
+                     </stylesheets>
+                  </JFXButton>
+                  <JFXButton fx:id="EdytujDaneBT" alignment="CENTER" buttonType="RAISED" layoutX="56.0" layoutY="415.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleEdytujDaneBTAction" prefHeight="44.0" prefWidth="145.0" ripplerFill="#6fb5ff" styleClass="loginBtn" text="Edytuj Dane" textAlignment="RIGHT">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                     <stylesheets>
+                        <URL value="@style.css" />
+                        <URL value="@style.css" />
+                     </stylesheets>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <JFXButton fx:id="HistoriaWizytBT" alignment="CENTER" buttonType="RAISED" layoutX="118.0" layoutY="114.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleHistoriaWizytBTAction" prefHeight="81.0" prefWidth="312.0" ripplerFill="#6fb5ff" styleClass="loginBtn" text="Historia Wizyt" textAlignment="RIGHT">
+               <font>
+                  <Font name="Ebrima Bold" size="12.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@style.css" />
+                  <URL value="@style.css" />
+               </stylesheets>
+            </JFXButton>
+            <JFXButton fx:id="EdytujWizytyBT" alignment="CENTER" buttonType="RAISED" layoutX="118.0" layoutY="341.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleEdytujWizyteBTAction" prefHeight="81.0" prefWidth="312.0" ripplerFill="#6fb5ff" styleClass="loginBtn" text="Edytuj Wizyty" textAlignment="RIGHT">
+               <font>
+                  <Font name="Ebrima Bold" size="12.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@style.css" />
+                  <URL value="@style.css" />
+               </stylesheets>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,77 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Przychodnia.Controller.EdytujDaneController">
-    <columnConstraints>
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-    </columnConstraints>
-    <rowConstraints>
-        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-    </rowConstraints>
-    <children>
-        <Label text="Imie:" GridPane.halignment="LEFT" GridPane.valignment="TOP">
-            <GridPane.margin>
-                <Insets left="80.0" top="30.0" />
-            </GridPane.margin>
-        </Label>
-        <Label text="Nazwisko:" GridPane.halignment="LEFT" GridPane.valignment="TOP">
-            <GridPane.margin>
-                <Insets left="80.0" top="60.0" />
-            </GridPane.margin>
-        </Label>
-        <Label text="PESEL:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
-            <GridPane.margin>
-                <Insets left="80.0" top="30.0" />
-            </GridPane.margin>
-        </Label>
-        <Label text="Telefon:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
-            <GridPane.margin>
-                <Insets left="80.0" top="60.0" />
-            </GridPane.margin>
-        </Label>
-        <Button mnemonicParsing="false" text="Edytuj" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-        <Button mnemonicParsing="false" text="Wyczyść" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-        <Button id="ExitBT" mnemonicParsing="false" onAction="#handleExitBTAction" text="Wyjdź" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-      <TextField maxWidth="-Infinity" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
-         <GridPane.margin>
-            <Insets top="25.0" />
-         </GridPane.margin>
-      </TextField>
-      <Label text="Adres:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
-         <GridPane.margin>
-            <Insets left="80.0" top="30.0" />
-         </GridPane.margin>
-      </Label>
-      <TextField maxWidth="-Infinity" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
-         <GridPane.margin>
-            <Insets top="55.0" />
-         </GridPane.margin>
-      </TextField>
-      <TextField maxWidth="-Infinity" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
-         <GridPane.margin>
-            <Insets top="25.0" />
-         </GridPane.margin>
-      </TextField>
-      <TextField maxWidth="-Infinity" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
-         <GridPane.margin>
-            <Insets top="55.0" />
-         </GridPane.margin>
-      </TextField>
-      <TextField maxWidth="-Infinity" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
-         <GridPane.margin>
-            <Insets top="25.0" />
-         </GridPane.margin>
-      </TextField>
-    </children>
-</GridPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="background2" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Przychodnia.Controller.EdytujDaneController">
+   <top>
+      <Pane prefHeight="50.0" prefWidth="600.0" styleClass="background" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="567.0" layoutY="15.0" text="Edytowanie Danych" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="16.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="TIMES" layoutX="759.0" layoutY="29.0" size="18" />
+            <Label layoutX="14.0" layoutY="4.0" prefHeight="29.0" prefWidth="265.0" styleClass="czcionka" stylesheets="@style.css" text="Przychodnia Familia" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="50.0" layoutY="436.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="69.0" prefWidth="203.0" ripplerFill="#6fb5ff" styleClass="loginBtn" text="Dodaj Wizytę" textAlignment="RIGHT">
+               <font>
+                  <Font name="Ebrima Bold" size="12.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../../Przychodnia/FXML/style.css" />
+                  <URL value="@style.css" />
+               </stylesheets>
+            </JFXButton>
+            <Label layoutX="118.0" layoutY="90.0" prefHeight="27.0" prefWidth="55.0" styleClass="czcionka" stylesheets="@../../Przychodnia/FXML/style.css" text="Imie:" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima" size="23.0" />
+               </font>
+            </Label>
+            <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="299.0" layoutY="436.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="69.0" prefWidth="203.0" ripplerFill="#6fb5ff" styleClass="loginBtn" text="Wyczyść" textAlignment="RIGHT">
+               <font>
+                  <Font name="Ebrima Bold" size="12.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../../Przychodnia/FXML/style.css" />
+                  <URL value="@style.css" />
+               </stylesheets>
+            </JFXButton>
+            <JFXButton fx:id="Wyjdz" alignment="CENTER" buttonType="RAISED" layoutX="549.0" layoutY="436.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleWyjdzBTAction" prefHeight="69.0" prefWidth="203.0" ripplerFill="#6fb5ff" styleClass="loginBtn" text="Wyjdź" textAlignment="RIGHT">
+               <font>
+                  <Font name="Ebrima Bold" size="12.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../../Przychodnia/FXML/style.css" />
+                  <URL value="@style.css" />
+               </stylesheets>
+            </JFXButton>
+            <Label layoutX="118.0" layoutY="152.0" prefHeight="34.0" prefWidth="114.0" styleClass="czcionka" stylesheets="@../../Przychodnia/FXML/style.css" text="Nazwisko:" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="118.0" layoutY="205.0" prefHeight="34.0" prefWidth="100.0" styleClass="czcionka" stylesheets="@../../Przychodnia/FXML/style.css" text="Pesel:" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="118.0" layoutY="262.0" prefHeight="34.0" prefWidth="88.0" styleClass="czcionka" stylesheets="@../../Przychodnia/FXML/style.css" text="Telefon:" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="124.0" layoutY="323.0" prefHeight="34.0" prefWidth="88.0" styleClass="czcionka" stylesheets="@../../Przychodnia/FXML/style.css" text="Adres:" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima" size="23.0" />
+               </font>
+            </Label>
+            <JFXTextField layoutX="258.0" layoutY="88.0" prefHeight="31.0" prefWidth="379.0" styleClass="jfx-text-field" stylesheets="@../../Przychodnia/FXML/style.css" unFocusColor="WHITE" />
+            <JFXTextField layoutX="258.0" layoutY="203.0" prefHeight="31.0" prefWidth="379.0" styleClass="jfx-text-field" stylesheets="@../../Przychodnia/FXML/style.css" unFocusColor="WHITE" />
+            <JFXTextField layoutX="258.0" layoutY="150.0" prefHeight="31.0" prefWidth="379.0" styleClass="jfx-text-field" stylesheets="@../../Przychodnia/FXML/style.css" unFocusColor="WHITE" />
+            <JFXTextField layoutX="258.0" layoutY="260.0" prefHeight="31.0" prefWidth="379.0" styleClass="jfx-text-field" stylesheets="@../../Przychodnia/FXML/style.css" unFocusColor="WHITE" />
+            <JFXTextField layoutX="258.0" layoutY="321.0" prefHeight="31.0" prefWidth="379.0" styleClass="jfx-text-field" stylesheets="@../../Przychodnia/FXML/style.css" unFocusColor="WHITE" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

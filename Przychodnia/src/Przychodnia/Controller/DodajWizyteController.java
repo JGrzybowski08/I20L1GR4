@@ -12,16 +12,13 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class DodajWizyteController {
+
     @FXML
-    public Button WyjdzBT;
+    private Button Wyjdz;
 
     @FXML
     public void handleWyjdzBTAction(ActionEvent event) throws IOException {
-        Parent L = FXMLLoader.load(getClass().getResource("/Przychodnia/FXML/PacjentGlowna.fxml"));
-        Stage Logowanie = (Stage)((Node)event.getSource()).getScene().getWindow();
-        Logowanie.setScene(new Scene(L));
-        Logowanie.show();
-
+        Wyjdz.getScene().getWindow().hide();
     }
 
 }

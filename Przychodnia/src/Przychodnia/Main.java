@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -60,6 +61,16 @@ public class Main extends Application {
         PacjentGlowna.show();
 
     }
+
+    @FXML
+    public void handleRejestracjaBTAction(MouseEvent event) throws IOException {
+        Parent Re = FXMLLoader.load(getClass().getResource("FXML/Rejestracja.fxml"));
+        Stage Rejestracja = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Rejestracja.setScene(new Scene(Re));
+        Rejestracja.show();
+
+    }
+
     public static void main(String[] args) {
         launch(args);
     }

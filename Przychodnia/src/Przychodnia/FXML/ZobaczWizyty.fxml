@@ -8,28 +8,28 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Przychodnia.Controller.ZobaczWizytyController">
-  <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="498.0" minWidth="10.0" prefWidth="489.0" />
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="111.0" />
-  </columnConstraints>
-  <rowConstraints>
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-  </rowConstraints>
-   <children>
-      <TableView prefHeight="200.0" prefWidth="200.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="Data" />
-          <TableColumn prefWidth="75.0" text="Godzina" />
-            <TableColumn prefWidth="75.0" text="Lekarz" />
-            <TableColumn prefWidth="75.0" text="Opis" />
-            <TableColumn prefWidth="75.0" text="Status" />
-        </columns>
-      </TableView>
-      <Button id="ExitBT" mnemonicParsing="false" text="Wyjdź" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" onAction="#handleExitBTAction">
-         <GridPane.margin>
-            <Insets bottom="50.0" />
-         </GridPane.margin>
-      </Button>
-   </children>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background2" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Przychodnia.Controller.ZobaczWizytyController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="498.0" minWidth="10.0" prefWidth="476.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="124.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <TableView prefHeight="398.0" prefWidth="418.0" styleClass="background" stylesheets="@style.css">
+            <columns>
+                <TableColumn prefWidth="75.0" text="Data" />
+                <TableColumn prefWidth="75.0" text="Godzina" />
+                <TableColumn prefWidth="88.0" text="Lekarz" />
+                <TableColumn prefWidth="124.0" text="Opis" />
+                <TableColumn prefWidth="113.0" text="Status" />
+            </columns>
+        </TableView>
+        <Button id="ExitBT" fx:id="Wyjdz" mnemonicParsing="false" onAction="#handleExitBTAction" prefHeight="35.0" prefWidth="78.0" styleClass="loginBtn" stylesheets="@style.css" text="Wyjdź" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+            <GridPane.margin>
+                <Insets bottom="50.0" />
+            </GridPane.margin>
+        </Button>
+    </children>
 </GridPane>
