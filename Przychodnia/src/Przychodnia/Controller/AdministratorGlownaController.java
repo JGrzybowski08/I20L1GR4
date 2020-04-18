@@ -22,6 +22,8 @@ public class AdministratorGlownaController {
     public Button EdytujDaneBT;
     @FXML
     private Button DodajWizyteBT;
+    @FXML
+    private Button DodajLekarzaBT;
 
 
 
@@ -67,6 +69,17 @@ public class AdministratorGlownaController {
         DodajWizyte.setScene(new Scene((Parent) DW.load()));
 
         DodajWizyte.showAndWait();
+
+    }
+
+    @FXML
+    public void handleDodajLekarzaBTAction(ActionEvent event) throws IOException {
+        FXMLLoader DL = new FXMLLoader(getClass().getResource("/Przychodnia/FXML/DodajLekarza.fxml"));
+        Stage DodajLekarza = new Stage();
+        DodajLekarza.initOwner(DodajWizyteBT.getScene().getWindow());
+        DodajLekarza.setScene(new Scene((Parent) DL.load()));
+
+        DodajLekarza.showAndWait();
 
     }
 

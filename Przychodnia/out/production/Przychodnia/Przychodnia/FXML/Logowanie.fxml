@@ -11,13 +11,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="background2" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Przychodnia.Main">
+<AnchorPane stylesheets="Przychodnia/Styles/style.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="background2"  xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Przychodnia.Main">
    <children>
-      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" styleClass="background" stylesheets="@style.css">
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" styleClass="background" >
          <children>
             <ImageView fitHeight="293.0" fitWidth="237.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@logov5.png" />
+                  <Image url="Przychodnia/Images/logov5.png" />
                </image>
             </ImageView>
          </children>
@@ -30,16 +30,16 @@
                </font>
             </Label>
             <Label layoutX="36.0" layoutY="63.0" text="Zaloguj się by kontynuować" textFill="#e4dcdc" />
-            <JFXTextField alignment="BOTTOM_LEFT" focusColor="WHITE" layoutX="57.0" layoutY="148.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="285.0" promptText="E-mail" styleClass="czcionka" stylesheets="@style.css" unFocusColor="#eeebeb" />
-            <JFXTextField focusColor="WHITE" layoutX="56.0" layoutY="220.0" prefHeight="50.0" prefWidth="285.0" promptText="Hasło" styleClass="czcionka" stylesheets="@style.css" unFocusColor="WHITE" />
+            <JFXTextField alignment="BOTTOM_LEFT" focusColor="WHITE" layoutX="57.0" layoutY="148.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="285.0" promptText="E-mail" styleClass="czcionka"  unFocusColor="#eeebeb" />
+            <JFXTextField focusColor="WHITE" layoutX="56.0" layoutY="220.0" prefHeight="50.0" prefWidth="285.0" promptText="Hasło" styleClass="czcionka"  unFocusColor="WHITE" />
             <Label layoutX="252.0" layoutY="290.0" text="Zapomniałeś hasła?" textFill="#c9c4c4">
                <font>
                   <Font name="Ebrima" size="10.0" />
                </font>
             </Label>
-            <JFXButton layoutX="57.0" layoutY="327.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleLoginBTAction" prefHeight="40.0" prefWidth="285.0" styleClass="loginBtn" stylesheets="@style.css" text="Zaloguj Się" />
-            <JFXButton layoutX="64.0" layoutY="485.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleLoginLekarzBTAction" prefHeight="39.0" prefWidth="130.0" styleClass="loginBtn" stylesheets="@style.css" text="Lekarz" />
-            <JFXButton layoutX="217.0" layoutY="484.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleLoginAdministratorBTAction" prefHeight="39.0" prefWidth="130.0" styleClass="loginBtn" stylesheets="@style.css" text="Administrator" />
+            <JFXButton layoutX="57.0" layoutY="327.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleLoginBTAction" prefHeight="40.0" prefWidth="285.0" styleClass="loginBtn"  text="Zaloguj Się" />
+            <JFXButton layoutX="64.0" layoutY="485.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleLoginLekarzBTAction" prefHeight="39.0" prefWidth="130.0" styleClass="loginBtn"  text="Lekarz" />
+            <JFXButton layoutX="217.0" layoutY="484.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleLoginAdministratorBTAction" prefHeight="39.0" prefWidth="130.0" styleClass="loginBtn"  text="Administrator" />
             <FontAwesomeIconView fill="WHITE" glyphName="TIMES" layoutX="367.0" layoutY="34.0" size="17" />
             <Label layoutX="130.0" layoutY="375.0" text="Nowy Użytkownik?" textFill="WHITE">
                <font>
