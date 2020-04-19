@@ -4,6 +4,8 @@
       <root url="jar://$PROJECT_DIR$/src/Przychodnia/Libraries/jfoenix-0.0.0-SNAPSHOT.jar!/" />
       <root url="jar://$PROJECT_DIR$/src/Przychodnia/Libraries/fontawesomefx-8.9.jar!/" />
       <root url="jar://$PROJECT_DIR$/src/Przychodnia/Libraries/controlsfx-8.40.17-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/Przychodnia/Libraries/mysql-connector-java-8.0.19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/Przychodnia/Libraries/mybatis-3.5.4.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

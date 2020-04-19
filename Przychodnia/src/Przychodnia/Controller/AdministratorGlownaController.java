@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class AdministratorGlownaController {
     @FXML
@@ -81,6 +82,16 @@ public class AdministratorGlownaController {
 
         DodajLekarza.showAndWait();
 
+    }
+
+    @FXML
+        public void handleWyczyscBazeBTAction(ActionEvent event){
+        Przychodnia.Connection.CzyszczenieBazy.Wyczysc();
+    }
+
+    @FXML
+    public void handleWypelnijBazeBTAction(ActionEvent event){
+        Przychodnia.Connection.WypelnianieBazy.Wypelnij();
     }
 
     @FXML
