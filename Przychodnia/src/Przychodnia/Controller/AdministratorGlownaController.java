@@ -84,6 +84,11 @@ public class AdministratorGlownaController {
     }
 
     @FXML
+        public void handleWyczyscBazeBTAction(ActionEvent event){
+        Przychodnia.Connection.CzyszczenieBazy.Wyczysc();
+    }
+
+    @FXML
     public void handleLogoutBTAction(ActionEvent event) throws IOException {
         Parent L = FXMLLoader.load(getClass().getResource("/Przychodnia/FXML/Logowanie.fxml"));
         Stage Logowanie = (Stage) ((Node) event.getSource()).getScene().getWindow();
