@@ -80,9 +80,9 @@ CREATE TABLE `lekarze` (
   `Nazwisko` varchar(64) COLLATE utf8_polish_ci NOT NULL,
   `PESEL` bigint(11) NOT NULL,
   `Telefon` int(9) NOT NULL,
-  `Specjalizacja` varchar(64) COLLATE utf8_polish_ci NOT NULL,
   `Adres_ID` int(11) NOT NULL,
-  `Login` int(11) NOT NULL
+  `Login` int(11) NOT NULL,
+  `Specjalizacja` varchar(64) COLLATE utf8_polish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
