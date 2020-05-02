@@ -12,10 +12,10 @@ public class Polaczenie {
             System.out.println("Database connected!");
 
             //Statement stmt=con.createStatement();
-            //ResultSet rs=stmt.executeQuery("select * from konta");
-            //while(rs.next())
-                //System.out.println(rs.getInt(1)+"  "+rs.getString(2));
-            //con.close();
+           // ResultSet rs=stmt.executeQuery("select * from konta");
+           // while(rs.next())
+             //   System.out.println(rs.getInt(1)+"  "+rs.getString(2));
+           // con.close();
 
             return con;
 

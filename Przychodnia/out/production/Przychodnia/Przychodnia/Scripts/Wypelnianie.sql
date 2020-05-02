@@ -24,8 +24,8 @@ INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
 VALUES (333333, 'eee', 1, 0 ,0);
 
 
-INSERT INTO lekarze (Imie, Nazwisko, PESEL, Telefon, Specjalizacja, Adres_ID, Login)
-VALUES ('Jan', 'Kowalski', 12345678912, 987654321, 'Laryngolog', 1, 111111);
+INSERT INTO lekarze (Imie, Nazwisko, PESEL, Telefon, Adres_ID, Login, Specjalizacja)
+VALUES ('Jan', 'Kowalski', 12345678912, 987654321, 1, 111111, 'Laryngolog');
 
 
 INSERT INTO pacjenci (Imie, Nazwisko, PESEL, Telefon, Adres_ID, Login)
