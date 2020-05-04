@@ -29,9 +29,9 @@ public class DodawanieLekarza {
                 stt.setString(2, nazwisko);
                 stt.setString(3, pesel);
                 stt.setInt(4, telefon);
-                stt.setInt(5, adres_id);
-                stt.setString(6, login);
-                stt.setString(7, spec);
+                stt.setString(5, spec);
+                stt.setInt(6, adres_id);
+                stt.setString(7, login);
                 stt.execute();
 
                 Statement delete = con.createStatement();
