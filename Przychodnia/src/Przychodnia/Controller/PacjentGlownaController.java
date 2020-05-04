@@ -1,5 +1,6 @@
 package Przychodnia.Controller;
 
+import Przychodnia.Main;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,11 +9,14 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class PacjentGlownaController {
+
+    int ID;
 
     @FXML
     private Button DodajWizyteBT;
@@ -22,28 +26,49 @@ public class PacjentGlownaController {
     private Button HistoriaWizytBT;
     @FXML
     private Button EdytujDaneBT;
+    @FXML
+    private Label IDL;
 
-
+    public void setID(int IDGet) {
+        this.IDL.setText(String.valueOf(IDGet));
+        ID = IDGet;
+    }
 
     @FXML
     public void handleDodajWizyteBTAction(ActionEvent event) throws IOException {
-        FXMLLoader DW = new FXMLLoader(getClass().getResource("/Przychodnia/FXML/DodajWizyte.fxml"));
-        Stage DodajWizyte = new Stage();
-        DodajWizyte.initOwner(DodajWizyteBT.getScene().getWindow());
-        DodajWizyte.setScene(new Scene((Parent) DW.load()));
 
-        DodajWizyte.showAndWait();
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Przychodnia/FXML/DodajWizyte.fxml"));
+            Parent root = (Parent) loader.load();
+
+            DodajWizyteController DWC = loader.getController();
+            DWC.setID(ID);
+
+            Stage DodajWizyte = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            DodajWizyte.setScene(new Scene(root));
+            DodajWizyte.showAndWait();
+        }catch(Exception e){
+            System.err.println(e);
+        }
 
     }
 
     @FXML
     public void handleZobaczWizytyBTAction(ActionEvent event) throws IOException {
-        FXMLLoader ZW = new FXMLLoader(getClass().getResource("/Przychodnia/FXML/ZobaczWizyty.fxml"));
-        Stage ZobaczWizyty = new Stage();
-        ZobaczWizyty.initOwner(ZobaczWizytyBT.getScene().getWindow());
-        ZobaczWizyty.setScene(new Scene((Parent) ZW.load()));
 
-        ZobaczWizyty.showAndWait();
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Przychodnia/FXML/ZobaczWizyty.fxml"));
+            Parent root = (Parent) loader.load();
+
+            ZobaczWizytyController ZWC = loader.getController();
+            //ZWC.setID(ID);
+
+            Stage ZobaczWizyty = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            ZobaczWizyty.setScene(new Scene(root));
+            ZobaczWizyty.showAndWait();
+        }catch(Exception e){
+            System.err.println(e);
+        }
 
     }
 

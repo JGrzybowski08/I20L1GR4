@@ -1,11 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e1e6351-08e7-4855-9da6-d4892f948ae3" name="Default Changelist" comment="" />
+    <list default="true" id="9e1e6351-08e7-4855-9da6-d4892f948ae3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/DodajWizyte.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/DodajWizyte.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Logowanie.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/Logowanie.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Connection/DodawanieLekarza.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Connection/DodawanieLekarza.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Controller/ZobaczWizytyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Controller/ZobaczWizytyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/DodajWizyte.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/DodajWizyte.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/Logowanie.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/Logowanie.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/ZobaczWizyty.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/ZobaczWizyty.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/ZobaczWizyty.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/ZobaczWizyty.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Connection/DodawanieLekarza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/Connection/DodawanieLekarza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Controller/DodajWizyteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/Controller/DodajWizyteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Controller/HistoriaWizytController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/Controller/HistoriaWizytController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Controller/PacjentGlownaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/Controller/PacjentGlownaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Controller/ZobaczWizytyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/Controller/ZobaczWizytyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/DodajWizyte.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/FXML/DodajWizyte.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/HistoriaWizyt.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/FXML/HistoriaWizyt.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/Logowanie.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/FXML/Logowanie.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/PacjentGlowna.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/FXML/PacjentGlowna.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/ZobaczWizyty.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/FXML/ZobaczWizyty.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/Styles/style.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/DodajWizyte.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="35" column="198" selection-start-line="35" selection-start-column="198" selection-end-line="35" selection-end-column="198" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Przychodnia/Connection/ZobaczWizyty.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Przychodnia/Connection/HistoriaWizyt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="406">
+              <caret line="28" column="49" lean-forward="true" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Przychodnia/Controller/HistoriaWizytController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Przychodnia/Controller/DodajWizyteController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-937">
+              <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#898#899#0" expanded="true" />
+                <element signature="e#924#925#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Przychodnia/Controller/ZobaczWizytyController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="83">
+              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/HistoriaWizyt.fxml">
+          <provider editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Przychodnia/Controller/PacjentGlownaController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="63" column="14" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Przychodnia/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4834#4835#0" expanded="true" />
+                <element signature="e#4862#4863#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Przychodnia/Controller/LogowanieController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -14,11 +156,112 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>godzina</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Przychodnia/Connection/DodawanieLekarza.java" />
+        <option value="$PROJECT_DIR$/src/Przychodnia/Styles/style.css" />
+        <option value="$PROJECT_DIR$/src/Przychodnia/ZobaczWizyty.java" />
+        <option value="$PROJECT_DIR$/src/Przychodnia/FXML/ZobaczWizyty.fxml" />
+        <option value="$PROJECT_DIR$/src/Przychodnia/Models/ModelZobaczWizyty.java" />
+        <option value="$PROJECT_DIR$/src/Przychodnia/Connection/Logowanie.java" />
+        <option value="$PROJECT_DIR$/src/Przychodnia/FXML/PacjentGlowna.fxml" />
+        <option value="$PROJECT_DIR$/src/Przychodnia/Main.java" />
+        <option value="$PROJECT_DIR$/src/Przychodnia/Controller/LogowanieController.java" />
+        <option value="$PROJECT_DIR$/src/Przychodnia/FXML/Logowanie.fxml" />
+        <option value="$PROJECT_DIR$/src/Przychodnia/FXML/DodajWizyte.fxml" />
+        <option value="$PROJECT_DIR$/src/Przychodnia/Controller/DodajWizyteController.java" />
+        <option value="$PROJECT_DIR$/src/Przychodnia/FXML/HistoriaWizyt.fxml" />
+        <option value="$PROJECT_DIR$/src/Przychodnia/Controller/ZobaczWizytyController.java" />
+        <option value="$PROJECT_DIR$/src/Przychodnia/Connection/ZobaczWizyty.java" />
+        <option value="$PROJECT_DIR$/src/Przychodnia/Controller/HistoriaWizytController.java" />
+        <option value="$PROJECT_DIR$/src/Przychodnia/Controller/PacjentGlownaController.java" />
+        <option value="$PROJECT_DIR$/src/Przychodnia/Connection/HistoriaWizyt.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
   <component name="ProjectId" id="1bG3Z08VDSEsQAqrlW7ZbcjHiym" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Przychodnia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Przychodnia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Przychodnia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Przychodnia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
+              <item name="Connection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Przychodnia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Przychodnia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
+              <item name="FXML" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Przychodnia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
+              <item name="Scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Przychodnia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
+              <item name="Styles" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -27,11 +270,12 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587313969230" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588631841710" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -43,13 +287,25 @@
       <recent name="P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\Przychodnia\Images" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Przychodnia.Main" />
       <module name="Przychodnia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Przychodnia.*" />
+          <option name="PATTERN" value="Przychodnia.Models.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -80,34 +336,275 @@
     </task>
     <servers />
   </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26332623" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.19501625" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053304" side_tool="true" weight="0.19501625" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49946696" weight="0.32936078" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="58" y="289" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588335498935">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="58" y="289" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588335498935" />
-    <state width="1877" height="166" key="GridCell.Tab.0.bottom" timestamp="1588595766421">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="166" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588595766421" />
-    <state width="1877" height="166" key="GridCell.Tab.0.center" timestamp="1588595766420">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="166" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588595766420" />
-    <state width="1877" height="166" key="GridCell.Tab.0.left" timestamp="1588595766420">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="166" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588595766420" />
-    <state width="1877" height="166" key="GridCell.Tab.0.right" timestamp="1588595766421">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="166" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588595766421" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1588334456304">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588334456304" />
+    <state x="58" y="289" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
+    <state x="58" y="289" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="166" key="GridCell.Tab.0.bottom" />
+    <state width="1877" height="166" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="166" key="GridCell.Tab.0.center" />
+    <state width="1877" height="166" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="166" key="GridCell.Tab.0.left" />
+    <state width="1877" height="166" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="166" key="GridCell.Tab.0.right" />
+    <state width="1877" height="166" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" />
+    <state x="461" y="165" key="SettingsEditor" />
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/Styles/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/DodajLekarza.fxml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/scene/control/cell/PropertyValueFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="112" column="11" selection-start-line="112" selection-start-column="11" selection-end-line="112" selection-end-column="11" />
+          <folding>
+            <element signature="e#4183#4184#0" expanded="true" />
+            <element signature="e#4223#4224#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/Models.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/Connection/DodawanieLekarza.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="46" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/Models/ModelZobaczWizyty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding>
+            <element signature="e#369#370#0" expanded="true" />
+            <element signature="e#396#397#0" expanded="true" />
+            <element signature="e#436#437#0" expanded="true" />
+            <element signature="e#463#464#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+            <element signature="e#573#574#0" expanded="true" />
+            <element signature="e#606#607#0" expanded="true" />
+            <element signature="e#639#640#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#743#744#0" expanded="true" />
+            <element signature="e#774#775#0" expanded="true" />
+            <element signature="e#801#802#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <element signature="e#901#902#0" expanded="true" />
+            <element signature="e#930#931#0" expanded="true" />
+            <element signature="e#974#975#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/ZobaczWizyty.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/Controller/DodajLekarzaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/Controller/AdministratorGlownaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/Connection/Logowanie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/PacjentGlowna.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-612">
+          <caret line="12" column="344" lean-forward="true" selection-start-line="12" selection-start-column="298" selection-end-line="12" selection-end-column="344" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/Controller/LekarzGlownaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/Logowanie.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4834#4835#0" expanded="true" />
+            <element signature="e#4862#4863#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/DodajWizyte.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="35" column="198" selection-start-line="35" selection-start-column="198" selection-end-line="35" selection-end-column="198" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/Controller/DodajWizyteController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-937">
+          <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#898#899#0" expanded="true" />
+            <element signature="e#924#925#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/Controller/ZobaczWizytyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/Connection/ZobaczWizyty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/Controller/LogowanieController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/Controller/PacjentGlownaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="63" column="14" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/HistoriaWizyt.fxml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/Controller/HistoriaWizytController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/Connection/HistoriaWizyt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="28" column="49" lean-forward="true" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
