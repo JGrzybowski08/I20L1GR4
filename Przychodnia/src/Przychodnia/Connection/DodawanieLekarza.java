@@ -1,24 +1,55 @@
 package Przychodnia.Connection;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
+
+
 
 public class DodawanieLekarza {
     public static void Dodawanie(String id, String spec) {
+
         Connection con = Polaczenie.Connect();
 
         try {
-            String sql2 = "insert into Lekarze values";
-            String sql = "select * from pacjenci WHERE Pacjent_ID = "+id;
-            Statement stt = con.createStatement();
-            ResultSet rs=stt.executeQuery(sql);
-            while(rs.next())
-                System.out.println(rs.getInt(1)+"  "+rs.getString(2)+" "+rs.getString(3));
+
+            String sql = "select Imie, Nazwisko, PESEL, Telefon, Adres_ID, Login from pacjenci WHERE Pacjent_ID = "+id;
+            Statement stmt=con.createStatement();
+            ResultSet rs=stmt.executeQuery(sql);
+
+            while (rs.next()){
+
+                String imie = rs.getString(1);
+                String nazwisko = rs.getString(2);
+                String pesel = rs.getString(3);
+                int telefon = rs.getInt(4);
+                int adres_id = rs.getInt(5);
+                String login = rs.getString(6);
+
+                PreparedStatement stt = con.prepareStatement("insert into Lekarze values (NULL, ?, ?, ?, ?, ?, ?, ?)");
+                stt.setString(1, imie);
+                stt.setString(2, nazwisko);
+                stt.setString(3, pesel);
+                stt.setInt(4, telefon);
+                stt.setInt(5, adres_id);
+                stt.setString(6, login);
+                stt.setString(7, spec);
+                stt.execute();
+
+                Statement delete = con.createStatement();
+                String sql3 = "delete from Pacjenci WHERE Pacjent_ID = "+id;
+                delete.execute(sql3);
+
+                Statement update = con.createStatement();
+                String sql4 = "update konta set Lekarz = '1', Pacjent = '0' where Login = "+login;
+                update.execute(sql4);
+
+                System.out.println("Lekarz dodany");
+
+            }
 
 
 
             con.close();
+
         } catch (Exception e) {
             System.err.println(e);
 
