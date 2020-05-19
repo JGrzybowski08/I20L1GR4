@@ -22,7 +22,17 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
 
+
+
 public class ZobaczWizytyController implements Initializable {
+
+
+    int ID;
+
+    public void setID(int IDGet) {ID = IDGet;
+    System.out.println(ID);
+    }
+
 
 
     public TableView<ModelZobaczWizyty> WizytyTV;
@@ -32,6 +42,8 @@ public class ZobaczWizytyController implements Initializable {
     public TableColumn<ModelZobaczWizyty, String> Kol_Opis;
     public TableColumn<ModelZobaczWizyty, String> Kol_Status;
 
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Kol_Data.setCellValueFactory(new PropertyValueFactory<>("Data"));
@@ -40,7 +52,7 @@ public class ZobaczWizytyController implements Initializable {
         Kol_Opis.setCellValueFactory(new PropertyValueFactory<>("Opis"));
         Kol_Status.setCellValueFactory(new PropertyValueFactory<>("Status"));
 
-        WizytyTV.setItems(ZobaczWizyty.WizytyGet());
+        WizytyTV.setItems(ZobaczWizyty.WizytyGet(ID));
     }
 
     @FXML

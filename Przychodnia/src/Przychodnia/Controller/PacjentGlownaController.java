@@ -1,5 +1,6 @@
 package Przychodnia.Controller;
 
+import Przychodnia.Connection.ZobaczWizyty;
 import Przychodnia.Main;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -32,7 +33,10 @@ public class PacjentGlownaController {
     public void setID(int IDGet) {
         this.IDL.setText(String.valueOf(IDGet));
         ID = IDGet;
+
     }
+
+
 
     @FXML
     public void handleDodajWizyteBTAction(ActionEvent event) throws IOException {
@@ -60,8 +64,10 @@ public class PacjentGlownaController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Przychodnia/FXML/ZobaczWizyty.fxml"));
             Parent root = (Parent) loader.load();
 
+
+
             ZobaczWizytyController ZWC = loader.getController();
-            //ZWC.setID(ID);
+            ZWC.setID(ID);
 
             Stage ZobaczWizyty = (Stage) ((Node) event.getSource()).getScene().getWindow();
             ZobaczWizyty.setScene(new Scene(root));

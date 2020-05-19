@@ -11,6 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+<?import com.jfoenix.controls.JFXPasswordField?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="background2" stylesheets="Przychodnia/Styles/style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Przychodnia.Controller.LogowanieController">
    <children>
       <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" styleClass="background">
@@ -31,7 +32,7 @@
             </Label>
             <Label layoutX="36.0" layoutY="63.0" text="Zaloguj się by kontynuować" textFill="#e4dcdc" />
             <JFXTextField fx:id="LoginTF" alignment="BOTTOM_LEFT" focusColor="WHITE" layoutX="57.0" layoutY="148.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="285.0" promptText="Login" styleClass="czcionka" unFocusColor="#eeebeb" />
-            <JFXTextField fx:id="HasloTF" focusColor="WHITE" layoutX="56.0" layoutY="220.0" prefHeight="50.0" prefWidth="285.0" promptText="Hasło" styleClass="czcionka" unFocusColor="WHITE" />
+            <JFXPasswordField fx:id="HasloTF" focusColor="WHITE" layoutX="56.0" layoutY="220.0" prefHeight="50.0" prefWidth="285.0" promptText="Hasło" styleClass="czcionka" unFocusColor="WHITE" />
             <Label layoutX="252.0" layoutY="290.0" text="Zapomniałeś hasła?" textFill="#c9c4c4">
                <font>
                   <Font name="Ebrima" size="10.0" />

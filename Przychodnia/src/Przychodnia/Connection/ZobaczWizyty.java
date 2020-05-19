@@ -13,9 +13,14 @@ import java.util.Date;
 public class ZobaczWizyty {
 
 
-    public static ObservableList<ModelZobaczWizyty> WizytyGet() {
+
+
+
+
+    public static ObservableList<ModelZobaczWizyty> WizytyGet(int ID) {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         Date czasSys = new Date(System.currentTimeMillis());
+
 
 
         ObservableList<ModelZobaczWizyty> oblist = FXCollections.observableArrayList();
@@ -24,7 +29,7 @@ public class ZobaczWizyty {
             ResultSet rs = con.createStatement().executeQuery(
                     "SELECT wizyta_ID, data, godzina, lekarze.imie, lekarze.nazwisko, opis, status " +
                             "FROM wizyty, lekarze " +
-                            "WHERE (wizyty.Lekarz_ID = Lekarze.Lekarz_ID AND data >= '" + formatter.format(czasSys) + "') GROUP BY wizyta_ID"
+                            "WHERE (wizyty.Lekarz_ID = Lekarze.Lekarz_ID AND Pacjent_ID = "+ID+" AND data >= '" + formatter.format(czasSys) + "') GROUP BY wizyta_ID"
             );
 
             while (rs.next()) {

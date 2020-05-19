@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Przychodnia">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Przychodnia/out/production/Przychodnia/fontawesomefx-8.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Przychodnia/out/production/Przychodnia/mybatis-3.5.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Przychodnia/out/production/Przychodnia/protobuf-java-3.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Przychodnia/out/production/Przychodnia/jfoenix-0.0.0-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Przychodnia/out/production/Przychodnia/mysql-connector-java-8.0.19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Przychodnia/out/production/Przychodnia/controlsfx-8.40.17-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

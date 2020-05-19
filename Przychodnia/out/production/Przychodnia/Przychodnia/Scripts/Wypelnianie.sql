@@ -15,13 +15,13 @@ VALUES ('Rejtana', '99', '33-401', 'Rzeszów');
 
 
 INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
-VALUES (111111, 'qqq', 0, 1, 0);
+VALUES (login1, 'qqq', 0, 1, 0);
 
 INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
-VALUES (222222, 'www', 0 ,0, 1);
+VALUES (login2, 'www', 0 ,0, 1);
 
 INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
-VALUES (333333, 'eee', 1, 0 ,0);
+VALUES (login3, 'eee', 1, 0 ,0);
 
 
 INSERT INTO lekarze (Imie, Nazwisko, PESEL, Telefon, Adres_ID, Login, Specjalizacja)

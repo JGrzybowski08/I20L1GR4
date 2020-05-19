@@ -22,7 +22,7 @@ public class HistoriaWizyt {
             ResultSet rs = con.createStatement().executeQuery(
                     "SELECT wizyta_ID, data, godzina, lekarze.imie, lekarze.nazwisko, opis, status " +
                             "FROM wizyty, lekarze " +
-                            "WHERE (wizyty.Lekarz_ID = Lekarze.Lekarz_ID AND data >= '" + formatter.format(czasSys) + "') GROUP BY wizyta_ID"
+                            "WHERE (wizyty.Lekarz_ID = Lekarze.Lekarz_ID AND data <= '" + formatter.format(czasSys) + "') GROUP BY wizyta_ID"
             );
 
             while (rs.next()) {
