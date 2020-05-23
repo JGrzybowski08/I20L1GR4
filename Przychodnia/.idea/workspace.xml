@@ -1,49 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e1e6351-08e7-4855-9da6-d4892f948ae3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/controlsfx-8.40.17-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/Libraries/controlsfx-8.40.17-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fontawesomefx-8.9.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/Libraries/fontawesomefx-8.9.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jfoenix-0.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/Libraries/jfoenix-0.0.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/META-INF/Przychodnia.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Controller/AdministratorGlownaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Controller/AdministratorGlownaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/AdministratorGlowna.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/AdministratorGlowna.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/DodajWizyte.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/DodajWizyte.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/EdytujDane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/EdytujDane.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/EdytujWizyte.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/EdytujWizyte.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/EdytujWizyteForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/EdytujWizyteForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/HistoriaWizyt.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/HistoriaWizyt.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/LekarzGlowna.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/LekarzGlowna.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/Logowanie.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/Logowanie.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/PacjentGlowna.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/PacjentGlowna.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/Rejestracja.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/Rejestracja.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/ZobaczWizyty.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/ZobaczWizyty.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/logo_Z_bocznym_napisem.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/logov4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/logov5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/logov6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Controller/AdministratorGlownaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/Controller/AdministratorGlownaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/AdministratorGlowna.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/FXML/AdministratorGlowna.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/Dodaj Lekarz.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/FXML/DodajLekarza.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/DodajWizyte.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/FXML/DodajWizyte.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/EdytujDane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/FXML/EdytujDane.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/EdytujWizyte.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/FXML/EdytujWizyte.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/EdytujWizyteForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/FXML/EdytujWizyteForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/HistoriaWizyt.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/FXML/HistoriaWizyt.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/LekarzGlowna.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/FXML/LekarzGlowna.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/Logowanie.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/FXML/Logowanie.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/PacjentGlowna.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/FXML/PacjentGlowna.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/REJESTRACJA_tested.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/Rejestracja.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/FXML/Rejestracja.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/ZobaczWizyty.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/FXML/ZobaczWizyty.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/logo_Z_bocznym_napisem.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/Images/logo_Z_bocznym_napisem.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/logov4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/Images/logov4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/logov5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/Images/logov5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/logov6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/Images/logov6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/logowanie_tested.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Przychodnia/Styles/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="9e1e6351-08e7-4855-9da6-d4892f948ae3" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,58 +9,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Przychodnia/Controller/AdministratorGlownaController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="75" column="42" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Przychodnia/Controller/DodajLekarzaController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Przychodnia/Controller/EdytujDaneController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="20" column="5" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/DodajLekarza.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
-              <caret line="12" column="340" selection-start-line="12" selection-start-column="340" selection-end-line="12" selection-end-column="340" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/AdministratorGlowna.fxml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -157,7 +64,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -175,34 +81,13 @@
               <item name="Przychodnia" type="b2602c69:ProjectViewProjectNode" />
               <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Przychodnia" type="b2602c69:ProjectViewProjectNode" />
               <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Przychodnia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
-              <item name="FXML" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Przychodnia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
-              <item name="Images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Przychodnia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="Libraries" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -210,12 +95,23 @@
               <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
-              <item name="Styles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Przychodnia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Przychodnia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Przychodnia" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="generated-sources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -279,34 +175,33 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17110874" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.14734562" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.219935" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Maven" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
   <component name="editorHistoryManager">
@@ -317,97 +212,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/logowanie_tested.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/logowanie_tested.fxml" />
     <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/DodajWizyte.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/EdytujDane.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
           <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/EdytujWizyte.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/EdytujWizyteForm.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/HistoriaWizyt.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/LekarzGlowna.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
           <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/Logowanie.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/PacjentGlowna.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/Rejestracja.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/ZobaczWizyty.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/AdministratorGlowna.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Przychodnia/Controller/AdministratorGlownaController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -417,12 +309,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Przychodnia/FXML/DodajLekarza.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-153">
           <caret line="12" column="340" selection-start-line="12" selection-start-column="340" selection-end-line="12" selection-end-column="340" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Przychodnia/Controller/EdytujDaneController.java">
       <provider selected="true" editor-type-id="text-editor">
