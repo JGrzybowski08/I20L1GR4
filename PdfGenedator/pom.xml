@@ -8,61 +8,64 @@
     <artifactId>PdfGenedator</artifactId>
     <version>1.0</version>
 
+    <properties>
+        <itext.version>RELEASE</itext.version>
+    </properties>
+
     <dependencies>
-        <!-- always needed -->
-        <dependency>
-            <groupId>com.itextpdf</groupId>
-            <artifactId>kernel</artifactId>
-            <version>7.0.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.itextpdf</groupId>
-            <artifactId>io</artifactId>
-            <version>7.0.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.itextpdf</groupId>
-            <artifactId>layout</artifactId>
-            <version>7.0.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.itextpdf</groupId>
-            <artifactId>forms</artifactId>
-            <version>7.0.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.itextpdf</groupId>
-            <artifactId>pdfa</artifactId>
-            <version>7.0.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.itextpdf</groupId>
-            <artifactId>sign</artifactId>
-            <version>7.0.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.itextpdf</groupId>
-            <artifactId>barcodes</artifactId>
-            <version>7.0.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.itextpdf</groupId>
-            <artifactId>font-asian</artifactId>
-            <version>7.0.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.itextpdf</groupId>
-            <artifactId>hyph</artifactId>
-            <version>7.0.2</version>
-        </dependency>
+    <!-- add all iText 7 modules -->
+    <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>kernel</artifactId>
+        <version>${itext.version}</version>
+    </dependency>
+    <!-- always needed -->
+    <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>io</artifactId>
+        <version>${itext.version}</version>
+    </dependency>
+    <!-- always needed -->
+    <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>layout</artifactId>
+        <version>${itext.version}</version>
+    </dependency>
+    <!-- only needed for forms -->
+    <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>forms</artifactId>
+        <version>${itext.version}</version>
+    </dependency>
+    <!-- only needed for PDF/A -->
+    <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>pdfa</artifactId>
+        <version>${itext.version}</version>
+    </dependency>
+    <!-- only needed for digital signatures -->
+    <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>sign</artifactId>
+        <version>${itext.version}</version>
+    </dependency>
+    <!-- only needed for barcodes -->
+    <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>barcodes</artifactId>
+        <version>${itext.version}</version>
+    </dependency>
+    <!-- only needed for Asian fonts -->
+    <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>font-asian</artifactId>
+        <version>${itext.version}</version>
+    </dependency>
+    <!-- only needed for hyphenation -->
+    <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>hyph</artifactId>
+        <version>${itext.version}</version>
+    </dependency>
     </dependencies>
-
 </project>
