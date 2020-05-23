@@ -1,125 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e1e6351-08e7-4855-9da6-d4892f948ae3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Przychodnia.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Przychodnia.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/jfoenix_0_0_0_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/AdministratorGlowna.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/DodajLekarza.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/DodajWizyte.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/EdytujDane.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/EdytujWizyte.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/EdytujWizyteForm.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/HistoriaWizyt.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/LekarzGlowna.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Logowanie.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/PacjentGlowna.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Connection/CzyszczenieBazy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Connection/DodawanieLekarza.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Connection/HistoriaWizyt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Connection/Logowanie.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Connection/Polaczenie.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Connection/WypelnianieBazy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Connection/ZobaczWizyty.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Controller/AdministratorGlownaController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Controller/DodajLekarzaController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Controller/DodajWizyteController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Controller/EdytujDaneController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Controller/EdytujWizyteController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Controller/EdytujWizyteFormController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Controller/HistoriaWizytController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Controller/LekarzGlownaController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Controller/LogowanieController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Controller/PacjentGlownaController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Controller/ZobaczWizytyController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/AdministratorGlowna.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/DodajLekarza.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/DodajWizyte.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/EdytujDane.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/EdytujWizyte.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/EdytujWizyteForm.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/HistoriaWizyt.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/LekarzGlowna.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/Logowanie.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/PacjentGlowna.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/Rejestracja.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/FXML/ZobaczWizyty.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Images/logo_Z_bocznym_napisem.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Images/logov4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Images/logov5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Images/logov6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Libraries/controlsfx-8.40.17-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Libraries/fontawesomefx-8.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Libraries/jfoenix-0.0.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Libraries/mybatis-3.5.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Libraries/mysql-connector-java-8.0.19.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Libraries/protobuf-java-3.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Models/ModelZobaczWizyty.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Scripts/Czyszczenie.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Scripts/Wypelnianie.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Przychodnia/Styles/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/Rejestracja.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/ZobaczWizyty.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/controlsfx-8.40.17-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/fontawesomefx-8.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/jfoenix-0.0.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/logo_Z_bocznym_napisem.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/logov4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/logov5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/logov6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/mybatis-3.5.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/mysql-connector-java-8.0.19.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/protobuf-java-3.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Przychodnia/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Connection/CzyszczenieBazy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Connection/CzyszczenieBazy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Connection/DodawanieLekarza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Connection/DodawanieLekarza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Connection/HistoriaWizyt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Connection/HistoriaWizyt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Connection/Logowanie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Connection/Logowanie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Connection/Polaczenie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Connection/Polaczenie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Connection/WypelnianieBazy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Connection/WypelnianieBazy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Connection/ZobaczWizyty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Connection/ZobaczWizyty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Controller/AdministratorGlownaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/AdministratorGlownaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Controller/DodajLekarzaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/DodajLekarzaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Controller/DodajWizyteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/DodajWizyteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Controller/EdytujDaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/EdytujDaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Controller/EdytujWizyteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/EdytujWizyteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Controller/EdytujWizyteFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/EdytujWizyteFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Controller/HistoriaWizytController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/HistoriaWizytController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Controller/LekarzGlownaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/LekarzGlownaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Controller/LogowanieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/LogowanieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Controller/PacjentGlownaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PacjentGlownaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Controller/ZobaczWizytyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ZobaczWizytyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/AdministratorGlowna.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AdministratorGlowna.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/DodajLekarza.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DodajLekarza.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/DodajWizyte.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DodajWizyte.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/EdytujDane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/EdytujDane.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/EdytujWizyte.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/EdytujWizyte.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/EdytujWizyteForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/EdytujWizyteForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/HistoriaWizyt.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HistoriaWizyt.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/LekarzGlowna.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LekarzGlowna.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/Logowanie.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Logowanie.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/PacjentGlowna.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/PacjentGlowna.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/Rejestracja.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Rejestracja.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/FXML/ZobaczWizyty.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ZobaczWizyty.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Images/logo_Z_bocznym_napisem.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Images/logo_Z_bocznym_napisem.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Images/logov4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Images/logov4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Images/logov5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Images/logov5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Images/logov6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Images/logov6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Libraries/controlsfx-8.40.17-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Libraries/fontawesomefx-8.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Libraries/jfoenix-0.0.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Libraries/mybatis-3.5.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Libraries/mysql-connector-java-8.0.19.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Libraries/protobuf-java-3.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Models/ModelZobaczWizyty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/ModelZobaczWizyty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Scripts/Czyszczenie.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Scripts/Czyszczenie.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Scripts/Wypelnianie.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Scripts/Wypelnianie.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Przychodnia/Styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="9e1e6351-08e7-4855-9da6-d4892f948ae3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -278,7 +160,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="340" />
     <option name="y" value="168" />
     <option name="width" value="1382" />
@@ -388,7 +270,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590253180607" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590253183028" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/Libraries/mybatis-3.5.4.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -466,7 +348,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17110874" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
