@@ -32,6 +32,16 @@ public class ZobaczWizytyController implements Initializable {
     public TableColumn<ModelZobaczWizyty, String> Kol_Opis;
     public TableColumn<ModelZobaczWizyty, String> Kol_Status;
 
+    int ID = 6;
+    //TODO  zobacz wizyty dziala tylko dla recznie wpisanego id
+    public void setID(int IDGet) {
+
+        ID = IDGet;
+
+    }
+
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Kol_Data.setCellValueFactory(new PropertyValueFactory<>("Data"));
@@ -40,7 +50,7 @@ public class ZobaczWizytyController implements Initializable {
         Kol_Opis.setCellValueFactory(new PropertyValueFactory<>("Opis"));
         Kol_Status.setCellValueFactory(new PropertyValueFactory<>("Status"));
 
-        WizytyTV.setItems(ZobaczWizyty.WizytyGet());
+        WizytyTV.setItems(ZobaczWizyty.WizytyGet(ID));
     }
 
     @FXML
