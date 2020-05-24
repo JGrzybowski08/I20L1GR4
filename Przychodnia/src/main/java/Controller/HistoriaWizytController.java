@@ -29,6 +29,16 @@ public class HistoriaWizytController implements Initializable {
     public TableColumn<ModelZobaczWizyty, String> Kol_Opis;
     public TableColumn<ModelZobaczWizyty, String> Kol_Status;
 
+    int ID=6;
+    //TODO  historia wizyt dziala tylko dla recznie wpisanego id
+
+    public void setID(int IDGet) {
+
+        ID = IDGet;
+
+    }
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Kol_Data.setCellValueFactory(new PropertyValueFactory<>("Data"));
@@ -37,7 +47,7 @@ public class HistoriaWizytController implements Initializable {
         Kol_Opis.setCellValueFactory(new PropertyValueFactory<>("Opis"));
         Kol_Status.setCellValueFactory(new PropertyValueFactory<>("Status"));
 
-        WizytyTV.setItems(HistoriaWizyt.WizytyGet());
+        WizytyTV.setItems(HistoriaWizyt.WizytyGet(ID));
     }
 
     @FXML

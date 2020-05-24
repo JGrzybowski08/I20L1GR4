@@ -60,7 +60,7 @@ public class PacjentGlownaController {
             Parent root = (Parent) loader.load();
 
             ZobaczWizytyController ZWC = loader.getController();
-            //ZWC.setID(ID);
+            ZWC.setID(ID);
 
             Stage ZobaczWizyty = (Stage) ((Node) event.getSource()).getScene().getWindow();
             ZobaczWizyty.setScene(new Scene(root));
