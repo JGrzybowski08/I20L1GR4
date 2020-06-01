@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="background2" stylesheets="@Styles/style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LogowanieController">
+   <children>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" styleClass="background">
+         <children>
+            <ImageView fitHeight="293.0" fitWidth="237.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/logov5.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <Pane layoutX="398.0" prefHeight="604.0" prefWidth="407.0">
+         <children>
+            <Label layoutX="36.0" layoutY="19.0" prefHeight="65.0" prefWidth="180.0" text="Witamy z powrotem," textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font name="Ebrima Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="63.0" text="Zaloguj się by kontynuować" textFill="#e4dcdc" />
+            <JFXTextField fx:id="LoginTF" alignment="BOTTOM_LEFT" focusColor="WHITE" layoutX="57.0" layoutY="148.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="285.0" promptText="Login" styleClass="czcionka" unFocusColor="#eeebeb" />
+            <JFXTextField fx:id="HasloTF" focusColor="WHITE" layoutX="56.0" layoutY="220.0" prefHeight="50.0" prefWidth="285.0" promptText="Hasło" styleClass="czcionka" unFocusColor="WHITE" />
+            <Label layoutX="252.0" layoutY="290.0" text="Zapomniałeś hasła?" textFill="#c9c4c4">
+               <font>
+                  <Font name="Ebrima" size="10.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="57.0" layoutY="327.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleLoginBTAction" prefHeight="40.0" prefWidth="285.0" styleClass="loginBtn" text="Zaloguj Się" />
+            <FontAwesomeIconView fill="WHITE" glyphName="TIMES" layoutX="367.0" layoutY="34.0" size="17" />
+            <Label layoutX="130.0" layoutY="375.0" text="Nowy Użytkownik?" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima" size="9.0" />
+               </font>
+            </Label>
+            <Label layoutX="219.0" layoutY="375.0" onMouseClicked="#handleRejestracjaBTAction" text="Zarejestruj Się!!" textFill="#3b8ab5">
+               <font>
+                  <Font name="Ebrima" size="9.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
