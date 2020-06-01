@@ -35,7 +35,7 @@ public class GenerujRaport {
         try {
             Generator.Generuj(ListaWizyt);
         }catch(Exception e){
-            System.err.println("Tutaj:"+e);
+            System.err.println(e);
         }
         System.out.println(ListaWizyt);
 

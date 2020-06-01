@@ -107,11 +107,14 @@ public class LogowanieController {
     }
 
     @FXML
-    public void handleRejestracjaBTAction(MouseEvent event) throws IOException {
-        Parent Re = FXMLLoader.load(getClass().getResource("/Rejestracja.fxml"));
-        Stage Rejestracja = (Stage)((Node)event.getSource()).getScene().getWindow();
-        Rejestracja.setScene(new Scene(Re));
-        Rejestracja.show();
-
+    public void handleRejestracjaBTAction(MouseEvent event) {
+        try {
+            Parent Re = FXMLLoader.load(getClass().getResource("/Rejestracja.fxml"));
+            Stage Rejestracja = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Rejestracja.setScene(new Scene(Re));
+            Rejestracja.show();
+        }catch (Exception e){
+            System.err.println(e);
+        }
     }
 }
