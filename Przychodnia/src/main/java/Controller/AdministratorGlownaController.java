@@ -11,13 +11,14 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.SQLException;
 
 public class AdministratorGlownaController {
     @FXML
     public Button LogoutBT;
     @FXML
     public Button EdytujWizytyBT;
+    @FXML
+    public Button SpisLekarzyBT;
     @FXML
     public Button HistoriaWizytBT;
     @FXML
@@ -53,6 +54,18 @@ public class AdministratorGlownaController {
 
     }
 
+
+    @FXML
+    public void handleSpisLekarzyBTAction(ActionEvent event) throws IOException {
+        FXMLLoader HW = new FXMLLoader(getClass().getResource("/SpisLekarzy.fxml"));
+        Stage HistoriaWizyt = new Stage();
+        HistoriaWizyt.initOwner(SpisLekarzyBT.getScene().getWindow());
+        HistoriaWizyt.setScene(new Scene((Parent) HW.load()));
+
+        HistoriaWizyt.showAndWait();
+
+    }
+
     @FXML
     public void handleEdytujDaneBTAction(ActionEvent event) throws IOException {
         FXMLLoader ED = new FXMLLoader(getClass().getResource("/EdytujDane.fxml"));
@@ -65,12 +78,10 @@ public class AdministratorGlownaController {
 
     @FXML
     public void handleDodajLekarzaBTAction(ActionEvent event) throws IOException {
-        FXMLLoader DL = new FXMLLoader(getClass().getResource("/DodajLekarza.fxml"));
-        Stage DodajLekarza = new Stage();
-        DodajLekarza.initOwner(DodajWizyteBT.getScene().getWindow());
-        DodajLekarza.setScene(new Scene((Parent) DL.load()));
-
-        DodajLekarza.showAndWait();
+        Parent dl = FXMLLoader.load(getClass().getResource("/DodajLekarza.fxml"));
+        Stage logowanie = (Stage)((Node)event.getSource()).getScene().getWindow();
+        logowanie.setScene(new Scene(dl));
+        logowanie.show();
 
     }
 

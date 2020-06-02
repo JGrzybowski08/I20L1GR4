@@ -46,12 +46,12 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <Button fx:id="btnDashboard" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleDodajLekarzaBTAction" prefHeight="213.0" prefWidth="255.0" text="Dodaj Lekarza" GridPane.rowIndex="1">
+            <Button fx:id="DodajWizyteBT" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleDodajLekarzaBTAction" prefHeight="213.0" prefWidth="255.0" text="Dodaj Lekarza" GridPane.rowIndex="1">
                <graphic>
                   <FontAwesomeIconView fill="#2d75e8" glyphName="USER" size="50" />
                </graphic>
             </Button>
-            <Button fx:id="btnStudents" contentDisplay="TOP" mnemonicParsing="false" prefHeight="170.0" prefWidth="249.0" text="Spis Lekarzy" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button fx:id="SpisLekarzyBT" contentDisplay="TOP" mnemonicParsing="false" prefHeight="170.0" prefWidth="249.0" onAction="#handleSpisLekarzyBTAction" text="Spis Lekarzy" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <graphic>
                   <FontAwesomeIconView fill="#2d75e8" glyphName="GROUP" size="50" />
                </graphic>

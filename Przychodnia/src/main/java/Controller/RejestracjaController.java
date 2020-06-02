@@ -1,10 +1,16 @@
 package Controller;
 
-import javafx.event.ActionEvent;
+import Exceptions.RegisterException;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 
 
 public class RejestracjaController {
@@ -14,42 +20,45 @@ public class RejestracjaController {
     @FXML
     private TextField ImieID;
     @FXML
-    private TextField NazwiskoID;
+    private TextField EmailID;
     @FXML
-    private TextField PESELID;
+    private TextField PeselID;
+    @FXML
+    private TextField NazwiskoID;
     @FXML
     private TextField TelefonID;
     @FXML
     private TextField LoginID;
     @FXML
     private TextField HasloID;
-    @FXML
-    private Button RejestracjaID;
 
 
 
     @FXML
-    public void handleDodawaniePacjentaBTAction(ActionEvent event){
+    public void handleDodawaniePacjentaBTAction(MouseEvent event) throws IOException, RegisterException {
 
-        if(ImieID.getText().isEmpty() || NazwiskoID.getText().isEmpty() || PESELID.getText().isEmpty() || TelefonID.getText().isEmpty() || LoginID.getText().isEmpty() || HasloID.getText().isEmpty()){
+        if(ImieID.getText().isEmpty() || NazwiskoID.getText().isEmpty() || EmailID.getText().isEmpty() || TelefonID.getText().isEmpty() || LoginID.getText().isEmpty() || HasloID.getText().isEmpty() || PeselID.getText().isEmpty()){
             System.out.println("Jedno z pól jest puste");
         }else{
 
             String Imie = ImieID.getText();
             String Nazwisko = NazwiskoID.getText();
-            String PESEL = PESELID.getText();
+            String Email = EmailID.getText();
+            String Pesel = PeselID.getText();
             String Telefon = TelefonID.getText();
-            String Login = LoginID.getText();
             String Haslo = HasloID.getText();
 
-            Connection.Rejestracja.Rejestrowanie(Imie, Nazwisko, PESEL, Telefon, Login, Haslo);
-
+            Connection.Rejestracja.Rejestrowanie(Imie, Nazwisko, Email, Pesel, Telefon, Haslo);
+            handleBackBTAction(event);
         }
-
-
-
-
     }
 
+    @FXML
+    public void handleBackBTAction(MouseEvent event) throws IOException {
+        Parent Re = FXMLLoader.load(getClass().getResource("/Logowanie.fxml"));
+        Stage logowanie = (Stage)((Node)event.getSource()).getScene().getWindow();
+        logowanie.setScene(new Scene(Re));
+        logowanie.show();
 
+    }
 }

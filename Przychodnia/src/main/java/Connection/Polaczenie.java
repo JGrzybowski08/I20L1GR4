@@ -8,7 +8,8 @@ public class Polaczenie {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("Connecting database...");
-            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/przychodnia?useUnicode=true&characterEncoding=utf8","root", "");
+//            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/przychodnia?useUnicode=true&characterEncoding=utf8","root", "");
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/przychodnia?useUnicode=yes&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","root", "");
             System.out.println("Database connected!");
 
             //Statement stmt=con.createStatement();
