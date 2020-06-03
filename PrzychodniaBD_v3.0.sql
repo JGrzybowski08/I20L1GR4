@@ -38,16 +38,35 @@ CREATE TABLE `adresy` (
 
 LOCK TABLES `adresy` WRITE;
 /*!40000 ALTER TABLE `adresy` DISABLE KEYS */;
-INSERT INTO `adresy` VALUES (28,'Okulickiego','22','37-450','Stalowa Wola');
-INSERT INTO `adresy` VALUES (29,'Poniatowskiego','44','44-444','?ód?');
-INSERT INTO `adresy` VALUES (30,'Rejtana','99','33-401','Rzeszów');
-INSERT INTO `adresy` VALUES (31,'Sobieskiego','23/24','57-000','Staszów');
-INSERT INTO `adresy` VALUES (32,'Myśliborska','29','46-422','Warszawa');
-INSERT INTO `adresy` VALUES (33,'Konopnickiej','451','33-401','Łódź');
-INSERT INTO `adresy` VALUES (34,'Inflacka','1A','35-401','Konstancin Jeziorna');
-INSERT INTO `adresy` VALUES (35,'Nowowiejska','97','75-435','Tychy');
-INSERT INTO `adresy` VALUES (36,'Bonifratów','451','00-441','Katowice');
-INSERT INTO `adresy` VALUES (37,'Braci Wagów','64/3A','53-136','Lubawa');
+INSERT INTO adresy (Adres_ID, Ulica, Nr_domu, Kod_pocztowy, Miejscowosc)
+VALUES (1, 'Okulickiego', '22', '37-450', 'Stalowa Wola');
+
+INSERT INTO adresy (Adres_ID, Ulica, Nr_domu, Kod_pocztowy, Miejscowosc)
+VALUES (2, 'Poniatowskiego', '44', '44-444', 'Łódź');
+
+INSERT INTO adresy (Adres_ID, Ulica, Nr_domu, Kod_pocztowy, Miejscowosc)
+VALUES (3, 'Rejtana', '99', '33-401', 'Rzeszów');
+
+INSERT INTO adresy (Adres_ID, Ulica, Nr_domu, Kod_pocztowy, Miejscowosc)
+VALUES (4, 'Sobieskiego','23/24','57-000','Staszów');
+
+INSERT INTO adresy (Adres_ID, Ulica, Nr_domu, Kod_pocztowy, Miejscowosc)
+VALUES (5, 'Myśliborska','29','46-422','Warszawa');
+
+INSERT INTO adresy (Adres_ID, Ulica, Nr_domu, Kod_pocztowy, Miejscowosc)
+VALUES (6, 'Konopnickiej','451','33-401','Łódź');
+
+INSERT INTO adresy (Adres_ID, Ulica, Nr_domu, Kod_pocztowy, Miejscowosc)
+VALUES (7, 'Inflacka','1A','35-401','Konstancin Jeziorna');
+
+INSERT INTO adresy (Adres_ID, Ulica, Nr_domu, Kod_pocztowy, Miejscowosc)
+VALUES (8, 'Nowowiejska','97','75-435','Tychy');
+
+INSERT INTO adresy (Adres_ID, Ulica, Nr_domu, Kod_pocztowy, Miejscowosc)
+VALUES (9, 'Bonifratów','451','00-441','Katowice');
+
+INSERT INTO adresy (Adres_ID, Ulica, Nr_domu, Kod_pocztowy, Miejscowosc)
+VALUES (10, 'Braci Wagów','64/3A','53-136','Lubawa');
 /*!40000 ALTER TABLE `adresy` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -59,7 +78,7 @@ DROP TABLE IF EXISTS `konta`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `konta` (
-  `Login` int NOT NULL,
+  `Login` bigint NOT NULL,
   `Haslo` varchar(64) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
   `Administrator` tinyint(1) NOT NULL,
   `Lekarz` tinyint(1) NOT NULL,
@@ -74,14 +93,57 @@ CREATE TABLE `konta` (
 
 LOCK TABLES `konta` WRITE;
 /*!40000 ALTER TABLE `konta` DISABLE KEYS */;
-INSERT INTO `konta` VALUES (96345,'asdfasdf',0,0,1);
-INSERT INTO `konta` VALUES (96347,'ytrewq',0,0,1);
-INSERT INTO `konta` VALUES (111111,'qqq',0,1,0);
-INSERT INTO `konta` VALUES (222222,'www',0,0,1);
-INSERT INTO `konta` VALUES (236576,'qwerty',0,1,0);
-INSERT INTO `konta` VALUES (333333,'eee',1,0,0);
-INSERT INTO `konta` VALUES (345164,'23f3d1',1,1,0);
-INSERT INTO `konta` VALUES (923456,'zxcvasdf',0,1,0);
+/* Konta Administratorow */;
+INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
+VALUES (111, '111', 1, 0, 0);
+/* Konta Administratorow */;
+
+/* Konta Lekarzy */;
+INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
+VALUES (35412342, 'www', 0 ,1, 0);
+
+INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
+VALUES (345164, 'eee', 0, 1 ,0);
+
+INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
+VALUES (874457,'rrr',0,1,0);
+
+INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
+VALUES (923456,'ttt',0,1,0);
+
+INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
+VALUES (236576,'aaa',0,1,0);
+
+INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
+VALUES (33335253,'ghh',0,1,0);
+/* Konta Lekarzy */;
+
+/* Konta Pacjentow */;
+INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
+VALUES (312354,'yyy',0,0,1);
+
+INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
+VALUES (67454,'uuu',0,0,1);
+
+INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
+VALUES (96346,'iii',0,0,1);
+
+INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
+VALUES (96347, 'ooo', 0, 0 ,1);
+
+INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
+VALUES (96345, 'ppp', 0, 0 ,1);
+
+INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
+VALUES (2222221122, 'ppp', 0, 0 ,1);
+/* Konta Pacjentow */;
+
+/* Konta ------------------------------------- */;
+
+
+
+
+/* Pacjenci ----------------------------------- */;
 /*!40000 ALTER TABLE `konta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -99,7 +161,7 @@ CREATE TABLE `lekarze` (
   `Telefon` int NOT NULL,
   `Specjalizacja` varchar(64) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
   `Adres_ID` int NOT NULL,
-  `PESEL` int NOT NULL,
+  `PESEL` bigint NOT NULL,
   `e_mail` varchar(255) NOT NULL,
   PRIMARY KEY (`Lekarz_ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
@@ -111,14 +173,17 @@ CREATE TABLE `lekarze` (
 
 LOCK TABLES `lekarze` WRITE;
 /*!40000 ALTER TABLE `lekarze` DISABLE KEYS */;
-INSERT INTO `lekarze` VALUES (1,'Roman','Kot',111123421,'Chirulg',1,35412342, 'rkot@przychodnia.pl');
-INSERT INTO `lekarze` VALUES (2,'Lew','Sapiecha',923654321,'Internista',1,345164, 'lsapiecha@przychodnia.pl');
+INSERT INTO `lekarze` VALUES (1,'Roman','Kot',111123421,'Chirurg',1,35412342, 'rkot@przychodnia.pl');
+INSERT INTO `lekarze` VALUES (2,'Lew','Sapiecha',923654321,'Internista',1,345164, 'lewsapiecha@przychodnia.pl');
 INSERT INTO `lekarze` VALUES (3,'Damian','Rębala',323423432,'Neurolog',1,874457, 'damianrebala@przychodnia.pl');
-INSERT INTO `lekarze` VALUES (4,'Daniel','Kęsy',987654567,'Kardiolog',1,923456, 'danielkesy@przychodnia.pl');
-INSERT INTO `lekarze` VALUES (5,'Rafał','Chmiel',987654367,'Internista',1,236576, 'rchmiel@przychodnia.pl');
-INSERT INTO `lekarze` VALUES (7,'Jan','Kowalski',987654321,'Laryngolog',1,111111, 'kowalski22@przychodnia.pl');
+INSERT INTO `lekarze` VALUES (4,'Daniel','Kęsy',987654567,'Kardiolog',1,923456, 'kesydaniel@przychodnia.pl');
+INSERT INTO `lekarze` VALUES (5,'Rafał','Chmiel',987654367,'Internista',1,236576, 'chmiel223@przychodnia.pl');
+INSERT INTO `lekarze` VALUES (7,'Jan','Kowalski',987654321,'Laryngolog',1,33335253, 'kowalski82@przychodnia.pl');
 /*!40000 ALTER TABLE `lekarze` ENABLE KEYS */;
 UNLOCK TABLES;
+
+
+
 
 --
 -- Table structure for table `pacjenci`
@@ -133,7 +198,7 @@ CREATE TABLE `pacjenci` (
   `Nazwisko` varchar(64) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
   `Telefon` int NOT NULL,
   `Adres_ID` int NOT NULL,
-  `PESEL` int NOT NULL,
+  `PESEL` bigint NOT NULL,
   `e_mail` varchar(255) NOT NULL,
   PRIMARY KEY (`Pacjent_ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
@@ -145,12 +210,12 @@ CREATE TABLE `pacjenci` (
 
 LOCK TABLES `pacjenci` WRITE;
 /*!40000 ALTER TABLE `pacjenci` DISABLE KEYS */;
-INSERT INTO `pacjenci` VALUES (1,'Robert','Pyzdra',454573423,1,312354, 'rkot@przychodnia.pl');
-INSERT INTO `pacjenci` VALUES (2,'Michał','Świtał',763233432,1,67454, 'rkot@przychodnia.pl');
-INSERT INTO `pacjenci` VALUES (3,'Michalina','Głowacka',98753343,2,96346, 'rkot@przychodnia.pl');
-INSERT INTO `pacjenci` VALUES (4,'Martyna','Rąbala',56235543,3,96347, 'rkot@przychodnia.pl');
-INSERT INTO `pacjenci` VALUES (5,'Bogumiła','Luba',84456742,4,96345, 'rkot@przychodnia.pl');
-INSERT INTO `pacjenci` VALUES (6,'Piotr','Nowak',654987321,2,222222, 'rkot@przychodnia.pl');
+INSERT INTO `pacjenci` VALUES (1,'Robert','Pyzdra',454573423,1,312354, 'rpyzdra@przychodnia.pl');
+INSERT INTO `pacjenci` VALUES (2,'Michał','Świtał',763233432,1,67454, 'mswital@przychodnia.pl');
+INSERT INTO `pacjenci` VALUES (3,'Michalina','Głowacka',98753343,2,96346, 'michglowacka@przychodnia.pl');
+INSERT INTO `pacjenci` VALUES (4,'Martyna','Rąbala',56235543,3,96347, 'rabala22@przychodnia.pl');
+INSERT INTO `pacjenci` VALUES (5,'Bogumiła','Luba',84456742,4,96345, 'bluba223@przychodnia.pl');
+INSERT INTO `pacjenci` VALUES (6,'Piotr','Nowak',654987321,2,2222221122, 'nowak293@przychodnia.pl');
 /*!40000 ALTER TABLE `pacjenci` ENABLE KEYS */;
 UNLOCK TABLES;
 
