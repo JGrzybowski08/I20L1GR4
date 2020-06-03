@@ -34,9 +34,7 @@ public class ModelZobaczLekarzy {
         return pesel;
     }
 
-    public String getE_mail() {
-        return e_mail;
-    }
+    public String getE_mail() { return e_mail; }
 
     @Override
     public boolean equals(Object o) {

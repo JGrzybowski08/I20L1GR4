@@ -24,7 +24,7 @@
                 <TableColumn fx:id="Kol_Telefon" prefWidth="88.0" text="Telefon" />
                 <TableColumn fx:id="Kol_Specjalizacja" prefWidth="124.0" text="Specjalizacja" />
                 <TableColumn fx:id="Kol_Pesel" prefWidth="113.0" text="Pesel" />
-                <TableColumn fx:id="Kol_Email" prefWidth="113.0" text="eMail" />
+                <TableColumn fx:id="Kol_Email" prefWidth="113.0" text="e-mail" />
             </columns>
         </TableView>
         <Button id="ExitBT" fx:id="Wyjdz" mnemonicParsing="false" onAction="#handleExitBTAction" prefHeight="35.0" prefWidth="78.0" styleClass="loginBtn" text="Wyjdź" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">

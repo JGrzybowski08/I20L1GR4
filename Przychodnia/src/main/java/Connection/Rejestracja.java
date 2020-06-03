@@ -66,7 +66,7 @@ public class Rejestracja {
             stt2.execute();
 
 
-            System.out.println("Pacjent dodany");
+            System.out.println("Lekarz dodany");
 
 
             con.close();

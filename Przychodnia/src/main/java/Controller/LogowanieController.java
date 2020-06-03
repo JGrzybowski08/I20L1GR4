@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.PasswordField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -30,7 +31,7 @@ public class LogowanieController {
     public TextField LoginTF;
 
     @FXML
-    public TextField HasloTF;
+    public PasswordField HasloTF;
 
     static int Login;
     static String Haslo;

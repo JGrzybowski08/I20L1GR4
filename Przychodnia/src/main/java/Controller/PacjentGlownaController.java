@@ -61,8 +61,8 @@ public class PacjentGlownaController implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/ZobaczWizyty.fxml"));
             Parent root = (Parent) loader.load();
 
-            ZobaczWizytyController ZWC = loader.getController();
-            ZWC.setID(ID);
+            //ZobaczWizytyController ZWC = loader.getController();
+           // ZWC.setID(ID);
 
             Stage ZobaczWizyty = (Stage) ((Node) event.getSource()).getScene().getWindow();
             ZobaczWizyty.setScene(new Scene(root));

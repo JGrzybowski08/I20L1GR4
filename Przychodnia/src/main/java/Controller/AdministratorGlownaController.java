@@ -20,13 +20,10 @@ public class AdministratorGlownaController {
     @FXML
     public Button SpisLekarzyBT;
     @FXML
-    public Button HistoriaWizytBT;
+    public Button ZobaczWizytyBT;
     @FXML
     public Button EdytujDaneBT;
-    @FXML
-    private Button DodajWizyteBT;
-    @FXML
-    private Button DodajLekarzaBT;
+
 
 
 
@@ -44,10 +41,10 @@ public class AdministratorGlownaController {
 
 
     @FXML
-    public void handleHistoriaWizytBTAction(ActionEvent event) throws IOException {
-        FXMLLoader HW = new FXMLLoader(getClass().getResource("/HistoriaWizyt.fxml"));
+    public void handleZobaczWizytyBTAction(ActionEvent event) throws IOException {
+        FXMLLoader HW = new FXMLLoader(getClass().getResource("/ZobaczWizyty.fxml"));
         Stage HistoriaWizyt = new Stage();
-        HistoriaWizyt.initOwner(HistoriaWizytBT.getScene().getWindow());
+        HistoriaWizyt.initOwner(ZobaczWizytyBT.getScene().getWindow());
         HistoriaWizyt.setScene(new Scene((Parent) HW.load()));
 
         HistoriaWizyt.showAndWait();

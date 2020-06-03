@@ -42,105 +42,82 @@ VALUES (10, 'Braci Wagów','64/3A','53-136','Lubawa');
 
 /* Konta Administratorow */;
 INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
-VALUES (111111, 'qqq', 1, 0, 0);
+VALUES (111, '111', 1, 0, 0);
 /* Konta Administratorow */;
 
 /* Konta Lekarzy */;
 INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
-VALUES (222222, 'www', 0 ,1, 0);
+VALUES (35412342, 'www', 0 ,1, 0);
 
 INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
-VALUES (333333, 'eee', 0, 1 ,0);
+VALUES (345164, 'eee', 0, 1 ,0);
 
 INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
-VALUES (444444,'rrr',0,1,0);
+VALUES (874457,'rrr',0,1,0);
 
 INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
-VALUES (555555,'ttt',0,1,0);
+VALUES (923456,'ttt',0,1,0);
+
+INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
+VALUES (236576,'aaa',0,1,0);
+
+INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
+VALUES (33335253,'ghh',0,1,0);
 /* Konta Lekarzy */;
 
 /* Konta Pacjentow */;
 INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
-VALUES (666666,'yyy',0,0,1);
+VALUES (312354,'yyy',0,0,1);
 
 INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
-VALUES (777777,'uuu',0,0,1);
+VALUES (67454,'uuu',0,0,1);
 
 INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
-VALUES (888888,'iii',0,0,1);
+VALUES (96346,'iii',0,0,1);
 
 INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
-VALUES (9999999, 'ooo', 0, 0 ,1);
+VALUES (96347, 'ooo', 0, 0 ,1);
 
 INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
-VALUES (000000, 'ppp', 0, 0 ,1);
+VALUES (96345, 'ppp', 0, 0 ,1);
+
+INSERT INTO konta (Login, Haslo, Administrator, Lekarz, Pacjent)
+VALUES (22166122, 'ppp', 0, 0 ,1);
 /* Konta Pacjentow */;
 
 /* Konta ------------------------------------- */;
 
 
 /* Lekarze ----------------------------------- */;
-INSERT INTO lekarze (Lekarz_ID, Imie, Nazwisko, PESEL, Telefon, Adres_ID, Login, Specjalizacja)
-VALUES (1, 'Jan', 'Kowalski', 78806243129, 229496313, 1, 222222, 'Laryngolog');
-
-INSERT INTO lekarze (Lekarz_ID, Imie, Nazwisko, PESEL, Telefon, Adres_ID, Login, Specjalizacja)
-VALUES (2,'Roman','Kot', 30265613965, 945695014, 2, 333333,'Chirulg');
-
-INSERT INTO lekarze (Lekarz_ID, Imie, Nazwisko, PESEL, Telefon, Adres_ID, Login, Specjalizacja)
-VALUES (3,'Lew','Sapiecha', 79154873985, 866789889, 3, 444444,'Internista');
-
-INSERT INTO lekarze (Lekarz_ID, Imie, Nazwisko, PESEL, Telefon, Adres_ID, Login, Specjalizacja)
-VALUES (4,'Damian','Rębala', 88765210869, 273935893, 4, 555555,'Neurolog');
+INSERT INTO `lekarze` VALUES (1,'Roman','Kot',111123421,'Chirurg',1,35412342, 'rkot@przychodnia.pl');
+INSERT INTO `lekarze` VALUES (2,'Lew','Sapiecha',923654321,'Internista',1,345164, 'lewsapiecha@przychodnia.pl');
+INSERT INTO `lekarze` VALUES (3,'Damian','Rębala',323423432,'Neurolog',1,874457, 'damianrebala@przychodnia.pl');
+INSERT INTO `lekarze` VALUES (4,'Daniel','Kęsy',987654567,'Kardiolog',1,923456, 'kesydaniel@przychodnia.pl');
+INSERT INTO `lekarze` VALUES (5,'Rafał','Chmiel',987654367,'Internista',1,236576, 'chmiel223@przychodnia.pl');
+INSERT INTO `lekarze` VALUES (7,'Jan','Kowalski',987654321,'Laryngolog',1,33335253, 'kowalski82@przychodnia.pl');
 /* Lekarze ----------------------------------- */;
 
 /* Pacjenci ----------------------------------- */;
-INSERT INTO pacjenci (Pacjent_ID, Imie, Nazwisko, PESEL, Telefon, Adres_ID, Login)
-VALUES (1, 'Piotr', 'Nowak', 98765432198, 167509275, 5, 666666);
-
-INSERT INTO pacjenci (Pacjent_ID, Imie, Nazwisko, PESEL, Telefon, Adres_ID, Login)
-VALUES (2, 'Robert','Pyzdra', 63982857188, 433277143, 6, 777777);
-
-INSERT INTO pacjenci (Pacjent_ID, Imie, Nazwisko, PESEL, Telefon, Adres_ID, Login)
-VALUES (3, 'Michał','Świtał', 34824963990, 613104320, 7, 888888);
-
-INSERT INTO pacjenci (Pacjent_ID, Imie, Nazwisko, PESEL, Telefon, Adres_ID, Login)
-VALUES (4, 'Michalina','Głowacka', 66774899715, 308714943, 8, 999999);
-
-INSERT INTO pacjenci (Pacjent_ID, Imie, Nazwisko, PESEL, Telefon, Adres_ID, Login)
-VALUES (5, 'Martyna','Rąbala', 64147768997, 804711115, 9, 000000);
+INSERT INTO `pacjenci` VALUES (1,'Robert','Pyzdra',454573423,1,312354, 'rpyzdra@przychodnia.pl');
+INSERT INTO `pacjenci` VALUES (2,'Michał','Świtał',763233432,1,67454, 'mswital@przychodnia.pl');
+INSERT INTO `pacjenci` VALUES (3,'Michalina','Głowacka',98753343,2,96346, 'michglowacka@przychodnia.pl');
+INSERT INTO `pacjenci` VALUES (4,'Martyna','Rąbala',56235543,3,96347, 'rabala22@przychodnia.pl');
+INSERT INTO `pacjenci` VALUES (5,'Bogumiła','Luba',84456742,4,96345, 'bluba223@przychodnia.pl');
+INSERT INTO `pacjenci` VALUES (6,'Piotr','Nowak',654987321,2,22166122, 'nowak293@przychodnia.pl');
 
 /* Pacjenci ----------------------------------- */;
 
 /* Wizyty ----------------------------------- */;
-INSERT INTO wizyty (Wizyta_ID, Data, Godzina, Opis, Status, Pacjent_ID, Lekarz_ID)
-VALUES (1, '2020-03-10', '11:45:00', 'Wizyta1', 'Odwołana', 1, 1);
-
-INSERT INTO wizyty (Wizyta_ID, Data, Godzina, Opis, Status, Pacjent_ID, Lekarz_ID)
-VALUES (2, '2020-03-25', '15:15:00', 'Wizyta2', 'Zakończona', 2, 2);
-
-INSERT INTO wizyty (Wizyta_ID, Data, Godzina, Opis, Status, Pacjent_ID, Lekarz_ID)
-VALUES (3, '2020-03-30', '13:00:00', 'Wizyta3', 'Zakończona', 3, 2);
-
-INSERT INTO wizyty (Wizyta_ID, Data, Godzina, Opis, Status, Pacjent_ID, Lekarz_ID)
-VALUES (4, '2020-04-14', '09:00:00', 'Wizyta4', 'Odwołana', 4, 3);
-
-INSERT INTO wizyty (Wizyta_ID, Data, Godzina, Opis, Status, Pacjent_ID, Lekarz_ID)
-VALUES (5, '2020-04-19', '10:30:00', 'Wizyta5', 'Zakończona', 5, 4);
-
-INSERT INTO wizyty (Wizyta_ID, Data, Godzina, Opis, Status, Pacjent_ID, Lekarz_ID)
-VALUES (6, '2020-04-27', '11:45:00', 'Wizyta6', 'Odwołana', 1, 4);
-
-INSERT INTO wizyty (Wizyta_ID, Data, Godzina, Opis, Status, Pacjent_ID, Lekarz_ID)
-VALUES (7, '2020-05-10', '14:00:00', 'Wizyta7', 'Zakończona', 2, 3);
-
-INSERT INTO wizyty (Wizyta_ID, Data, Godzina, Opis, Status, Pacjent_ID, Lekarz_ID)
-VALUES (8, '2020-05-25', '13:45:00', 'Wizyta8', 'Oczekująca', 3, 2);
-
-INSERT INTO wizyty (Wizyta_ID, Data, Godzina, Opis, Status, Pacjent_ID, Lekarz_ID)
-VALUES (9, '2020-05-29', '12:15:00', 'Wizyta9', 'Oczekująca', 4, 1);
-
-INSERT INTO wizyty (Wizyta_ID, Data, Godzina, Opis, Status, Pacjent_ID, Lekarz_ID)
-VALUES (10, '2020-06-05', '11:00:00', 'Wizyta10', 'Oczekująca', 5, 1);
+INSERT INTO `wizyty` VALUES (1,'2020-03-10','12:30:00','Test uzębienia','Trwa',2,2);
+INSERT INTO `wizyty` VALUES (2,'2020-06-12','12:30:00','Test nogi','Przełożona',3,1);
+INSERT INTO `wizyty` VALUES (3,'2020-04-01','12:30:00','Test ramienia','Wygasła',4,1);
+INSERT INTO `wizyty` VALUES (4,'2020-07-17','12:30:00','Test głowy','Umówiona',4,3);
+INSERT INTO `wizyty` VALUES (5,'2020-03-10','12:30:00','Test','Oczekuj?ca',1,1);
+INSERT INTO `wizyty` VALUES (6,'2020-06-22','12:30:00','Test nadgarstka','Oczekująca',2,5);
+INSERT INTO `wizyty` VALUES (7,'2020-06-22','12:30:00','Omówienie zmian','Oczekująca',3,6);
+INSERT INTO `wizyty` VALUES (8,'2020-06-22','12:30:00','Boli kolano','Oczekująca',5,4);
+INSERT INTO `wizyty` VALUES (9,'2020-06-22','12:30:00','Złamany palec','Oczekująca',1,2);
+INSERT INTO `wizyty` VALUES (10,'2020-06-22','12:30:00','Test piszczela','Oczekująca',1,1);
 
 /* Wizyty ----------------------------------- */;
 

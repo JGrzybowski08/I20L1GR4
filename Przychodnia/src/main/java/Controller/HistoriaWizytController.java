@@ -47,7 +47,7 @@ public class HistoriaWizytController implements Initializable {
         Kol_Opis.setCellValueFactory(new PropertyValueFactory<>("Opis"));
         Kol_Status.setCellValueFactory(new PropertyValueFactory<>("Status"));
 
-        WizytyTV.setItems(HistoriaWizyt.WizytyGet(ID));
+        WizytyTV.setItems(HistoriaWizyt.ZobaczWizytyGet());
     }
 
     @FXML

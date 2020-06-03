@@ -22,6 +22,7 @@
                 <TableColumn fx:id="Kol_Data" prefWidth="75.0" text="Data" />
                 <TableColumn fx:id="Kol_Godzina" prefWidth="75.0" text="Godzina" />
                 <TableColumn fx:id="Kol_Lekarz" prefWidth="88.0" text="Lekarz" />
+                <TableColumn fx:id="Kol_Pacjent" prefWidth="88.0" text="Pacjent" />
                 <TableColumn fx:id="Kol_Opis" prefWidth="124.0" text="Opis" />
                 <TableColumn fx:id="Kol_Status" prefWidth="113.0" text="Status" />
             </columns>
