@@ -1,4 +1,4 @@
-package Connection;
+/*package Connection;
 
 import Models.ModelZobaczLekarzy;
 import javafx.beans.InvalidationListener;
@@ -227,4 +227,4 @@ public class SpisLekarzyTest {
 
         // then
     }
-}
+}*/

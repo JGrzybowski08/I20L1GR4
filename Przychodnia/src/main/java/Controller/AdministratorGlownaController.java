@@ -54,12 +54,10 @@ public class AdministratorGlownaController {
 
     @FXML
     public void handleSpisLekarzyBTAction(ActionEvent event) throws IOException {
-        FXMLLoader HW = new FXMLLoader(getClass().getResource("/SpisLekarzy.fxml"));
-        Stage HistoriaWizyt = new Stage();
-        HistoriaWizyt.initOwner(SpisLekarzyBT.getScene().getWindow());
-        HistoriaWizyt.setScene(new Scene((Parent) HW.load()));
-
-        HistoriaWizyt.showAndWait();
+        Parent SL = FXMLLoader.load(getClass().getResource("/SpisLekarzy.fxml"));
+        Stage SpisLekarzy = (Stage)((Node)event.getSource()).getScene().getWindow();
+        SpisLekarzy.setScene(new Scene(SL));
+        SpisLekarzy.show();
 
     }
 
