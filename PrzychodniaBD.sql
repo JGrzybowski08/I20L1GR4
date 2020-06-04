@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 19 Kwi 2020, 18:39
+-- Czas generowania: 04 Cze 2020, 01:58
 -- Wersja serwera: 10.3.15-MariaDB
 -- Wersja PHP: 7.3.6
 
@@ -36,15 +36,6 @@ CREATE TABLE `adresy` (
   `Miejscowosc` varchar(64) COLLATE utf8_polish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
---
--- Zrzut danych tabeli `adresy`
---
-
-INSERT INTO `adresy` (`Adres_ID`, `Ulica`, `Nr_domu`, `Kod_pocztowy`, `Miejscowosc`) VALUES
-(28, 'Okulickiego', '22', '37-450', 'Stalowa Wola'),
-(29, 'Poniatowskiego', '44', '44-444', '?ód?'),
-(30, 'Rejtana', '99', '33-401', 'Rzeszów');
-
 -- --------------------------------------------------------
 
 --
@@ -59,15 +50,6 @@ CREATE TABLE `konta` (
   `Pacjent` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
---
--- Zrzut danych tabeli `konta`
---
-
-INSERT INTO `konta` (`Login`, `Haslo`, `Administrator`, `Lekarz`, `Pacjent`) VALUES
-(111111, 'qqq', 0, 1, 0),
-(222222, 'www', 0, 0, 1),
-(333333, 'eee', 1, 0, 0);
-
 -- --------------------------------------------------------
 
 --
@@ -78,19 +60,13 @@ CREATE TABLE `lekarze` (
   `Lekarz_ID` int(11) NOT NULL,
   `Imie` varchar(64) COLLATE utf8_polish_ci NOT NULL,
   `Nazwisko` varchar(64) COLLATE utf8_polish_ci NOT NULL,
-  `PESEL` bigint(11) NOT NULL,
+  `Email` varchar(128) COLLATE utf8_polish_ci NOT NULL,
+  `PESEL` bigint(20) NOT NULL,
   `Telefon` int(9) NOT NULL,
+  `Specjalizacja` varchar(64) COLLATE utf8_polish_ci NOT NULL,
   `Adres_ID` int(11) NOT NULL,
-  `Login` int(11) NOT NULL,
-  `Specjalizacja` varchar(64) COLLATE utf8_polish_ci NOT NULL
+  `Login` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
-
---
--- Zrzut danych tabeli `lekarze`
---
-
-INSERT INTO `lekarze` (`Lekarz_ID`, `Imie`, `Nazwisko`, `PESEL`, `Telefon`, `Specjalizacja`, `Adres_ID`, `Login`) VALUES
-(7, 'Jan', 'Kowalski', 12345678912, 987654321, 'Laryngolog', 1, 111111);
 
 -- --------------------------------------------------------
 
@@ -102,18 +78,11 @@ CREATE TABLE `pacjenci` (
   `Pacjent_ID` int(11) NOT NULL,
   `Imie` varchar(64) COLLATE utf8_polish_ci NOT NULL,
   `Nazwisko` varchar(64) COLLATE utf8_polish_ci NOT NULL,
-  `PESEL` bigint(11) NOT NULL,
-  `Telefon` int(9) NOT NULL,
+  `PESEL` bigint(20) NOT NULL,
+  `Telefon` int(11) NOT NULL,
   `Adres_ID` int(11) NOT NULL,
   `Login` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
-
---
--- Zrzut danych tabeli `pacjenci`
---
-
-INSERT INTO `pacjenci` (`Pacjent_ID`, `Imie`, `Nazwisko`, `PESEL`, `Telefon`, `Adres_ID`, `Login`) VALUES
-(6, 'Piotr', 'Nowak', 98765432198, 654987321, 2, 222222);
 
 -- --------------------------------------------------------
 
@@ -123,20 +92,13 @@ INSERT INTO `pacjenci` (`Pacjent_ID`, `Imie`, `Nazwisko`, `PESEL`, `Telefon`, `A
 
 CREATE TABLE `wizyty` (
   `Wizyta_ID` int(11) NOT NULL,
-  `Data` date NOT NULL,
-  `Godzina` time NOT NULL,
+  `Data` varchar(10) COLLATE utf8_polish_ci NOT NULL,
+  `Godzina` varchar(8) COLLATE utf8_polish_ci NOT NULL,
   `Opis` varchar(128) COLLATE utf8_polish_ci NOT NULL,
   `Status` varchar(64) COLLATE utf8_polish_ci NOT NULL,
   `Pacjent_ID` int(11) NOT NULL,
   `Lekarz_ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
-
---
--- Zrzut danych tabeli `wizyty`
---
-
-INSERT INTO `wizyty` (`Wizyta_ID`, `Data`, `Godzina`, `Opis`, `Status`, `Pacjent_ID`, `Lekarz_ID`) VALUES
-(5, '2020-03-10', '12:30:00', 'Test', 'Oczekuj?ca', 1, 1);
 
 --
 -- Indeksy dla zrzutów tabel
@@ -180,31 +142,25 @@ ALTER TABLE `wizyty`
 -- AUTO_INCREMENT dla tabeli `adresy`
 --
 ALTER TABLE `adresy`
-  MODIFY `Adres_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
-
---
--- AUTO_INCREMENT dla tabeli `konta`
---
-ALTER TABLE `konta`
-  MODIFY `Login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=333334;
+  MODIFY `Adres_ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT dla tabeli `lekarze`
 --
 ALTER TABLE `lekarze`
-  MODIFY `Lekarz_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `Lekarz_ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT dla tabeli `pacjenci`
 --
 ALTER TABLE `pacjenci`
-  MODIFY `Pacjent_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `Pacjent_ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT dla tabeli `wizyty`
 --
 ALTER TABLE `wizyty`
-  MODIFY `Wizyta_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `Wizyta_ID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
