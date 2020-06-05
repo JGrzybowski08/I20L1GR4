@@ -1,6 +1,6 @@
 package Connection;
 
-import Models.ModelZobaczWizyty;
+import Models.ModelSpisWizyt;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -10,8 +10,8 @@ import java.sql.SQLException;
 
 
 public class ZobaczWizyty {
-    public static ObservableList<ModelZobaczWizyty> ZobaczWizytyGet() {
-        ObservableList<ModelZobaczWizyty> oblist = FXCollections.observableArrayList();
+    public static ObservableList<ModelSpisWizyt> ZobaczWizytyGet() {
+        ObservableList<ModelSpisWizyt> oblist = FXCollections.observableArrayList();
         try {
             Connection con = Polaczenie.Connect();
             ResultSet rs = con.createStatement().executeQuery(
@@ -19,7 +19,7 @@ public class ZobaczWizyty {
             );
 
             while (rs.next()) {
-                oblist.add(new ModelZobaczWizyty(
+                oblist.add(new ModelSpisWizyt(
                         rs.getString("Data"),
                         rs.getString("Godzina"),
                         rs.getString("Lekarz"),

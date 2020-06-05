@@ -2,12 +2,12 @@ package Models;
 
 import java.util.Objects;
 
-public class ModelZobaczLekarzy {
+public class ModelSpisLekarzy {
     private final String Imie, Nazwisko, Email, Specjalizacja, Numer_Domu, Kod_Pocztowy, Miejscowosc, Ulica;
     private final long Pesel;
     private final int Telefon;
 
-    public ModelZobaczLekarzy(String imie, String nazwisko, String email, long pesel, int telefon, String specjalizacja,String kod_pocztowy, String miejscowosc, String ulica, String nr_domu) {
+    public ModelSpisLekarzy(String imie, String nazwisko, String email, long pesel, int telefon, String specjalizacja, String kod_pocztowy, String miejscowosc, String ulica, String nr_domu) {
         this.Imie = imie;
         this.Nazwisko = nazwisko;
         this.Email = email;
@@ -65,7 +65,7 @@ public class ModelZobaczLekarzy {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ModelZobaczLekarzy that = (ModelZobaczLekarzy) o;
+        ModelSpisLekarzy that = (ModelSpisLekarzy) o;
         return Objects.equals(Pesel, that.Pesel);
     }
 

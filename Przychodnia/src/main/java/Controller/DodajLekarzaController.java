@@ -1,15 +1,12 @@
 package Controller;
 
 
-import Exceptions.RegisterException;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -85,7 +82,7 @@ public class DodajLekarzaController {
 
     @FXML
     public void handleBackBTAction(MouseEvent event) throws IOException {
-        Parent AG = FXMLLoader.load(getClass().getResource("/AdministratorGlowna.fxml"));
+        Parent AG = FXMLLoader.load(getClass().getResource("/AdministratorFXML/AdministratorGlowna.fxml"));
         Stage AdministratorGlowna = (Stage)((Node)event.getSource()).getScene().getWindow();
         AdministratorGlowna.setScene(new Scene(AG));
         AdministratorGlowna.show();

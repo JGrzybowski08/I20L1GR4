@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -8,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="943.0" stylesheets="@Styles/style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SpisLekarzyController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="943.0" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SpisLekarzyController">
    <children>
       <Pane prefHeight="66.0" prefWidth="943.0" style="-fx-background-color: #48A5EA;">
          <children>
@@ -39,5 +41,9 @@
         </columns>
       </TableView>
       <JFXButton layoutX="33.0" layoutY="558.0" onAction="#handleExitBTAction" prefHeight="46.0" prefWidth="133.0" style="-fx-background-color: #48A5EA;" text="Wróć" textFill="WHITE" />
+      <JFXComboBox fx:id="FiltrCB" layoutX="229.0" layoutY="567.0" prefHeight="37.0" prefWidth="148.0" />
+      <JFXButton fx:id="FiltrujBT" layoutX="652.0" layoutY="558.0" onAction="#handleFiltrujBTAction" prefHeight="46.0" prefWidth="133.0" style="-fx-background-color: #48A5EA;" text="Filtruj" textFill="WHITE" />
+      <JFXTextField fx:id="FiltrTF" layoutX="389.0" layoutY="567.0" prefHeight="37.0" prefWidth="233.0" promptText="Filtr" stylesheets="@../Styles/style.css" />
+      <JFXButton fx:id="WyczyscFiltrBT" layoutX="799.0" layoutY="558.0" onAction="#handleWyczyscFiltrBTAction" prefHeight="46.0" prefWidth="133.0" style="-fx-background-color: #48A5EA;" text="Wyczyść Filtr" textFill="WHITE" />
    </children>
 </AnchorPane>

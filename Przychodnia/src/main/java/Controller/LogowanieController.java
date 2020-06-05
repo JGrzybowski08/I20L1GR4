@@ -61,7 +61,7 @@ public class LogowanieController {
         switch (Konto_Up) {
             case "Administrator":
                 try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/AdministratorGlowna.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/AdministratorFXML/AdministratorGlowna.fxml"));
                     Parent root = (Parent) loader.load();
                     Stage AdministratorGlowna = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     AdministratorGlowna.setScene(new Scene(root));

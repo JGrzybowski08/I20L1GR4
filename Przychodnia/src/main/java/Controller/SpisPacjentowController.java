@@ -1,7 +1,8 @@
 package Controller;
 
 import Connection.SpisLekarzy;
-import Models.ModelSpisLekarzy;
+import Connection.SpisPacjentow;
+import Models.ModelSpisPacjentow;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +10,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -17,21 +21,17 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SpisLekarzyController implements Initializable {
+public class SpisPacjentowController implements Initializable {
 
-    public TableView<ModelSpisLekarzy> SpisLekarzyTV;
-    public TableColumn<ModelSpisLekarzy, String> ImieTC;
-    public TableColumn<ModelSpisLekarzy, String> NazwiskoTC;
-    public TableColumn<ModelSpisLekarzy, String> EMailTC;
-    public TableColumn<ModelSpisLekarzy, Long> PeselTC;
-    public TableColumn<ModelSpisLekarzy, Integer> TelefonTC;
-    public TableColumn<ModelSpisLekarzy, String> SpecjalizacjaTC;
-    public TableColumn<ModelSpisLekarzy, String> KodPocztowyTC;
-    public TableColumn<ModelSpisLekarzy, String> MiejscowoscTC;
-    public TableColumn<ModelSpisLekarzy, String> UlicaTC;
-    public TableColumn<ModelSpisLekarzy, String> NumerDomuTC;
-
-    private Button ExitBT;
+    public TableView<ModelSpisPacjentow> SpisLekarzyTV;
+    public TableColumn<ModelSpisPacjentow, String> ImieTC;
+    public TableColumn<ModelSpisPacjentow, String> NazwiskoTC;
+    public TableColumn<ModelSpisPacjentow, Long> PeselTC;
+    public TableColumn<ModelSpisPacjentow, Integer> TelefonTC;
+    public TableColumn<ModelSpisPacjentow, String> KodPocztowyTC;
+    public TableColumn<ModelSpisPacjentow, String> MiejscowoscTC;
+    public TableColumn<ModelSpisPacjentow, String> UlicaTC;
+    public TableColumn<ModelSpisPacjentow, String> NumerDomuTC;
 
     public ComboBox<String> FiltrCB;
 
@@ -42,12 +42,11 @@ public class SpisLekarzyController implements Initializable {
         wypelnijTabele();
         wypelnijCB();
     }
-
     @FXML
     public void handleFiltrujBTAction(ActionEvent event){
         SpisLekarzyTV.getItems().clear();
 
-        SpisLekarzyTV.setItems(SpisLekarzy.FiltrowaniLekarzeGet(FiltrCB.getValue(), FiltrTF.getText() ));
+        SpisLekarzyTV.setItems(SpisPacjentow.FiltrowaniPacjenciGet(FiltrCB.getValue(), FiltrTF.getText() ));
     }
 
     @FXML
@@ -68,17 +67,15 @@ public class SpisLekarzyController implements Initializable {
     public void wypelnijTabele(){
         ImieTC.setCellValueFactory(new PropertyValueFactory<>("Imie"));
         NazwiskoTC.setCellValueFactory(new PropertyValueFactory<>("Nazwisko"));
-        EMailTC.setCellValueFactory(new PropertyValueFactory<>("Email"));
         PeselTC.setCellValueFactory(new PropertyValueFactory<>("Pesel"));
         TelefonTC.setCellValueFactory(new PropertyValueFactory<>("Telefon"));
-        SpecjalizacjaTC.setCellValueFactory(new PropertyValueFactory<>("Specjalizacja"));
         KodPocztowyTC.setCellValueFactory(new PropertyValueFactory<>("Kod_Pocztowy"));
         MiejscowoscTC.setCellValueFactory(new PropertyValueFactory<>("Miejscowosc"));
         UlicaTC.setCellValueFactory(new PropertyValueFactory<>("Ulica"));
         NumerDomuTC.setCellValueFactory(new PropertyValueFactory<>("Numer_Domu"));
 
 
-        SpisLekarzyTV.setItems(SpisLekarzy.WszyscyLekarzeGet());
+        SpisLekarzyTV.setItems(SpisPacjentow.WszyscyPacjenciGet());
     }
 
     public void wypelnijCB(){
@@ -86,10 +83,8 @@ public class SpisLekarzyController implements Initializable {
         FiltrCB.getItems().addAll(
                 "Imie",
                 "Nazwisko",
-                "Email",
                 "PESEL",
                 "Telefon",
-                "Specjalizacja",
                 "Kod pocztowy",
                 "Miejscowość",
                 "Ulica",
@@ -97,5 +92,4 @@ public class SpisLekarzyController implements Initializable {
         FiltrCB.getSelectionModel().select(0);
 
     }
-
 }

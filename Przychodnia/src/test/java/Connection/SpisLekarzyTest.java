@@ -1,6 +1,6 @@
 /*package Connection;
 
-import Models.ModelZobaczLekarzy;
+import Models.ModelSpisLekarzy;
 import javafx.beans.InvalidationListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
@@ -165,8 +165,8 @@ public class SpisLekarzyTest {
             }
 
             @Override
-            public ModelZobaczLekarzy[] toArray(Object[] a) {
-                return new ModelZobaczLekarzy[0];
+            public ModelSpisLekarzy[] toArray(Object[] a) {
+                return new ModelSpisLekarzy[0];
             }
 
             @Override

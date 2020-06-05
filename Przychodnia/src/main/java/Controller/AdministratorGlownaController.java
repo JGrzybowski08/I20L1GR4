@@ -29,54 +29,40 @@ public class AdministratorGlownaController {
 
 
     @FXML
-    public void handleEdytujWizyteBTAction(ActionEvent event) throws IOException {
-        FXMLLoader EW = new FXMLLoader(getClass().getResource("/EdytujWizyte.fxml"));
-        Stage EdytujWizyte = new Stage();
-        EdytujWizyte.initOwner(EdytujWizytyBT.getScene().getWindow());
-        EdytujWizyte.setScene(new Scene((Parent) EW.load()));
-
-        EdytujWizyte.showAndWait();
+    public void handleSpisPacjentowBTAction(ActionEvent event) throws IOException {
+        Parent SP = FXMLLoader.load(getClass().getResource("/AdministratorFXML/SpisPacjentow.fxml"));
+        Stage SpisPacjentow = (Stage)((Node)event.getSource()).getScene().getWindow();
+        SpisPacjentow.setScene(new Scene(SP));
+        SpisPacjentow.show();
 
     }
 
 
     @FXML
-    public void handleZobaczWizytyBTAction(ActionEvent event) throws IOException {
-        FXMLLoader HW = new FXMLLoader(getClass().getResource("/ZobaczWizyty.fxml"));
-        Stage HistoriaWizyt = new Stage();
-        HistoriaWizyt.initOwner(ZobaczWizytyBT.getScene().getWindow());
-        HistoriaWizyt.setScene(new Scene((Parent) HW.load()));
-
-        HistoriaWizyt.showAndWait();
-
+    public void handleSpisWizytBTAction(ActionEvent event) throws IOException {
+        Parent SW = FXMLLoader.load(getClass().getResource("/AdministratorFXML/SpisWizyt.fxml"));
+        Stage SpisWizyt = (Stage)((Node)event.getSource()).getScene().getWindow();
+        SpisWizyt.setScene(new Scene(SW));
+        SpisWizyt.show();
     }
 
 
     @FXML
     public void handleSpisLekarzyBTAction(ActionEvent event) throws IOException {
-        Parent SL = FXMLLoader.load(getClass().getResource("/SpisLekarzy.fxml"));
+        Parent SL = FXMLLoader.load(getClass().getResource("/AdministratorFXML/SpisLekarzy.fxml"));
         Stage SpisLekarzy = (Stage)((Node)event.getSource()).getScene().getWindow();
         SpisLekarzy.setScene(new Scene(SL));
         SpisLekarzy.show();
 
     }
 
-    @FXML
-    public void handleEdytujDaneBTAction(ActionEvent event) throws IOException {
-        FXMLLoader ED = new FXMLLoader(getClass().getResource("/EdytujDane.fxml"));
-        Stage EdytujDane = new Stage();
-        EdytujDane.initOwner(EdytujDaneBT.getScene().getWindow());
-        EdytujDane.setScene(new Scene((Parent) ED.load()));
-
-        EdytujDane.showAndWait();
-    }
 
     @FXML
     public void handleDodajLekarzaBTAction(ActionEvent event) throws IOException {
-        Parent dl = FXMLLoader.load(getClass().getResource("/DodajLekarza.fxml"));
-        Stage logowanie = (Stage)((Node)event.getSource()).getScene().getWindow();
-        logowanie.setScene(new Scene(dl));
-        logowanie.show();
+        Parent DL = FXMLLoader.load(getClass().getResource("/AdministratorFXML/DodajLekarza.fxml"));
+        Stage DodajLekarza = (Stage)((Node)event.getSource()).getScene().getWindow();
+        DodajLekarza.setScene(new Scene(DL));
+        DodajLekarza.show();
 
     }
 

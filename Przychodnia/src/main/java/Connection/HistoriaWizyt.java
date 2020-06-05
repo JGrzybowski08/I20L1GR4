@@ -1,6 +1,6 @@
 package Connection;
 
-import Models.ModelZobaczWizyty;
+import Models.ModelSpisWizyt;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -11,12 +11,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class HistoriaWizyt {
-    public static ObservableList<ModelZobaczWizyty> ZobaczWizytyGet() {
+    public static ObservableList<ModelSpisWizyt> ZobaczWizytyGet() {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         Date czasSys = new Date(System.currentTimeMillis());
 
 
-        ObservableList<ModelZobaczWizyty> oblist = FXCollections.observableArrayList();
+        ObservableList<ModelSpisWizyt> oblist = FXCollections.observableArrayList();
         try {
             Connection con = Polaczenie.Connect();
             ResultSet rs = con.createStatement().executeQuery(
@@ -26,7 +26,7 @@ public class HistoriaWizyt {
             );
 
             while (rs.next()) {
-                oblist.add(new ModelZobaczWizyty(
+                oblist.add(new ModelSpisWizyt(
                         rs.getString("Data"),
                         rs.getString("Godzina"),
                         rs.getString("lekarze.imie") + rs.getString("lekarze.nazwisko"),

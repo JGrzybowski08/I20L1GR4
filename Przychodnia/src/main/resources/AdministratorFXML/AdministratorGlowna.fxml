@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="943.0" style="-fx-background-color: blu;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdministratorGlownaController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="943.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdministratorGlownaController">
    <children>
       <Pane prefHeight="66.0" prefWidth="943.0" style="-fx-background-color: #48A5EA;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -28,7 +28,7 @@
 
          </children>
       </Pane>
-      <GridPane alignment="CENTER" hgap="10.0" layoutX="53.0" layoutY="131.0" prefHeight="360.0" prefWidth="692.0" stylesheets="@Styles/fullpackstyling.css" vgap="10.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="86.0">
+      <GridPane alignment="CENTER" hgap="10.0" layoutX="53.0" layoutY="131.0" prefHeight="360.0" prefWidth="692.0" stylesheets="@../Styles/fullpackstyling.css" vgap="10.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="86.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -51,7 +51,7 @@
                   <FontAwesomeIconView fill="#2d75e8" glyphName="GROUP" size="50" />
                </graphic>
             </Button>
-            <Button fx:id="ZobaczWizytyBT" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleZobaczWizytyBTAction" prefHeight="181.0" prefWidth="242.0" text="Wizyty" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button fx:id="SpisWizytBT" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleSpisWizytBTAction" prefHeight="181.0" prefWidth="242.0" text="Wizyty" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <graphic>
                   <FontAwesomeIconView fill="#2d75e8" glyphName="CALENDAR_CHECK_ALT" size="50" />
                </graphic>
@@ -64,15 +64,7 @@
                   <Insets />
                </GridPane.margin>
             </Button>
-            <Button fx:id="EdytujDaneBT" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleEdytujDaneBTAction" prefHeight="170.0" prefWidth="249.0" text="Edytuj Dane" GridPane.rowIndex="2">
-               <graphic>
-                  <FontAwesomeIconView fill="#2d75e8" glyphName="SLIDERS" size="50" />
-               </graphic>
-               <GridPane.margin>
-                  <Insets />
-               </GridPane.margin>
-            </Button>
-            <Button fx:id="GenerujRaportBT" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleGenerujRaportWizytBTAction" prefHeight="170.0" prefWidth="253.0" text="Generuj raport wizyt" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Button fx:id="GenerujRaportBT" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleGenerujRaportWizytBTAction" prefHeight="170.0" prefWidth="253.0" text="Generuj raport wizyt" GridPane.rowIndex="2">
                <graphic>
                   <FontAwesomeIconView fill="#2d75e8" glyphName="INDENT" size="50" />
                </graphic>
@@ -85,6 +77,11 @@
             <Button fx:id="WyczyscBazeBT" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleWyczyscBazeBTAction" prefHeight="170.0" prefWidth="249.0" text="Wyczyśc baze" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <graphic>
                   <FontAwesomeIconView fill="#2d75e8" glyphName="DATABASE" size="50" />
+               </graphic>
+            </Button>
+            <Button fx:id="SpisPacjentowBT" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleSpisPacjentowBTAction" prefHeight="170.0" prefWidth="249.0" text="Spis Pacjentów" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <graphic>
+                  <FontAwesomeIconView fill="#2d75e8" glyphName="GROUP" size="50" />
                </graphic>
             </Button>
          </children>

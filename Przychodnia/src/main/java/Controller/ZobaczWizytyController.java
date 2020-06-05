@@ -1,7 +1,7 @@
 package Controller;
 
 import Connection.ZobaczWizyty;
-import Models.ModelZobaczWizyty;
+import Models.ModelSpisWizyt;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -16,13 +16,13 @@ import java.util.ResourceBundle;
 public class ZobaczWizytyController implements Initializable {
 
 
-    public TableView<ModelZobaczWizyty> WizytyTV;
-    public TableColumn<ModelZobaczWizyty, String> Kol_Data;
-    public TableColumn<ModelZobaczWizyty, String> Kol_Godzina;
-    public TableColumn<ModelZobaczWizyty, String> Kol_Lekarz;
-    public TableColumn<ModelZobaczWizyty, String> Kol_Pacjent;
-    public TableColumn<ModelZobaczWizyty, String> Kol_Opis;
-    public TableColumn<ModelZobaczWizyty, String> Kol_Status;
+    public TableView<ModelSpisWizyt> WizytyTV;
+    public TableColumn<ModelSpisWizyt, String> Kol_Data;
+    public TableColumn<ModelSpisWizyt, String> Kol_Godzina;
+    public TableColumn<ModelSpisWizyt, String> Kol_Lekarz;
+    public TableColumn<ModelSpisWizyt, String> Kol_Pacjent;
+    public TableColumn<ModelSpisWizyt, String> Kol_Opis;
+    public TableColumn<ModelSpisWizyt, String> Kol_Status;
 
     @FXML
     private Button Wyjdz;
