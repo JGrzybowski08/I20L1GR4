@@ -42,7 +42,11 @@
 {
 -fx-text-inner-color: black;
 -fx-font-size:16px;
+}
 
+.jfx-password-field{
+-fx-text-inner-color: black;
+-fx-font-size:16px;
 }
 
 .jfx-date-picker .text-field{

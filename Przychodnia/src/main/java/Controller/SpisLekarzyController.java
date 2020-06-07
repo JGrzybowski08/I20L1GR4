@@ -1,6 +1,6 @@
 package Controller;
 
-import Connection.SpisLekarzy;
+import Connection.AdministratorCon.SpisLekarzy;
 import Models.ModelSpisLekarzy;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

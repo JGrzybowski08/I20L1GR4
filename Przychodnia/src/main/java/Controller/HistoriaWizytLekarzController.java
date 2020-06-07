@@ -1,6 +1,9 @@
 package Controller;
 
 import Connection.AdministratorCon.SpisWizyt;
+import Connection.LekarzCon.AktualneWizytyLekarz;
+import Connection.LekarzCon.HistoriaWizytLekarz;
+import Models.ModelAktualneWizytyLekarz;
 import Models.ModelSpisWizyt;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,19 +23,19 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SpisWizytController implements Initializable {
-
-    public TableView<ModelSpisWizyt> SpisWizytTV;
+public class HistoriaWizytLekarzController implements Initializable {
+    public TableView<ModelAktualneWizytyLekarz> SpisWizytTV;
     public TableColumn<ModelSpisWizyt, String> DataTC;
     public TableColumn<ModelSpisWizyt, String> GodzinaTC;
     public TableColumn<ModelSpisWizyt, String> OpisTC;
     public TableColumn<ModelSpisWizyt, String> StatusTC;
     public TableColumn<ModelSpisWizyt, String> PacjentTC;
-    public TableColumn<ModelSpisWizyt, String> LekarzTC;
 
     public ComboBox FiltrCB;
 
     public TextField FiltrTF;
+
+    int LekarzID = LogowanieController.getKonto_ID();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -45,7 +48,7 @@ public class SpisWizytController implements Initializable {
     public void handleFiltrujBTAction(ActionEvent event){
         SpisWizytTV.getItems().clear();
 
-        SpisWizytTV.setItems(SpisWizyt.FiltrowaneWizytyGet((String) FiltrCB.getValue(), FiltrTF.getText() ));
+        SpisWizytTV.setItems(HistoriaWizytLekarz.FiltrowaneWizytyGet((String) FiltrCB.getValue(), FiltrTF.getText(), LekarzID ));
     }
 
     @FXML
@@ -56,7 +59,7 @@ public class SpisWizytController implements Initializable {
 
     @FXML
     public void handleExitBTAction(ActionEvent event) throws IOException {
-        Parent AG = FXMLLoader.load(getClass().getResource("/AdministratorFXML/AdministratorGlowna.fxml"));
+        Parent AG = FXMLLoader.load(getClass().getResource("/LekarzFXML/LekarzGlowna.fxml"));
         Stage AdministratorGlowna = (Stage)((Node)event.getSource()).getScene().getWindow();
         AdministratorGlowna.setScene(new Scene(AG));
         AdministratorGlowna.show();
@@ -69,9 +72,8 @@ public class SpisWizytController implements Initializable {
         OpisTC.setCellValueFactory(new PropertyValueFactory<>("Opis"));
         StatusTC.setCellValueFactory(new PropertyValueFactory<>("Status"));
         PacjentTC.setCellValueFactory(new PropertyValueFactory<>("Pacjent"));
-        LekarzTC.setCellValueFactory(new PropertyValueFactory<>("Lekarz"));
 
-        SpisWizytTV.setItems(SpisWizyt.WszystkieWizytyGet());
+        SpisWizytTV.setItems(HistoriaWizytLekarz.WszystkieWizytyGet(LekarzID));
     }
 
     public void wypelnijCB(){
@@ -81,10 +83,7 @@ public class SpisWizytController implements Initializable {
                 "Godzina",
                 "Opis",
                 "Status",
-                "Pacjent",
-                "Lekarz");
+                "Pacjent");
         FiltrCB.getSelectionModel().select(0);
-
     }
-
 }

@@ -1,6 +1,8 @@
 package Controller;
 
-import Connection.GenerujRaport;
+import Connection.AdministratorCon.CzyszczenieBazy;
+import Connection.AdministratorCon.GenerujRaport;
+import Connection.AdministratorCon.WypelnianieBazy;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +14,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ *
+ */
 public class AdministratorGlownaController {
     @FXML
     public Button LogoutBT;
@@ -56,7 +61,6 @@ public class AdministratorGlownaController {
 
     }
 
-
     @FXML
     public void handleDodajLekarzaBTAction(ActionEvent event) throws IOException {
         Parent DL = FXMLLoader.load(getClass().getResource("/AdministratorFXML/DodajLekarza.fxml"));
@@ -68,17 +72,17 @@ public class AdministratorGlownaController {
 
     @FXML
     public void handleWyczyscBazeBTAction(ActionEvent event){
-        Connection.CzyszczenieBazy.Wyczysc();
+        CzyszczenieBazy.Wyczysc();
     }
 
     @FXML
     public void handleWypelnijBazeBTAction(ActionEvent event){
-        Connection.WypelnianieBazy.Wypelnij();
+        WypelnianieBazy.Wypelnij();
     }
 
     @FXML
     public void handleLogoutBTAction(ActionEvent event) throws IOException {
-        Parent L = FXMLLoader.load(getClass().getResource("/Logowanie.fxml"));
+        Parent L = FXMLLoader.load(getClass().getResource("/GlownaFXML/Logowanie.fxml"));
         Stage Logowanie = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Logowanie.setScene(new Scene(L));
         Logowanie.show();

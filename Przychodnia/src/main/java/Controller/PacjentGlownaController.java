@@ -1,7 +1,6 @@
 package Controller;
 
 import Connection.Logowanie;
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -96,7 +95,7 @@ public class PacjentGlownaController implements Initializable {
 
     @FXML
     public void handleLogoutBTAction(ActionEvent event) throws IOException {
-        Parent L = FXMLLoader.load(getClass().getResource("/Logowanie.fxml"));
+        Parent L = FXMLLoader.load(getClass().getResource("GlownaFXML/Logowanie.fxml"));
         Stage Logowanie = (Stage)((Node)event.getSource()).getScene().getWindow();
         Logowanie.setScene(new Scene(L));
         Logowanie.show();

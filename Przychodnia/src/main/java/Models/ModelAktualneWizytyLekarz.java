@@ -1,15 +1,14 @@
 package Models;
 
-public class ModelSpisWizyt {
-    private final String Data, Godzina, Lekarz, Pacjent, Opis, Status;
+public class ModelAktualneWizytyLekarz {
+    private final String Data, Godzina, Pacjent, Opis, Status;
 
-    public ModelSpisWizyt(String data, String godzina, String opis, String status, String pacjent, String lekarz) {
+    public ModelAktualneWizytyLekarz(String data, String godzina, String opis, String status, String pacjent) {
         this.Data = data;
         this.Godzina = godzina;
         this.Opis = opis;
         this.Status = status;
         this.Pacjent = pacjent;
-        this.Lekarz = lekarz;
     }
 
     public String getData() {
@@ -30,10 +29,6 @@ public class ModelSpisWizyt {
 
     public String getPacjent() {
         return Pacjent;
-    }
-
-    public String getLekarz() {
-        return Lekarz;
     }
 
 }

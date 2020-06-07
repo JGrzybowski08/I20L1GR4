@@ -11,13 +11,21 @@ public class Logowanie {
     static String ImieNazwisko;
 
     public static int IdGet(int Login, String Haslo){
+        String Uprawnienia = UprawnieniaGet(Login, Haslo);
+        String sql = "";
+        if(Uprawnienia.equals("Pacjent")){
+            sql = "SELECT pacjenci.pacjent_id " +
+                    "FROM pacjenci, konta " +
+                    "WHERE (pacjenci.login = konta.login AND konta.login = "+ Login + " AND konta.haslo = '" + Haslo +"')";
+        }
+        if(Uprawnienia.equals("Lekarz")){
+            sql = "SELECT lekarze.lekarz_id " +
+                    "FROM lekarze, konta " +
+                    "WHERE (lekarze.login = konta.login AND konta.login = "+ Login + " AND konta.haslo = '" + Haslo +"')";
+        }
         try {
             Connection con = Polaczenie.Connect();
-            ResultSet rs = con.createStatement().executeQuery(
-                    "SELECT pacjenci.pacjent_id " +
-                    "FROM pacjenci, konta " +
-                     "WHERE (pacjenci.login = konta.login AND konta.login = "+ Login + " AND konta.haslo = '" + Haslo +"')"
-            );
+            ResultSet rs = con.createStatement().executeQuery(sql);
             while(rs.next()) {
                 pacjent_ID_Get = rs.getInt(1);
             }
@@ -82,5 +90,20 @@ public class Logowanie {
         }
         System.out.println(ImieNazwisko);
         return ImieNazwisko;
+    }
+
+    public static Boolean SprawdzHaslo(String Login, String Haslo){
+      try{
+          int LoginInt = Integer.parseInt(Login);
+          Connection con = Polaczenie.Connect();
+          ResultSet rs = con.createStatement().executeQuery("SELECT * FROM konta WHERE Login = " + LoginInt + " AND Haslo = '" + Haslo +"'");
+          if(rs.next()){
+              return true;
+          }else{
+              return false;
+          }
+      }catch(Exception e){
+          return false;
+      }
     }
 }

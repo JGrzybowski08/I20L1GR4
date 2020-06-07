@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="943.0" style="-fx-background-color: blu;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LekarzGlownaController">
+   <children>
+      <Pane prefHeight="66.0" prefWidth="943.0" style="-fx-background-color: #48A5EA;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="136.0" layoutY="105.0" text="School Mangement " textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="16.0" prefHeight="25.0" prefWidth="244.0" text="Przychodnia Familia" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="586.0" layoutY="22.0" prefHeight="25.0" prefWidth="244.0" text="Panel Lekarza" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="NazwaLL" layoutX="734.0" layoutY="24.0" prefHeight="25.0" prefWidth="134.0" text="username_doctor" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+
+         </children>
+      </Pane>
+      <GridPane alignment="CENTER" hgap="10.0" layoutX="53.0" layoutY="131.0" prefHeight="360.0" prefWidth="692.0" stylesheets="@../Styles/fullpackstyling.css" vgap="10.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="86.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button fx:id="HistoriaWizytBT" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleHistoriaWizytBTAction" prefHeight="181.0" prefWidth="242.0" text="Historia Wizyt" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <graphic>
+                  <FontAwesomeIconView fill="#2d75e8" glyphName="CALENDAR_CHECK_ALT" size="50" />
+               </graphic>
+            </Button>
+            <Button fx:id="LogoutBT" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleLogoutBTAction" prefHeight="181.0" prefWidth="242.0" text="Wyloguj" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <graphic>
+                  <FontAwesomeIconView fill="#2d75e8" glyphName="CLOSE" size="50" />
+               </graphic>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="EdytujDaneBt" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleEdytujDaneBTAction" prefHeight="170.0" prefWidth="257.0" text="Edytuj Dane" GridPane.rowIndex="2">
+               <graphic>
+                  <FontAwesomeIconView fill="#2d75e8" glyphName="SLIDERS" size="50" />
+               </graphic>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="EdytujWizytyBT" contentDisplay="TOP" mnemonicParsing="false"  prefHeight="170.0" prefWidth="253.0" text="Godziny pracy" GridPane.rowIndex="1">
+               <graphic>
+                  <FontAwesomeIconView fill="#2d75e8" glyphName="INDENT" size="50" />
+               </graphic>
+            </Button>
+            <Button fx:id="AktualneWizytyBT" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleAktualneWizytyBTAction" prefHeight="170.0" prefWidth="252.0" text="Aktualne Wizyty" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <graphic>
+                  <FontAwesomeIconView fill="#2d75e8" glyphName="CALENDAR_CHECK_ALT" size="50" />
+               </graphic>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

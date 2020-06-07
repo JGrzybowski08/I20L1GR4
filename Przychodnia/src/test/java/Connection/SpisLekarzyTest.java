@@ -1,5 +1,6 @@
-/*package Connection;
+package Connection;
 
+import Connection.AdministratorCon.SpisLekarzy;
 import Models.ModelSpisLekarzy;
 import javafx.beans.InvalidationListener;
 import javafx.collections.FXCollections;
@@ -227,4 +228,4 @@ public class SpisLekarzyTest {
 
         // then
     }
-}*/
+}

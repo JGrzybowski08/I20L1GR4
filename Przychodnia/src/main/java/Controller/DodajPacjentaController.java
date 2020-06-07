@@ -1,22 +1,23 @@
 package Controller;
 
-
-import Connection.AdministratorCon.DodajLekarza;
+import Connection.DodajPacjenta;
+import Exceptions.RegisterException;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.control.PasswordField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-
+import java.awt.event.ActionEvent;
 import java.io.IOException;
 
-public class DodajLekarzaController {
+
+public class DodajPacjentaController {
 
     Alert alertBlad = new Alert(Alert.AlertType.ERROR);
 
@@ -27,15 +28,11 @@ public class DodajLekarzaController {
     @FXML
     private TextField ImieTF;
     @FXML
-    private TextField EmailTF;
-    @FXML
     private TextField PeselTF;
     @FXML
     private TextField NazwiskoTF;
     @FXML
     private TextField TelefonTF;
-    @FXML
-    private TextField SpecjalizacjaTF;
     @FXML
     private PasswordField HasloPF;
     @FXML
@@ -50,21 +47,20 @@ public class DodajLekarzaController {
     private TextField NumerDomuTF;
 
 
+
     @FXML
-    public void handleDodawanieLekarzaBTAction(MouseEvent event) {
+    public void handleZarejestrujBTAction(MouseEvent event) {
 
         if(sprawdzPola()){
             alertBlad.setContentText(TrescBledu);
             alertBlad.showAndWait();
         }else{
-           System.out.println("Poszło wszystko!");
+            System.out.println("Poszło wszystko!");
 
             String Imie = ImieTF.getText();
             String Nazwisko = NazwiskoTF.getText();
-            String Email = EmailTF.getText();
             String Pesel = PeselTF.getText();
             String Telefon = TelefonTF.getText();
-            String Specjalizacja = SpecjalizacjaTF.getText();
             String Haslo = HasloPF.getText();
             String Miejscowosc = MiejscowoscTF.getText();
             String KodPocztowy = KodPocztowyTF.getText();
@@ -72,7 +68,7 @@ public class DodajLekarzaController {
             String NumerDomu = NumerDomuTF.getText();
 
             try {
-                if(DodajLekarza.Rejestruj(Imie, Nazwisko, Email, Pesel, Telefon, Specjalizacja, Haslo, Miejscowosc, KodPocztowy, Ulica, NumerDomu)){
+                if(DodajPacjenta.Rejestruj(Imie, Nazwisko, Pesel, Telefon, Haslo, Miejscowosc, KodPocztowy, Ulica, NumerDomu)){
                     handleBackBTAction(event);
                 }
             }catch(Exception e){
@@ -83,10 +79,10 @@ public class DodajLekarzaController {
 
     @FXML
     public void handleBackBTAction(MouseEvent event) throws IOException {
-        Parent AG = FXMLLoader.load(getClass().getResource("/AdministratorFXML/AdministratorGlowna.fxml"));
-        Stage AdministratorGlowna = (Stage)((Node)event.getSource()).getScene().getWindow();
-        AdministratorGlowna.setScene(new Scene(AG));
-        AdministratorGlowna.show();
+        Parent Re = FXMLLoader.load(getClass().getResource("/GlownaFXML/Logowanie.fxml"));
+        Stage logowanie = (Stage)((Node)event.getSource()).getScene().getWindow();
+        logowanie.setScene(new Scene(Re));
+        logowanie.show();
 
     }
 
@@ -107,11 +103,6 @@ public class DodajLekarzaController {
             WysBlad = true;
         }
 
-        if(EmailTF.getText().isEmpty()){
-            TrescBledu = TrescBledu + ("Pole e-mail jest puste!\n");
-            WysBlad = true;
-        }
-
         if(TelefonTF.getText().isEmpty()){
             TrescBledu = TrescBledu + ("Pole numer jest puste!\n");
             WysBlad = true;
@@ -129,11 +120,6 @@ public class DodajLekarzaController {
 
         if(PeselTF.getText().length() != 11){
             TrescBledu = TrescBledu + ("Pole PESEL ma złą długość!\n");
-            WysBlad = true;
-        }
-
-        if(SpecjalizacjaTF.getText().isEmpty()){
-            TrescBledu = TrescBledu + ("Pole specjalizacja jest puste!\n");
             WysBlad = true;
         }
 
