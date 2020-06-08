@@ -81,9 +81,9 @@ public class Logowanie {
         System.out.print("Testtowo: " + idl);
         try{
             Connection con = Polaczenie.Connect();
-            ResultSet rs = con.createStatement().executeQuery("SELECT Imie, Nazwisko FROM lekarze WHERE Lekarz_ID = " + idl);
+            ResultSet rs = con.createStatement().executeQuery("SELECT Imie, Nazwisko, Specjalizacja FROM lekarze WHERE Lekarz_ID = " + idl);
             while(rs.next()){
-                ImieNazwisko =  rs.getString(1) + " " + rs.getString(2);
+                ImieNazwisko =  rs.getString(1) + " " + rs.getString(2) + "     " + rs.getString(3);
             }
         }catch(Exception e){
             System.err.println(e);

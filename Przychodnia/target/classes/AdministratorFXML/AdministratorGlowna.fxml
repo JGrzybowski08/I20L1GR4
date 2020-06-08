@@ -74,7 +74,7 @@
                   <FontAwesomeIconView fill="#2d75e8" glyphName="DATABASE" size="50" />
                </graphic>
             </Button>
-            <Button fx:id="WyczyscBazeBT" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleWyczyscBazeBTAction" prefHeight="170.0" prefWidth="249.0" text="Wyczyśc baze" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button fx:id="WyczyscBazeBT" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleWyczyscBazeBTAction" prefHeight="170.0" prefWidth="249.0" text="Wyczyść baze" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <graphic>
                   <FontAwesomeIconView fill="#2d75e8" glyphName="DATABASE" size="50" />
                </graphic>

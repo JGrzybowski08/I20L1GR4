@@ -21,6 +21,8 @@ public class PacjentGlownaController implements Initializable {
     int ID;
 
     @FXML
+    private Button LogoutBT;
+    @FXML
     private Button DodajWizyteBT;
     @FXML
     private Button ZobaczWizytyBT;
@@ -57,7 +59,7 @@ public class PacjentGlownaController implements Initializable {
     public void handleZobaczWizytyBTAction(ActionEvent event) {
 
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/ZobaczWizyty.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/SpisWizytPacjent.fxml"));
             Parent root = (Parent) loader.load();
 
             //ZobaczWizytyController ZWC = loader.getController();
@@ -95,8 +97,8 @@ public class PacjentGlownaController implements Initializable {
 
     @FXML
     public void handleLogoutBTAction(ActionEvent event) throws IOException {
-        Parent L = FXMLLoader.load(getClass().getResource("GlownaFXML/Logowanie.fxml"));
-        Stage Logowanie = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Parent L = FXMLLoader.load(getClass().getResource("/GlownaFXML/Logowanie.fxml"));
+        Stage Logowanie = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Logowanie.setScene(new Scene(L));
         Logowanie.show();
 

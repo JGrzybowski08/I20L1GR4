@@ -35,7 +35,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <FontAwesomeIconView fill="WHITE" glyphName="TIMES" layoutX="888.0" layoutY="41.0" size="18" />
+
          </children>
       </Pane>
       <GridPane alignment="CENTER" hgap="10.0" layoutX="53.0" layoutY="131.0" prefHeight="360.0" prefWidth="692.0" stylesheets="@Styles/fullpackstyling.css" vgap="10.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="86.0">
@@ -65,7 +65,7 @@
                   <FontAwesomeIconView fill="#2d75e8" glyphName="CALENDAR_CHECK_ALT" size="50" />
                </graphic>
             </Button>
-            <Button fx:id="btnSettings" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleLogoutBTAction" prefHeight="181.0" prefWidth="242.0" text="Wyloguj" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button fx:id="LogoutBT" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleLogoutBTAction" prefHeight="181.0" prefWidth="242.0" text="Wyloguj" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <graphic>
                   <FontAwesomeIconView fill="#2d75e8" glyphName="CLOSE" size="50" />
                </graphic>

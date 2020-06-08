@@ -2,6 +2,7 @@ package Controller;
 
 import Connection.AdministratorCon.SpisWizyt;
 import Connection.LekarzCon.AktualneWizytyLekarz;
+import Connection.Logowanie;
 import Models.ModelAktualneWizytyLekarz;
 import Models.ModelSpisWizyt;
 import javafx.event.ActionEvent;
@@ -11,10 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -30,6 +28,9 @@ public class AktualneWizytyLekarzController implements Initializable {
     public TableColumn<ModelSpisWizyt, String> StatusTC;
     public TableColumn<ModelSpisWizyt, String> PacjentTC;
 
+    @FXML
+    Label NazwaLL;
+
     public ComboBox FiltrCB;
 
     public TextField FiltrTF;
@@ -41,6 +42,9 @@ public class AktualneWizytyLekarzController implements Initializable {
         wypelnijTabele();
 
         wypelnijCB();
+
+        NazwaLL.setText("");
+        NazwaLL.setText(Logowanie.ImieNazwiskoLekarzGet(LogowanieController.getKonto_ID()));
     }
 
     @FXML
@@ -59,9 +63,9 @@ public class AktualneWizytyLekarzController implements Initializable {
     @FXML
     public void handleExitBTAction(ActionEvent event) throws IOException {
         Parent AG = FXMLLoader.load(getClass().getResource("/LekarzFXML/LekarzGlowna.fxml"));
-        Stage AdministratorGlowna = (Stage)((Node)event.getSource()).getScene().getWindow();
-        AdministratorGlowna.setScene(new Scene(AG));
-        AdministratorGlowna.show();
+        Stage LekarzGlowna = (Stage)((Node)event.getSource()).getScene().getWindow();
+        LekarzGlowna.setScene(new Scene(AG));
+        LekarzGlowna.show();
 
     }
 
@@ -86,4 +90,6 @@ public class AktualneWizytyLekarzController implements Initializable {
         FiltrCB.getSelectionModel().select(0);
 
     }
+
+
 }

@@ -3,6 +3,7 @@ package Controller;
 import Connection.AdministratorCon.SpisWizyt;
 import Connection.LekarzCon.AktualneWizytyLekarz;
 import Connection.LekarzCon.HistoriaWizytLekarz;
+import Connection.Logowanie;
 import Models.ModelAktualneWizytyLekarz;
 import Models.ModelSpisWizyt;
 import javafx.event.ActionEvent;
@@ -12,10 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -31,6 +29,9 @@ public class HistoriaWizytLekarzController implements Initializable {
     public TableColumn<ModelSpisWizyt, String> StatusTC;
     public TableColumn<ModelSpisWizyt, String> PacjentTC;
 
+    @FXML
+    Label NazwaLL;
+
     public ComboBox FiltrCB;
 
     public TextField FiltrTF;
@@ -42,6 +43,9 @@ public class HistoriaWizytLekarzController implements Initializable {
         wypelnijTabele();
 
         wypelnijCB();
+
+        NazwaLL.setText("");
+        NazwaLL.setText(Logowanie.ImieNazwiskoLekarzGet(LogowanieController.getKonto_ID()));
     }
 
     @FXML
