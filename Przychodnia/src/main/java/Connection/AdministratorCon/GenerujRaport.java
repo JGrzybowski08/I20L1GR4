@@ -7,9 +7,17 @@ import java.util.List;
 import PdfGenerator.Generator;
 import Connection.Polaczenie;
 
+/**
+ * Klasa GenerujRaport, obsługująca generowanie raportów PDF z danych z bazy.
+ */
 
 public class GenerujRaport {
     public static final String FONT = "Amble-Bold.ttf";
+
+    /**
+     * Metoda generujRaportWizyt, osbługująca generowanie raportów PDF.
+     */
+
     public static void generujRaportWizyt() {
         List<String> ListaWizyt = new ArrayList<>();
 

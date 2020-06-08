@@ -8,9 +8,23 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import Connection.Polaczenie;
 
+/**
+ * Klasa SpisLekarzy obsługująca wyświetlanie tabeli z danymi wszystkich lekarzy.
+ */
 
 public class SpisLekarzy {
+
+    /**
+     * Metoda WszyscyLekarzeGet pobierająca dane lekarzy.
+     * @return SpisLekarzyOL - lista wszystkich lekarzy
+     */
+
     public static ObservableList<ModelSpisLekarzy> WszyscyLekarzeGet() {
+
+        /**
+         * @param SpisLekarzyOL przechowujący wszystkie informacje o lekarzach pobrane z bazy danych.
+         */
+
         ObservableList<ModelSpisLekarzy> SpisLekarzyOL = FXCollections.observableArrayList();
         try {
             Connection con = Polaczenie.Connect();
@@ -19,6 +33,11 @@ public class SpisLekarzy {
             );
 
             while (rs.next()) {
+
+                /**
+                 * SpisLekarzyOL.add funkcja dodająca dane wyciągnięte za pomocą zapytania SQL do listy SpisLekarzyOL.
+                 */
+
                 SpisLekarzyOL.add(new ModelSpisLekarzy(
                         rs.getString(1),
                         rs.getString(2),
@@ -37,6 +56,14 @@ public class SpisLekarzy {
         }
         return SpisLekarzyOL;
     }
+
+
+    /**
+     * Metoda FiltrowaniLekarzeGet odpowiadająca za działanie filtrów w liśćie lekarzy.
+     * @param filtrCB
+     * @param filtrTF
+     * @return SpisLekarzyOL - lista z wybranymi filtrami.
+     */
 
     public static ObservableList<ModelSpisLekarzy> FiltrowaniLekarzeGet(String filtrCB, String filtrTF) {
         ObservableList<ModelSpisLekarzy> SpisLekarzyOL = FXCollections.observableArrayList();
@@ -59,6 +86,11 @@ public class SpisLekarzy {
             );
 
             while (rs.next()) {
+
+                /**
+                 * SpisLekarzyOL.add funkcja dodająca dane wyciągnięte za pomocą zapytania SQL do listy SpisLekarzyOL.
+                 */
+
                 SpisLekarzyOL.add(new ModelSpisLekarzy(
                         rs.getString(1),
                         rs.getString(2),

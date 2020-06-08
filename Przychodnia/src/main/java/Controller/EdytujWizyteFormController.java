@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+//TODO niegotowe
+
 public class EdytujWizyteFormController {
     @FXML
     private Button WyjdzBT;

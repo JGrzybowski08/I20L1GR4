@@ -9,13 +9,44 @@ import java.sql.SQLException;
 import java.util.Random;
 import Connection.Polaczenie;
 
+/**
+ * Klasa DodajPacjenta odpowiadająca za rejestrowanie pacjenta i dodawanie go do bazy danych.
+ */
+
 public class DodajPacjenta {
 
+    /**
+     * Metoda Rejestruj zczytująca dane wprowadzone przez pacjenta i dodająca go do bazy danych.
+     * @param Imie
+     * @param Nazwisko
+     * @param Pesel
+     * @param Telefon
+     * @param Haslo
+     * @param Miejscowosc
+     * @param KodPocztowy
+     * @param Ulica
+     * @param NumerDomu
+     * @return true jeżeli wszystkie dane są poprawnie uzupełnione, w przeciwnym wypadku false.
+     * @throws SQLException
+     */
+
     public static boolean Rejestruj(String Imie, String Nazwisko, String Pesel, String Telefon, String Haslo, String Miejscowosc, String KodPocztowy, String Ulica, String NumerDomu) throws SQLException {
+
+        /**
+         * @param con - umożliwia połączenie się z bazą danych
+         * @param alertBlad - alert jeżeli dane są niepełne lub niepoprawne
+         * @param alertInfo - informacja które dane są niepoprawne
+         */
+
         Connection con = Polaczenie.Connect();
 
         Alert alertBlad = new Alert(Alert.AlertType.ERROR);
         Alert alertInfo = new Alert(Alert.AlertType.INFORMATION);
+
+        /**
+         * @param Login
+         * @param generator
+         */
 
         String Login = "";
         Random generator = new Random();

@@ -9,8 +9,23 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import Connection.Polaczenie;
 
+/**
+ * Klasa SpisPacjentow obsługująca wyświetlanie tabeli z danymi wszystkich pacjentów.
+ */
+
 public class SpisPacjentow {
+
+    /**
+     * Metoda WszyscyPacjenciGet pobierająca dane pacjentów.
+     * @return SpisPacjentowOL - lista wszystkich pacjentów
+     */
+
     public static ObservableList<ModelSpisPacjentow> WszyscyPacjenciGet() {
+
+        /**
+         * @param SpisPacjentowOL przechowujący wszystkie informacje o pacjentach pobrane z bazy danych.
+         */
+
         ObservableList<ModelSpisPacjentow> SpisPacjentowOL = FXCollections.observableArrayList();
         try {
             Connection con = Polaczenie.Connect();
@@ -19,6 +34,11 @@ public class SpisPacjentow {
             );
 
             while (rs.next()) {
+
+                /**
+                 * SpisPacjentowOL.add funkcja dodająca dane wyciągnięte za pomocą zapytania SQL do listy SpisPacjentowOL.
+                 */
+
                 SpisPacjentowOL.add(new ModelSpisPacjentow(
                         rs.getString(1),
                         rs.getString(2),
@@ -35,6 +55,13 @@ public class SpisPacjentow {
         }
         return SpisPacjentowOL;
     }
+
+    /**
+     * Metoda FiltrowaniePacjenciGet odpowiadająca za działanie filtrów w liśćie pacjentów.
+     * @param filtrCB
+     * @param filtrTF
+     * @return SpisPacjentowOL - lista z wybranymi filtrami.
+     */
 
     public static ObservableList<ModelSpisPacjentow> FiltrowaniPacjenciGet(String filtrCB, String filtrTF) {
         ObservableList<ModelSpisPacjentow> SpisPacjentowOL = FXCollections.observableArrayList();
@@ -57,6 +84,11 @@ public class SpisPacjentow {
             );
 
             while (rs.next()) {
+
+                /**
+                 * SpisPacjentowOL.add funkcja dodająca dane wyciągnięte za pomocą zapytania SQL do listy SpisPacjentowOL.
+                 */
+
                 SpisPacjentowOL.add(new ModelSpisPacjentow(
                         rs.getString(1),
                         rs.getString(2),

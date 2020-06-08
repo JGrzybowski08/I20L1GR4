@@ -16,6 +16,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Klasa LekarzGlownaController - kontroler do strony panelu głównego lekarza.
+ */
+
 public class LekarzGlownaController implements Initializable {
     @FXML
     public Button LogoutBT;
@@ -28,7 +32,11 @@ public class LekarzGlownaController implements Initializable {
     @FXML
     Label NazwaLL;
 
-
+    /**
+     * Metoda handleAktualneWizytyBTAction obsługująca przycisk do wyświetlania tabeli z przyszłymi wizytami lekarza
+     * @param event
+     * @throws IOException
+     */
 
     @FXML
     public void handleAktualneWizytyBTAction(ActionEvent event) throws IOException {
@@ -39,6 +47,12 @@ public class LekarzGlownaController implements Initializable {
 
     }
 
+    /**
+     * Metoda handleHistoriaWizytBTAction obsługująca przycisk do wyświetlania tabeli z przeszłymi wizytami lekarza
+     * @param event
+     * @throws IOException
+     */
+
     @FXML
     public void handleHistoriaWizytBTAction(ActionEvent event) throws IOException {
         Parent HW = FXMLLoader.load(getClass().getResource("/LekarzFXML/HistoriaWizytLekarz.fxml"));
@@ -46,6 +60,8 @@ public class LekarzGlownaController implements Initializable {
         HistoriaWizyt.setScene(new Scene(HW));
         HistoriaWizyt.show();
     }
+
+    //TODO niegotowe
 
     @FXML
     public void handleEdytujDaneBTAction(ActionEvent event) throws IOException {
@@ -57,6 +73,12 @@ public class LekarzGlownaController implements Initializable {
         EdytujDane.showAndWait();
     }
 
+    /**
+     * Metoda handleLogoutBTAction obsługująca przycisk wylogowujący lekarza
+     * @param event
+     * @throws IOException
+     */
+
     @FXML
     public void handleLogoutBTAction(ActionEvent event) throws IOException {
         Parent L = FXMLLoader.load(getClass().getResource("/GlownaFXML/Logowanie.fxml"));
@@ -65,6 +87,12 @@ public class LekarzGlownaController implements Initializable {
         Logowanie.show();
 
     }
+
+    /**
+     * Metoda initialize inicjująca wyświetlenie danych lekarza w głównym panelu
+     * @param location
+     * @param resources
+     */
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

@@ -29,6 +29,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 
+//TODO niegotowe
+
 public class DodajWizyteController implements Initializable {
 
     int ID;

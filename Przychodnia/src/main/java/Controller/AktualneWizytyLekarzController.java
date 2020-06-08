@@ -20,6 +20,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Klasa AktualneWizytyLekarzController - kontroler do wyświetlania spisu aktualnych wizyt lekarza
+ */
+
 public class AktualneWizytyLekarzController implements Initializable {
     public TableView<ModelAktualneWizytyLekarz> SpisWizytTV;
     public TableColumn<ModelSpisWizyt, String> DataTC;
@@ -27,6 +31,13 @@ public class AktualneWizytyLekarzController implements Initializable {
     public TableColumn<ModelSpisWizyt, String> OpisTC;
     public TableColumn<ModelSpisWizyt, String> StatusTC;
     public TableColumn<ModelSpisWizyt, String> PacjentTC;
+
+    /**
+     * @param NazwaLL
+     * @param FiltrCB
+     * @param FiltrTF
+     * @param LekarzID
+     */
 
     @FXML
     Label NazwaLL;
@@ -36,6 +47,12 @@ public class AktualneWizytyLekarzController implements Initializable {
     public TextField FiltrTF;
 
     int LekarzID = LogowanieController.getKonto_ID();
+
+    /**
+     * Metoda initialize inicjująca wypełnienie tabel danymi oraz wyświetlanie danych lekarza
+     * @param location
+     * @param resources
+     */
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -47,6 +64,11 @@ public class AktualneWizytyLekarzController implements Initializable {
         NazwaLL.setText(Logowanie.ImieNazwiskoLekarzGet(LogowanieController.getKonto_ID()));
     }
 
+    /**
+     * Metoda handleFiltrujBTAction czyszcząca listę z obecnymi danymi i wypełniająca je danymi z odpowiednim filtrem
+     * @param event
+     */
+
     @FXML
     public void handleFiltrujBTAction(ActionEvent event){
         SpisWizytTV.getItems().clear();
@@ -54,11 +76,22 @@ public class AktualneWizytyLekarzController implements Initializable {
         SpisWizytTV.setItems(AktualneWizytyLekarz.FiltrowaneWizytyGet((String) FiltrCB.getValue(), FiltrTF.getText(), LekarzID ));
     }
 
+    /**
+     * Metoda handleWyczyscFiltrBTAction usuwająca filtry nałożone na tabelę
+     * @param event
+     */
+
     @FXML
     public void handleWyczyscFiltrBTAction(ActionEvent event){
         wypelnijTabele();
         FiltrTF.clear();
     }
+
+    /**
+     * Metoda handleExitBTAction obsługująca wyjście do panelu głównego lekarza
+     * @param event
+     * @throws IOException
+     */
 
     @FXML
     public void handleExitBTAction(ActionEvent event) throws IOException {
@@ -69,6 +102,10 @@ public class AktualneWizytyLekarzController implements Initializable {
 
     }
 
+    /**
+     * Metoda wypelnijTabele inicjalizująca wyświetlaną tabelę
+     */
+
     public void wypelnijTabele(){
         DataTC.setCellValueFactory(new PropertyValueFactory<>("Data"));
         GodzinaTC.setCellValueFactory(new PropertyValueFactory<>("Godzina"));
@@ -78,6 +115,10 @@ public class AktualneWizytyLekarzController implements Initializable {
 
         SpisWizytTV.setItems(AktualneWizytyLekarz.WszystkieWizytyGet(LekarzID));
     }
+
+    /**
+     * Metoda wypelnijCB dodająca dane do wyświetlanej tabeli
+     */
 
     public void wypelnijCB(){
         FiltrCB.getItems().clear();

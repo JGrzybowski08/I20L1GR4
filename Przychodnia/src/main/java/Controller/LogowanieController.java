@@ -17,7 +17,17 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Klasa LogowanieController - kontroler obsługujący logowanie użytkowników
+ */
+
 public class LogowanieController {
+
+    /**
+     * @param alertBlad
+     * @param WysBlad
+     * @param TrescBledu
+     */
 
     Alert alertBlad = new Alert(Alert.AlertType.ERROR);
 
@@ -29,11 +39,6 @@ public class LogowanieController {
     public Button ExitBT;
     public Button LoginBT;
     public GridPane PacjentGlownaFXML;
-
-    @FXML
-    public void handleExitBTAction(ActionEvent event) {
-        System.exit(0);
-    }
 
     @FXML
     public TextField LoginTF;
@@ -50,9 +55,16 @@ public class LogowanieController {
         return Konto_ID;
     }
 
+    //TODO nieuzywana metoda setKonto_ID
+
     public static void setKonto_ID(int konto_ID) {
         Konto_ID = Logowanie.IdGet(Integer.parseInt(Login), Haslo);
     }
+
+    /**
+     * Metoda handleLoginBTAction odpowiadająca za obsługę procesu logowania
+     * @param event
+     */
 
     @FXML
     public void handleLoginBTAction(ActionEvent event) {
@@ -109,6 +121,12 @@ public class LogowanieController {
         }
     }
 
+    /**
+     * Metoda handleRejestracjaBTAction odpowiadająca za obsługę przycisku przekierowania do panelu rejestracji
+     * @param event
+     * @throws IOException
+     */
+
     @FXML
     public void handleRejestracjaBTAction(MouseEvent event) throws IOException {
         Parent Re = FXMLLoader.load(getClass().getResource("/GlownaFXML/DodajPacjenta.fxml"));
@@ -117,6 +135,11 @@ public class LogowanieController {
         Rejestracja.show();
 
     }
+
+    /**
+     * Metoda sprawdzPola odpowiadająca za sprawdzenie poprawności danych wprowadzonych przez użytkownika przy logowaniu uzytkownika
+     * @return WysBlad - true, jeżeli wszystkie dane są wprowadzone poprawnie, w przeciwnym wypadku false z odpowiednim komunikatem
+     */
 
     public Boolean sprawdzPola(){
         WysBlad = false;

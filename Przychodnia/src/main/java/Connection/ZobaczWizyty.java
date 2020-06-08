@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+//TODO ZobaczWizyty.java chyba tez do wywalenia
 
 public class ZobaczWizyty {
     public static ObservableList<ModelSpisWizyt> ZobaczWizytyGet() {

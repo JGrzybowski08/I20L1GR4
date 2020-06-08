@@ -7,8 +7,23 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import Connection.Polaczenie;
 
+/**
+ * Klasa SpisWizyt obsługująca wyświetlanie tabeli z danymi wszystkich wizyt.
+ */
+
 public class SpisWizyt {
+
+    /**
+     * Metoda WszystkieWizytyGet pobierająca dane wizyt.
+     * @return SpisWizytOL - lista wszystkich wizyt
+     */
+
     public static ObservableList<ModelSpisWizyt> WszystkieWizytyGet() {
+
+        /**
+         * @param SpisWizytOL przechowujący wszystkie informacje o wizytach pobrane z bazy danych.
+         */
+
         ObservableList<ModelSpisWizyt> SpisWizytOL = FXCollections.observableArrayList();
 
         try{
@@ -17,6 +32,11 @@ public class SpisWizyt {
                     "SELECT wizyty.Data, wizyty.Godzina, wizyty.Opis, wizyty.Status, pacjenci.Imie, pacjenci.Nazwisko, lekarze.Imie, lekarze.Nazwisko FROM wizyty, pacjenci, lekarze WHERE wizyty.Pacjent_ID = pacjenci.Pacjent_ID AND wizyty.Lekarz_ID = lekarze.Lekarz_ID ORDER BY wizyty.Data DESC, wizyty.Godzina DESC"
             );
             while (rs.next()) {
+
+                /**
+                 * SpisWizytOL.add funkcja dodająca dane wyciągnięte za pomocą zapytania SQL do listy SpisWizytOL.
+                 */
+
                 SpisWizytOL.add(new ModelSpisWizyt(
                         rs.getString(1), //Data
                         rs.getString(2), //Godzina
@@ -32,6 +52,13 @@ public class SpisWizyt {
         }
         return SpisWizytOL;
     }
+
+    /**
+     * Metoda FiltrowaneWizytyGet odpowiadająca za działanie filtrów w liśćie wizyt.
+     * @param FiltrCB
+     * @param FiltrTF
+     * @return SpisWizytOL - lista z wybranymi filtrami.
+     */
 
     public static ObservableList<ModelSpisWizyt> FiltrowaneWizytyGet(String FiltrCB, String FiltrTF) {
         ObservableList<ModelSpisWizyt> SpisWizytOL = FXCollections.observableArrayList();
@@ -55,6 +82,11 @@ public class SpisWizyt {
             FWG = con.createStatement().executeQuery(sql);
 
             while (FWG.next()) {
+
+                /**
+                 * SpisWizytOL.add funkcja dodająca dane wyciągnięte za pomocą zapytania SQL do listy SpisWizytOL.
+                 */
+
                 SpisWizytOL.add(new ModelSpisWizyt(
                         FWG.getString(1), //Data
                         FWG.getString(2), //Godzina

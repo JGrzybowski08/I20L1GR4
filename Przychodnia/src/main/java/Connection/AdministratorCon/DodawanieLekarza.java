@@ -3,7 +3,7 @@ package Connection.AdministratorCon;
 import java.sql.*;
 import Connection.Polaczenie;
 
-
+//TODO DodawanieLekarza.java do wywalenia
 
 public class DodawanieLekarza {
     public static void Dodawanie(String id, String spec) {

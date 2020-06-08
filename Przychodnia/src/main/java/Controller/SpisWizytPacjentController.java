@@ -19,6 +19,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Klasa SpisWizytPacjentController - kontroler do obsługi wyświetlania wszystkich wizyt pacjenta
+ */
+
 public class SpisWizytPacjentController implements Initializable {
 
     public TableView<ModelSpisWizyt> SpisWizytTV;
@@ -36,6 +40,12 @@ public class SpisWizytPacjentController implements Initializable {
 
     public TextField FiltrTF;
 
+    /**
+     * Metoda initialize inicjująca wypełnienie tabel danymi oraz wyświetlanie wizyt oraz danych pacjenta w panelu
+     * @param location
+     * @param resources
+     */
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         wypelnijTabele();
@@ -46,6 +56,11 @@ public class SpisWizytPacjentController implements Initializable {
         NazwaPL.setText(Logowanie.ImieNazwiskopacjentGet(LogowanieController.getKonto_ID()));
     }
 
+    /**
+     * Metoda handleFiltrujBTAction czyszcząca listę z obecnymi danymi i wypełniająca je danymi z odpowiednim filtrem
+     * @param event
+     */
+
     @FXML
     public void handleFiltrujBTAction(ActionEvent event){
         SpisWizytTV.getItems().clear();
@@ -53,11 +68,22 @@ public class SpisWizytPacjentController implements Initializable {
         SpisWizytTV.setItems(SpisWizyt.FiltrowaneWizytyGet((String) FiltrCB.getValue(), FiltrTF.getText() ));
     }
 
+    /**
+     * Metoda handleWyczyscFiltrBTAction usuwająca filtry nałożone na tabelę
+     * @param event
+     */
+
     @FXML
     public void handleWyczyscFiltrBTAction(ActionEvent event){
         wypelnijTabele();
         FiltrTF.clear();
     }
+
+    /**
+     * Metoda handleExitBTAction obsługująca wyjście do panelu głównego pacjenta
+     * @param event
+     * @throws IOException
+     */
 
     @FXML
     public void handleExitBTAction(ActionEvent event) throws IOException {
@@ -67,6 +93,10 @@ public class SpisWizytPacjentController implements Initializable {
         PacjentGlowna.show();
 
     }
+
+    /**
+     * Metoda wypelnijTabele inicjalizująca wyświetlaną tabelę
+     */
 
     public void wypelnijTabele(){
         DataTC.setCellValueFactory(new PropertyValueFactory<>("Data"));
@@ -78,6 +108,10 @@ public class SpisWizytPacjentController implements Initializable {
 
         SpisWizytTV.setItems(SpisWizyt.WszystkieWizytyGet());
     }
+
+    /**
+     * Metoda wypelnijCB dodająca dane do wyświetlanej tabeli
+     */
 
     public void wypelnijCB(){
         FiltrCB.getItems().clear();

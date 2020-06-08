@@ -20,6 +20,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Klasa SpisPacjentowController - kontroler do obsługi wyświetlania wszystkich pacjentów
+ */
+
 public class SpisPacjentowController implements Initializable {
 
     public TableView<ModelSpisPacjentow> SpisLekarzyTV;
@@ -36,11 +40,23 @@ public class SpisPacjentowController implements Initializable {
 
     public TextField FiltrTF;
 
+    /**
+     * Metoda initialize inicjująca wypełnienie tabel danymi oraz wyświetlanie danych pacjentów
+     * @param location
+     * @param resources
+     */
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         wypelnijTabele();
         wypelnijCB();
     }
+
+    /**
+     * Metoda handleFiltrujBTAction czyszcząca listę z obecnymi danymi i wypełniająca je danymi z odpowiednim filtrem
+     * @param event
+     */
+
     @FXML
     public void handleFiltrujBTAction(ActionEvent event){
         SpisLekarzyTV.getItems().clear();
@@ -48,11 +64,22 @@ public class SpisPacjentowController implements Initializable {
         SpisLekarzyTV.setItems(SpisPacjentow.FiltrowaniPacjenciGet(FiltrCB.getValue(), FiltrTF.getText() ));
     }
 
+    /**
+     * Metoda handleWyczyscFiltrBTAction usuwająca filtry nałożone na tabelę
+     * @param event
+     */
+
     @FXML
     public void handleWyczyscFiltrBTAction(ActionEvent event){
         wypelnijTabele();
         FiltrTF.clear();
     }
+
+    /**
+     * Metoda handleExitBTAction obsługująca wyjście do panelu głównego administratora
+     * @param event
+     * @throws IOException
+     */
 
     @FXML
     public void handleExitBTAction(ActionEvent event) throws IOException {
@@ -62,6 +89,10 @@ public class SpisPacjentowController implements Initializable {
         AdministratorGlowna.show();
 
     }
+
+    /**
+     * Metoda wypelnijTabele inicjalizująca wyświetlaną tabelę
+     */
 
     public void wypelnijTabele(){
         ImieTC.setCellValueFactory(new PropertyValueFactory<>("Imie"));
@@ -76,6 +107,10 @@ public class SpisPacjentowController implements Initializable {
 
         SpisLekarzyTV.setItems(SpisPacjentow.WszyscyPacjenciGet());
     }
+
+    /**
+     * Metoda wypelnijCB dodająca dane do wyświetlanej tabeli
+     */
 
     public void wypelnijCB(){
         FiltrCB.getItems().clear();

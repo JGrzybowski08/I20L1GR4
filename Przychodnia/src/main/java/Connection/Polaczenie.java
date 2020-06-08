@@ -1,9 +1,23 @@
 package Connection;
 import java.sql.*;
 
+/**
+ * Klasa Polaczenie umożliwiająca połączenie z bazą danych.
+ */
+
 public class Polaczenie {
 
+    /**
+     * Metoda Connect łącząca się z bazą danych
+     * @return con jeżeli połączenie zostało nawiązane, w przeciwnym wypadku zwraca null
+     */
+
     public static Connection Connect() {
+
+        /**
+         * @param con
+         */
+
         Connection con;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");

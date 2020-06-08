@@ -2,6 +2,7 @@ Controller\SpisPacjentowController.class
 Models\ModelSpisPacjentow.class
 Exceptions\RegisterException.class
 Connection\Logowanie.class
+Controller\SpisWizytPacjentController.class
 Models\ModelAktualneWizytyLekarz.class
 Connection\AdministratorCon\CzyszczenieBazy.class
 Connection\ZobaczWizyty.class

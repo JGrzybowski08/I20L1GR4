@@ -16,6 +16,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+//TODO niegotowe
+
 public class PacjentGlownaController implements Initializable {
 
     int ID;

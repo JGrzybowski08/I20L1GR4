@@ -20,6 +20,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Klasa SpisWizytController - kontroler do obsługi wyświetlania wszystkich wizyt
+ */
+
 public class SpisWizytController implements Initializable {
 
     public TableView<ModelSpisWizyt> SpisWizytTV;
@@ -34,12 +38,23 @@ public class SpisWizytController implements Initializable {
 
     public TextField FiltrTF;
 
+    /**
+     * Metoda initialize inicjująca wypełnienie tabel danymi oraz wyświetlanie danych wizyt
+     * @param location
+     * @param resources
+     */
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         wypelnijTabele();
 
         wypelnijCB();
     }
+
+    /**
+     * Metoda handleFiltrujBTAction czyszcząca listę z obecnymi danymi i wypełniająca je danymi z odpowiednim filtrem
+     * @param event
+     */
 
     @FXML
     public void handleFiltrujBTAction(ActionEvent event){
@@ -48,11 +63,22 @@ public class SpisWizytController implements Initializable {
         SpisWizytTV.setItems(SpisWizyt.FiltrowaneWizytyGet((String) FiltrCB.getValue(), FiltrTF.getText() ));
     }
 
+    /**
+     * Metoda handleWyczyscFiltrBTAction usuwająca filtry nałożone na tabelę
+     * @param event
+     */
+
     @FXML
     public void handleWyczyscFiltrBTAction(ActionEvent event){
         wypelnijTabele();
         FiltrTF.clear();
     }
+
+    /**
+     * Metoda handleExitBTAction obsługująca wyjście do panelu głównego administratora
+     * @param event
+     * @throws IOException
+     */
 
     @FXML
     public void handleExitBTAction(ActionEvent event) throws IOException {
@@ -62,6 +88,10 @@ public class SpisWizytController implements Initializable {
         AdministratorGlowna.show();
 
     }
+
+    /**
+     * Metoda wypelnijTabele inicjalizująca wyświetlaną tabelę
+     */
 
     public void wypelnijTabele(){
         DataTC.setCellValueFactory(new PropertyValueFactory<>("Data"));
@@ -73,6 +103,10 @@ public class SpisWizytController implements Initializable {
 
         SpisWizytTV.setItems(SpisWizyt.WszystkieWizytyGet());
     }
+
+    /**
+     * Metoda wypelnijCB dodająca dane do wyświetlanej tabeli
+     */
 
     public void wypelnijCB(){
         FiltrCB.getItems().clear();
