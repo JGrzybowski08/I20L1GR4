@@ -26,7 +26,7 @@ numer domu
  */
 
 public class EdytujDanePacjent {
-    public static boolean EdytujDane(String Imie, String Nazwisko, String Pesel, String Telefon, String Haslo, String Miejscowosc, String KodPocztowy, String Ulica, String NumerDomu) throws SQLException {
+    public static boolean EdytujDane(String Imie, String Nazwisko, String Pesel, String Telefon, String Miejscowosc, String KodPocztowy, String Ulica, String NumerDomu, String Haslo) throws SQLException {
         Connection con = Polaczenie.Connect();
 
         Alert alertBlad = new Alert(Alert.AlertType.ERROR);

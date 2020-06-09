@@ -4,7 +4,7 @@ public class ModelZarezerwujWizyte {
     private final String Imie, Nazwisko, Email, Specjalizacja;
     private final int Telefon;
 
-    public ModelZarezerwujWizyte(String imie, String nazwisko, String email, String specjalizacja, int telefon) {
+    public ModelZarezerwujWizyte(String imie, String nazwisko, String email, int telefon, String specjalizacja) {
         Imie = imie;
         Nazwisko = nazwisko;
         Email = email;

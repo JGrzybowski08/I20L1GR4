@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<<<<<<< HEAD
-<testsuite tests="1" failures="0" name="Connection.SpisLekarzyTest" time="0.4" errors="0" skipped="0">
-=======
-<testsuite tests="1" failures="0" name="Connection.SpisLekarzyTest" time="0.689" errors="0" skipped="0">
->>>>>>> 834ccbd89f32b39f8d269cad93de48ff50a9d39b
+<testsuite tests="1" failures="0" name="Connection.SpisLekarzyTest" time="0.333" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2018.3.5"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_201\jre\bin"/>
     <property name="java.vm.version" value="25.201-b09"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-<<<<<<< HEAD
     <property name="maven.multiModuleProjectDirectory" value="P:\Programowanie zespołowe\I20L1GR4\Przychodnia"/>
-=======
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\wesol\Desktop\I20L1GR4-master\Przychodnia"/>
->>>>>>> 834ccbd89f32b39f8d269cad93de48ff50a9d39b
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -25,13 +17,8 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-<<<<<<< HEAD
     <property name="user.dir" value="P:\Programowanie zespołowe\I20L1GR4\Przychodnia"/>
     <property name="java.runtime.version" value="1.8.0_201-b09"/>
-=======
-    <property name="user.dir" value="C:\Users\wesol\Desktop\I20L1GR4-master\Przychodnia"/>
-    <property name="java.runtime.version" value="1.8.0_192-b12"/>
->>>>>>> 834ccbd89f32b39f8d269cad93de48ff50a9d39b
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_201\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
@@ -75,9 +62,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-<<<<<<< HEAD
-  <testcase classname="Connection.SpisLekarzyTest" name="WszyscyLekarzeGetTest" time="0.4"/>
-=======
-  <testcase classname="Connection.SpisLekarzyTest" name="WszyscyLekarzeGetTest" time="0.689"/>
->>>>>>> 834ccbd89f32b39f8d269cad93de48ff50a9d39b
+  <testcase classname="Connection.SpisLekarzyTest" name="WszyscyLekarzeGetTest" time="0.333"/>
 </testsuite>

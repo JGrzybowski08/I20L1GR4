@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="943.0" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PacjentController.ZarezerwujWizyteController">
+    <children>
+        <TableView fx:id="SpisLekarzyTV" layoutY="66.0" prefHeight="432.0" prefWidth="943.0">
+            <columns>
+                <TableColumn fx:id="ImieTC" prefWidth="108.0" text="Imie" />
+                <TableColumn fx:id="NazwiskoTC" prefWidth="164.0" text="Nazwisko" />
+                <TableColumn fx:id="EMailTC" prefWidth="198.0" text="E-Mail" />
+                <TableColumn fx:id="TelefonTC" prefWidth="171.0" text="Telefon" />
+                <TableColumn fx:id="SpecjalizacjaTC" prefWidth="299.0" text="Specjalizacja" />
+            </columns>
+        </TableView>
+        <JFXButton layoutX="33.0" layoutY="558.0" onAction="#handleExitBTAction" prefHeight="46.0" prefWidth="133.0" style="-fx-background-color: #48A5EA;" text="Wróć" textFill="WHITE" />
+        <JFXComboBox fx:id="FiltrCB" layoutX="229.0" layoutY="567.0" prefHeight="37.0" prefWidth="148.0" />
+        <JFXButton fx:id="FiltrujBT" layoutX="652.0" layoutY="558.0" onAction="#handleFiltrujBTAction" prefHeight="46.0" prefWidth="133.0" style="-fx-background-color: #48A5EA;" text="Filtruj" textFill="WHITE" />
+        <JFXTextField fx:id="FiltrTF" layoutX="389.0" layoutY="567.0" prefHeight="37.0" prefWidth="233.0" promptText="Filtr" stylesheets="@../Styles/style.css" />
+        <JFXButton fx:id="WyczyscFiltrBT" layoutX="799.0" layoutY="558.0" onAction="#handleWyczyscFiltrBTAction" prefHeight="46.0" prefWidth="133.0" style="-fx-background-color: #48A5EA;" text="Wyczyść Filtr" textFill="WHITE" />
+      <Pane prefHeight="66.0" prefWidth="943.0" style="-fx-background-color: #48A5EA;">
+         <children>
+            <Label layoutX="32.0" layoutY="16.0" prefHeight="25.0" prefWidth="244.0" text="Przychodnia Familia" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="586.0" layoutY="22.0" prefHeight="25.0" prefWidth="244.0" text="Panel Pacjenta" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="NazwaPL" layoutX="734.0" layoutY="24.0" prefHeight="25.0" prefWidth="134.0" text="username_pacient" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXButton fx:id="WybierzBT" layoutX="405.0" layoutY="512.0" onAction="#handleWybierzBTAction" prefHeight="46.0" prefWidth="133.0" style="-fx-background-color: #48A5EA;" text="Wybierz" textFill="WHITE" />
+    </children>
+</AnchorPane>

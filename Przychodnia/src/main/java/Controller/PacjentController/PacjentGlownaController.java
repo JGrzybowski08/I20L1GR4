@@ -1,7 +1,6 @@
 package Controller.PacjentController;
 
 import Connection.Logowanie;
-import Controller.DodajWizyteController;
 import Controller.LogowanieController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -41,21 +40,11 @@ public class PacjentGlownaController implements Initializable {
     Label NazwaPL;
 
     @FXML
-    public void handleDodajWizyteBTAction(ActionEvent event) {
-
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/DodajWizyte.fxml"));
-            Parent root = (Parent) loader.load();
-
-            DodajWizyteController DWC = loader.getController();
-            DWC.setID(ID);
-
-            Stage DodajWizyte = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            DodajWizyte.setScene(new Scene(root));
-            DodajWizyte.showAndWait();
-        }catch(Exception e){
-            System.err.println(e);
-        }
+    public void handleDodajWizyteBTAction(ActionEvent event) throws IOException {
+        Parent ZW = FXMLLoader.load(getClass().getResource("/PacjentFXML/ZarezerwujWizyte.fxml"));
+        Stage ZarezerwujWizyte = (Stage)((Node)event.getSource()).getScene().getWindow();
+        ZarezerwujWizyte.setScene(new Scene(ZW));
+        ZarezerwujWizyte.show();
 
     }
 
