@@ -102,11 +102,40 @@ public class AktualneWizytyLekarzController implements Initializable {
 
     }
 
+<<<<<<< HEAD
     /**
      * Metoda wypelnijTabele inicjalizująca wyświetlaną tabelę
      */
+=======
+    @FXML
+    public void handleZaakceptujBTAction(ActionEvent event){
+        ModelAktualneWizytyLekarz Wizyta = SpisWizytTV.getSelectionModel().getSelectedItem();
+        AktualneWizytyLekarz.ZaakceptujWizyte(Wizyta.getData(), Wizyta.getGodzina());
+
+        wypelnijTabele();
+    }
+
+    @FXML
+    public void handleOdwolajBTAction(ActionEvent event){
+        ModelAktualneWizytyLekarz Wizyta = SpisWizytTV.getSelectionModel().getSelectedItem();
+        AktualneWizytyLekarz.OdwolajWizyte(Wizyta.getData(), Wizyta.getGodzina());
+
+        wypelnijTabele();
+    }
+
+    @FXML
+    public void handleZakonczBTAction(ActionEvent event){
+        ModelAktualneWizytyLekarz Wizyta = SpisWizytTV.getSelectionModel().getSelectedItem();
+        AktualneWizytyLekarz.ZakonczWizyte(Wizyta.getData(), Wizyta.getGodzina());
+
+        wypelnijTabele();
+    }
+
+>>>>>>> master
 
     public void wypelnijTabele(){
+        SpisWizytTV.getItems().clear();
+
         DataTC.setCellValueFactory(new PropertyValueFactory<>("Data"));
         GodzinaTC.setCellValueFactory(new PropertyValueFactory<>("Godzina"));
         OpisTC.setCellValueFactory(new PropertyValueFactory<>("Opis"));

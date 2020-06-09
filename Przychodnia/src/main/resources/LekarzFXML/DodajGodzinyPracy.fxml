@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="943.0" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DodajGodzinyPracyController">
+    <children>
+        <Pane prefHeight="66.0" prefWidth="943.0" style="-fx-background-color: #48A5EA;">
+            <children>
+                <Label layoutX="32.0" layoutY="16.0" prefHeight="25.0" prefWidth="244.0" text="Przychodnia Familia" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="685.0" layoutY="20.0" prefHeight="25.0" prefWidth="244.0" text="Panel Administratora" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="19.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <JFXButton layoutX="33.0" layoutY="558.0" onAction="#handleExitBTAction" prefHeight="46.0" prefWidth="133.0" style="-fx-background-color: #48A5EA;" text="Wróć" textFill="WHITE" />
+        <JFXButton fx:id="WyczyscFiltrBT" layoutX="788.0" layoutY="558.0" onAction="#handleDodajGPBTAction" prefHeight="46.0" prefWidth="133.0" style="-fx-background-color: #48A5EA;" text="Dodaj godziny pracy" textFill="WHITE" />
+      <JFXComboBox fx:id="DzienTygodniaCB" layoutX="350.0" layoutY="146.0" prefHeight="46.0" prefWidth="244.0" />
+      <Label layoutX="187.0" layoutY="156.0" prefHeight="27.0" prefWidth="127.0" text="Dzień tygodnia:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="226.0" text="Godzina rozpoczęcia pracy:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="95.0" layoutY="296.0" text="Godzina zakończenia pracy:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="GodzinaRPCB" layoutX="350.0" layoutY="216.0" prefHeight="46.0" prefWidth="244.0" />
+      <JFXComboBox fx:id="GodzinaZPCB" layoutX="350.0" layoutY="286.0" prefHeight="46.0" prefWidth="244.0" />
+    </children>
+</AnchorPane>

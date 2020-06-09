@@ -1,12 +1,15 @@
 package Connection.LekarzCon;
 
+import Controller.LogowanieController;
 import Models.ModelAktualneWizytyLekarz;
 import Models.ModelSpisWizyt;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import Connection.Polaczenie;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 
@@ -112,5 +115,59 @@ public class AktualneWizytyLekarz {
             System.err.println(e);
         }
         return SpisWizytOL;
+    }
+
+    public static void ZaakceptujWizyte(String Data, String Godzina){
+        int LekarzID = LogowanieController.getKonto_ID();
+        int WizytaID = 0;
+        Connection con = Polaczenie.Connect();
+        try {
+            ResultSet rs = con.createStatement().executeQuery("SELECT Wizyta_ID FROM wizyty WHERE Data = '" + Data + "' AND Godzina = '" + Godzina + "' AND Lekarz_ID = " + LekarzID);
+            while(rs.next()){
+                WizytaID = rs.getInt(1);
+            }
+
+            PreparedStatement ZW = con.prepareStatement("UPDATE wizyty SET Status = ? WHERE Wizyta_ID = " + WizytaID);
+            ZW.setString(1,"Zaakceptowana");
+            ZW.executeUpdate();
+        }catch(SQLException e){
+            System.err.println(e);
+        }
+    }
+
+    public static void OdwolajWizyte(String Data, String Godzina){
+        int LekarzID = LogowanieController.getKonto_ID();
+        int WizytaID = 0;
+        Connection con = Polaczenie.Connect();
+        try {
+            ResultSet rs = con.createStatement().executeQuery("SELECT Wizyta_ID FROM wizyty WHERE Data = '" + Data + "' AND Godzina = '" + Godzina + "' AND Lekarz_ID = " + LekarzID);
+            while(rs.next()){
+                WizytaID = rs.getInt(1);
+            }
+
+            PreparedStatement ZW = con.prepareStatement("UPDATE wizyty SET Status = ? WHERE Wizyta_ID = " + WizytaID);
+            ZW.setString(1,"Odwołana");
+            ZW.executeUpdate();
+        }catch(SQLException e){
+            System.err.println(e);
+        }
+    }
+
+    public static void ZakonczWizyte(String Data, String Godzina){
+        int LekarzID = LogowanieController.getKonto_ID();
+        int WizytaID = 0;
+        Connection con = Polaczenie.Connect();
+        try {
+            ResultSet rs = con.createStatement().executeQuery("SELECT Wizyta_ID FROM wizyty WHERE Data = '" + Data + "' AND Godzina = '" + Godzina + "' AND Lekarz_ID = " + LekarzID);
+            while(rs.next()){
+                WizytaID = rs.getInt(1);
+            }
+
+            PreparedStatement ZW = con.prepareStatement("UPDATE wizyty SET Status = ? WHERE Wizyta_ID = " + WizytaID);
+            ZW.setString(1,"Zakończona");
+            ZW.executeUpdate();
+        }catch(SQLException e){
+            System.err.println(e);
+        }
     }
 }

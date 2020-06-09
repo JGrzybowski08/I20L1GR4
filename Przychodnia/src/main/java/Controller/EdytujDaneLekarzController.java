@@ -1,32 +1,29 @@
 package Controller;
 
-
-import Connection.AdministratorCon.DodajLekarza;
+import Connection.LekarzCon.EdytujDaneLekarz;
+import Connection.Logowanie;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-
+import org.omg.CORBA.PERSIST_STORE;
 
 import java.io.IOException;
+import java.net.URL;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.ResourceBundle;
 
-/**
- * Klasa DodajLekarzaController - kontroler do obsługi rejestracji lekarza
- */
-
-public class DodajLekarzaController {
-
-    /**
-     * @param alertBlad
-     * @param WysBlad
-     * @param TrescBledu
-     */
+public class EdytujDaneLekarzController implements Initializable {
 
     Alert alertBlad = new Alert(Alert.AlertType.ERROR);
 
@@ -58,19 +55,38 @@ public class DodajLekarzaController {
     private TextField UlicaTF;
     @FXML
     private TextField NumerDomuTF;
+    @FXML
+    Label NazwaLL;
 
-    /**
-     * Metoda handleDodawanieLekarzaBTAction obsługująca przycisk dodawania lekarza
-     * @param event
-     */
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        NazwaLL.setText("");
+        NazwaLL.setText(Logowanie.ImieNazwiskoLekarzGet(LogowanieController.getKonto_ID()));
+
+        wypełnijPola(EdytujDaneLekarz.PobierzDaneLekarz());
+
+    }
+
+    public void wypełnijPola(List<String> DaneLekarza){
+        ImieTF.setText(DaneLekarza.get(0));//Imie
+        NazwiskoTF.setText(DaneLekarza.get(1));//Nazwisko
+        EmailTF.setText(DaneLekarza.get(2));//Email
+        PeselTF.setText(DaneLekarza.get(3));//PESEL
+        TelefonTF.setText(DaneLekarza.get(4));//Telefon
+        SpecjalizacjaTF.setText(DaneLekarza.get(5));//Specjalizacja
+        KodPocztowyTF.setText(DaneLekarza.get(6));//Kod_pocztowy
+        MiejscowoscTF.setText(DaneLekarza.get(7));//Miejscowosc
+        UlicaTF.setText(DaneLekarza.get(8));//Ulica
+        NumerDomuTF.setText(DaneLekarza.get(9));//Numer_Domu
+        HasloPF.setText(DaneLekarza.get(10));//Haslo
+    }
 
     @FXML
-    public void handleDodawanieLekarzaBTAction(MouseEvent event) {
-
+    public void handleEdytujBTAction(ActionEvent event) throws IOException {
         if(sprawdzPola()){
             alertBlad.setContentText(TrescBledu);
             alertBlad.showAndWait();
-        }else{
+        }else {
             String Imie = ImieTF.getText();
             String Nazwisko = NazwiskoTF.getText();
             String Email = EmailTF.getText();
@@ -82,36 +98,25 @@ public class DodajLekarzaController {
             String KodPocztowy = KodPocztowyTF.getText();
             String Ulica = UlicaTF.getText();
             String NumerDomu = NumerDomuTF.getText();
-
             try {
-                if(DodajLekarza.Rejestruj(Imie, Nazwisko, Email, Pesel, Telefon, Specjalizacja, Haslo, Miejscowosc, KodPocztowy, Ulica, NumerDomu)){
-                    handleBackBTAction(event);
-                }
-            }catch(Exception e){
+                EdytujDaneLekarz.EdytujDane(Imie, Nazwisko, Email, Pesel, Telefon, Specjalizacja, Miejscowosc, KodPocztowy, Ulica, NumerDomu, Haslo);
+                wypełnijPola(EdytujDaneLekarz.PobierzDaneLekarz());
+                NazwaLL.setText(Logowanie.ImieNazwiskoLekarzGet(LogowanieController.getKonto_ID()));
+            } catch (SQLException e) {
                 System.err.println(e);
             }
         }
-    }
 
-    /**
-     * Metoda handleBackBTAction obsługująca przycisk odpowiadający za powrót do panelu głównego administratora
-     * @param event
-     * @throws IOException
-     */
+    }
 
     @FXML
-    public void handleBackBTAction(MouseEvent event) throws IOException {
-        Parent AG = FXMLLoader.load(getClass().getResource("/AdministratorFXML/AdministratorGlowna.fxml"));
-        Stage AdministratorGlowna = (Stage)((Node)event.getSource()).getScene().getWindow();
-        AdministratorGlowna.setScene(new Scene(AG));
-        AdministratorGlowna.show();
+    public void handleBackBTAction(ActionEvent event) throws IOException {
+        Parent LG = FXMLLoader.load(getClass().getResource("/LekarzFXML/LekarzGlowna.fxml"));
+        Stage LekarzGlowna = (Stage)((Node)event.getSource()).getScene().getWindow();
+        LekarzGlowna.setScene(new Scene(LG));
+        LekarzGlowna.show();
 
     }
-
-    /**
-     * Metoda sprawdzPola odpowiadająca za sprawdzenie poprawności danych wprowadzonych przez administratora przy rejestracji lekarza
-     * @return WysBlad - true, jeżeli wszystkie dane są wprowadzone poprawnie, w przeciwnym wypadku false z odpowiednim komunikatem
-     */
 
     public Boolean sprawdzPola(){
         WysBlad = false;
