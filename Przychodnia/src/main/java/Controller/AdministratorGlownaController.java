@@ -30,9 +30,11 @@ public class AdministratorGlownaController {
     public Button EdytujDaneBT;
 
 
-
-
-
+    /**
+     *
+     * @param event
+     * @throws IOException
+     */
     @FXML
     public void handleSpisPacjentowBTAction(ActionEvent event) throws IOException {
         Parent SP = FXMLLoader.load(getClass().getResource("/AdministratorFXML/SpisPacjentow.fxml"));

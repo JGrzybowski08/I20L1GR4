@@ -1,5 +1,6 @@
 package Controller;
 
+import Connection.LekarzCon.GodzinyPracy;
 import Connection.Logowanie;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -27,6 +28,19 @@ public class LekarzGlownaController implements Initializable {
     public Button EdytujDaneBT;
     @FXML
     Label NazwaLL;
+    @FXML
+    Label poniedzialekGP;
+    @FXML
+    Label wtorekGP;
+    @FXML
+    Label srodaGP;
+    @FXML
+    Label czwartekGP;
+    @FXML
+    Label piatekGP;
+    @FXML
+    Label sobotaGP;
+
 
 
 
@@ -48,13 +62,19 @@ public class LekarzGlownaController implements Initializable {
     }
 
     @FXML
-    public void handleEdytujDaneBTAction(ActionEvent event) throws IOException {
-        FXMLLoader ED = new FXMLLoader(getClass().getResource("/EdytujDane.fxml"));
-        Stage EdytujDane = new Stage();
-        EdytujDane.initOwner(EdytujDaneBT.getScene().getWindow());
-        EdytujDane.setScene(new Scene((Parent) ED.load()));
+    public void handleGodzinyPracyBTAction(ActionEvent event) throws IOException {
+        Parent GP = FXMLLoader.load(getClass().getResource("/LekarzFXML/DodajGodzinyPracy.fxml"));
+        Stage GodzinyPracy = (Stage)((Node)event.getSource()).getScene().getWindow();
+        GodzinyPracy.setScene(new Scene(GP));
+        GodzinyPracy.show();
+    }
 
-        EdytujDane.showAndWait();
+    @FXML
+    public void handleEdytujDaneBTAction(ActionEvent event) throws IOException {
+        Parent EDL = FXMLLoader.load(getClass().getResource("/LekarzFXML/EdytujDaneLekarz.fxml"));
+        Stage EdytujDaneLekarz = (Stage)((Node)event.getSource()).getScene().getWindow();
+        EdytujDaneLekarz.setScene(new Scene(EDL));
+        EdytujDaneLekarz.show();
     }
 
     @FXML
@@ -70,5 +90,27 @@ public class LekarzGlownaController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         NazwaLL.setText("");
         NazwaLL.setText(Logowanie.ImieNazwiskoLekarzGet(LogowanieController.getKonto_ID()));
+
+
+
+        poniedzialekGP.setText("");
+        poniedzialekGP.setText(GodzinyPracy.WysGPPon());
+
+        wtorekGP.setText("");
+        wtorekGP.setText(GodzinyPracy.WysGPWt());
+
+        srodaGP.setText("");
+        srodaGP.setText(GodzinyPracy.WysGPSr());
+
+        czwartekGP.setText("");
+        czwartekGP.setText(GodzinyPracy.WysGPCzw());
+
+        piatekGP.setText("");
+        piatekGP.setText(GodzinyPracy.WysGPPt());
+
+        sobotaGP.setText("");
+        sobotaGP.setText(GodzinyPracy.WysGPSob());
+
+        GodzinyPracy.SprawdzGodzinyPracy();
     }
 }

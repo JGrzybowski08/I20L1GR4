@@ -95,7 +95,7 @@ public class DodajLekarza {
 
             alertInfo.setTitle("Zakończono!");
             alertInfo.setHeaderText("Pomyślnie zarejstrowano lekarza!");
-            alertBlad.setContentText("Login: "+ Login + ", hasło: "+ Haslo);
+            alertInfo.setContentText("Login: "+ Login + ", hasło: "+ Haslo);
             alertInfo.showAndWait();
             return true;
         }else{
