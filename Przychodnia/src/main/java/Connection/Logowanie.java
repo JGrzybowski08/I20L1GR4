@@ -1,16 +1,39 @@
 package Connection;
 
-import javax.swing.plaf.synth.SynthTextAreaUI;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 
+/**
+ * Klasa Logowanie odpowiadająca za poprawne logowanie do systemu.
+ */
+
 public class Logowanie {
+
+    /**
+     * @param pacjent_ID_GET
+     * @param uprawnienia_Get
+     * @param ImieNazwisko
+     */
 
     static int pacjent_ID_Get;
     static String uprawnienia_Get;
     static String ImieNazwisko;
 
+    /**
+     * Metoda IdGet pobierająca ID na podstawie wprowadzonych przez użytkownika danych
+     * @param Login
+     * @param Haslo
+     * @return pacjent_ID_Get
+     */
+
     public static int IdGet(int Login, String Haslo){
+
+        /**
+         * @param Uprawenienia
+         * @param sql
+         */
+
         String Uprawnienia = UprawnieniaGet(Login, Haslo);
         String sql = "";
         if(Uprawnienia.equals("Pacjent")){
@@ -36,6 +59,13 @@ public class Logowanie {
         }
     return pacjent_ID_Get;
     }
+
+    /**
+     * Metoda UprawnieniaGet pobierająca odpowiednie uprawnienia użytkownika (administrator, lekarz, pacjent)
+     * @param Login
+     * @param Haslo
+     * @return uprawnienia_Get
+     */
 
     public static String UprawnieniaGet(int Login, String Haslo){
         try {
@@ -64,6 +94,12 @@ public class Logowanie {
      return uprawnienia_Get;
     }
 
+    /**
+     * Metoda ImieNazwiskopacjentGet pobierająca imię i nazwisko pacjenta z bazy danych.
+     * @param idp
+     * @return ImieNazwisko
+     */
+
     public static String ImieNazwiskopacjentGet(int idp){
         try{
             Connection con = Polaczenie.Connect();
@@ -77,13 +113,19 @@ public class Logowanie {
         return ImieNazwisko;
     }
 
+    /**
+     * Metoda ImieNazwiskoLekarzGet pobierająca imię, nazwisko oraz specjalizację lekarza z bazy danych.
+     * @param idl
+     * @return ImieNazwisko
+     */
+
     public static String ImieNazwiskoLekarzGet(int idl){
         System.out.print("Testtowo: " + idl);
         try{
             Connection con = Polaczenie.Connect();
-            ResultSet rs = con.createStatement().executeQuery("SELECT Imie, Nazwisko FROM lekarze WHERE Lekarz_ID = " + idl);
+            ResultSet rs = con.createStatement().executeQuery("SELECT Imie, Nazwisko, Specjalizacja FROM lekarze WHERE Lekarz_ID = " + idl);
             while(rs.next()){
-                ImieNazwisko =  rs.getString(1) + " " + rs.getString(2);
+                ImieNazwisko =  rs.getString(1) + " " + rs.getString(2) + "     " + rs.getString(3);
             }
         }catch(Exception e){
             System.err.println(e);
@@ -91,6 +133,13 @@ public class Logowanie {
         System.out.println(ImieNazwisko);
         return ImieNazwisko;
     }
+
+    /**
+     * Metoda SprawdzHaslo ustalająca czy dane istnieją w bazie danych
+     * @param Login
+     * @param Haslo
+     * @return true jeżeli dane zostały poprawnie dopasowane, w przeciwnym wypadku false
+     */
 
     public static Boolean SprawdzHaslo(String Login, String Haslo){
       try{

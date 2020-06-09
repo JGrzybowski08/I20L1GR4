@@ -13,6 +13,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+//TODO kontroler do ZobaczWizyty które chyba jest do wywalenia
+
 public class ZobaczWizytyController implements Initializable {
 
 

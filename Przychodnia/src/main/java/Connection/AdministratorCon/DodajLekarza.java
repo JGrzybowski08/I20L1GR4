@@ -5,7 +5,28 @@ import Connection.Polaczenie;
 import java.sql.*;
 import java.util.Random;
 
+/**
+ * Klasa DodajLekarza, obsługująca rejestrację nowego lekarza.
+ */
+
 public class DodajLekarza {
+
+    /**
+     * Metoda Rejestruj, obsługująca rejestrację nowego lekarza.
+     * @param Imie
+     * @param Nazwisko
+     * @param Email
+     * @param Pesel
+     * @param Telefon
+     * @param Specjalizacja
+     * @param Haslo
+     * @param Miejscowosc
+     * @param KodPocztowy
+     * @param Ulica
+     * @param NumerDomu
+     * @return true jeżeli wszystkie dane są poprawne i lekarz zostanie dodany do bazy, w przeciwnym wypadku false.
+     * @throws SQLException
+     */
 
     public static boolean Rejestruj(String Imie, String Nazwisko, String Email, String Pesel, String Telefon, String Specjalizacja, String Haslo, String Miejscowosc, String KodPocztowy, String Ulica, String NumerDomu) throws SQLException {
         Connection con = Polaczenie.Connect();

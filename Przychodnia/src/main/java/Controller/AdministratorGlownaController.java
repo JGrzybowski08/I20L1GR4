@@ -15,9 +15,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
- *
+ * Klasa AdministratorGlownaController - kontroler do strony panelu głównego administratora.
  */
+
 public class AdministratorGlownaController {
+
+
     @FXML
     public Button LogoutBT;
     @FXML
@@ -31,10 +34,11 @@ public class AdministratorGlownaController {
 
 
     /**
-     *
+     * Metoda handleSpisPacjentowBTAction obsługująca przycisk do wyświetlania panelu spisu pacjentów
      * @param event
      * @throws IOException
      */
+
     @FXML
     public void handleSpisPacjentowBTAction(ActionEvent event) throws IOException {
         Parent SP = FXMLLoader.load(getClass().getResource("/AdministratorFXML/SpisPacjentow.fxml"));
@@ -44,6 +48,11 @@ public class AdministratorGlownaController {
 
     }
 
+    /**
+     * Metoda handleSpisWizytBTAction obsługująca przycisk do wyświetlania panelu spisu wizyt
+     * @param event
+     * @throws IOException
+     */
 
     @FXML
     public void handleSpisWizytBTAction(ActionEvent event) throws IOException {
@@ -53,6 +62,11 @@ public class AdministratorGlownaController {
         SpisWizyt.show();
     }
 
+    /**
+     * Metoda handleSpisLekarzyBTAction obsługująca przycisk do wyświetlania panelu spisu lekarzy
+     * @param event
+     * @throws IOException
+     */
 
     @FXML
     public void handleSpisLekarzyBTAction(ActionEvent event) throws IOException {
@@ -63,6 +77,12 @@ public class AdministratorGlownaController {
 
     }
 
+    /**
+     * Metoda handleSpisDodajLekarzaBTAction obsługująca przycisk do wyświetlania panelu rejestrowania lekarza
+     * @param event
+     * @throws IOException
+     */
+
     @FXML
     public void handleDodajLekarzaBTAction(ActionEvent event) throws IOException {
         Parent DL = FXMLLoader.load(getClass().getResource("/AdministratorFXML/DodajLekarza.fxml"));
@@ -72,15 +92,30 @@ public class AdministratorGlownaController {
 
     }
 
+    /**
+     * Metoda handleWyczyscBazeBTAction obsługująca przycisk do czyszczenia bazy
+     * @param event
+     */
+
     @FXML
     public void handleWyczyscBazeBTAction(ActionEvent event){
         CzyszczenieBazy.Wyczysc();
     }
 
+    /**
+     * Metoda handleWypelnijBazeBTAction obsługująca przycisk do wstawiania rekordów do bazy
+     * @param event
+     */
+
     @FXML
     public void handleWypelnijBazeBTAction(ActionEvent event){
         WypelnianieBazy.Wypelnij();
     }
+
+    /**
+     * Metoda handleLogoutBTAction obsługująca przycisk wylogowujący użytkownika
+     * @param event
+     */
 
     @FXML
     public void handleLogoutBTAction(ActionEvent event) throws IOException {
@@ -90,6 +125,11 @@ public class AdministratorGlownaController {
         Logowanie.show();
 
     }
+
+    /**
+     * Metoda handleGenerujRaportWizytBTAction obsługująca przycisk generujący raport
+     * @param event
+     */
 
     public void handleGenerujRaportWizytBTAction(ActionEvent event) {
         GenerujRaport.generujRaportWizyt();

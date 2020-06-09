@@ -1,38 +1,39 @@
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Connection\AdministratorCon\SpisLekarzy.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Models\ModelAktualneWizytyLekarz.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Connection\AdministratorCon\DodajLekarza.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Controller\LogowanieController.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Controller\SpisWizytController.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Exceptions\RegisterException.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Controller\DodajWizyteController.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Connection\HistoriaWizyt.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Main.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Connection\AdministratorCon\SpisWizyt.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Connection\Polaczenie.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Controller\HistoriaWizytLekarzController.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Controller\LekarzGlownaController.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Connection\AdministratorCon\DodawanieLekarza.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Controller\AdministratorGlownaController.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Controller\AktualneWizytyLekarzController.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Connection\Logowanie.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Models\ModelSpisPacjentow.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Connection\LekarzCon\AktualneWizytyLekarz.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Controller\EdytujDaneController.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Controller\ZobaczWizytyController.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Connection\AdministratorCon\GenerujRaport.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Controller\DodajLekarzaController.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Controller\EdytujWizyteController.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Controller\PacjentGlownaController.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Connection\LekarzCon\HistoriaWizytLekarz.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Connection\DodajPacjenta.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Models\ModelSpisWizyt.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Controller\SpisPacjentowController.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Connection\AdministratorCon\WypelnianieBazy.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Controller\EdytujWizyteFormController.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Controller\SpisLekarzyController.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Controller\DodajPacjentaController.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Connection\AdministratorCon\CzyszczenieBazy.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Connection\ZobaczWizyty.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Connection\AdministratorCon\SpisPacjentow.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Controller\HistoriaWizytController.java
-P:\Programowanie zespołowe\I20L1GR4\Przychodnia\src\main\java\Models\ModelSpisLekarzy.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Controller\LekarzGlownaController.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Exceptions\RegisterException.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Controller\AktualneWizytyLekarzController.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Controller\SpisLekarzyController.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Controller\HistoriaWizytController.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Controller\LogowanieController.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Controller\ZobaczWizytyController.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Connection\LekarzCon\HistoriaWizytLekarz.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Connection\AdministratorCon\SpisWizyt.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Connection\AdministratorCon\DodawanieLekarza.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Controller\SpisWizytPacjentController.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Models\ModelSpisPacjentow.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Connection\AdministratorCon\DodajLekarza.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Connection\Polaczenie.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Controller\SpisWizytController.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Main.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Connection\LekarzCon\AktualneWizytyLekarz.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Connection\Logowanie.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Controller\EdytujWizyteController.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Connection\AdministratorCon\SpisPacjentow.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Controller\DodajPacjentaController.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Controller\EdytujWizyteFormController.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Models\ModelAktualneWizytyLekarz.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Controller\DodajWizyteController.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Controller\PacjentGlownaController.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Controller\SpisPacjentowController.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Connection\HistoriaWizyt.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Models\ModelSpisLekarzy.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Connection\ZobaczWizyty.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Controller\DodajLekarzaController.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Connection\AdministratorCon\WypelnianieBazy.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Controller\AdministratorGlownaController.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Connection\AdministratorCon\GenerujRaport.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Controller\HistoriaWizytLekarzController.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Connection\DodajPacjenta.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Controller\EdytujDaneController.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Connection\AdministratorCon\CzyszczenieBazy.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Models\ModelSpisWizyt.java
+C:\Users\wesol\Desktop\I20L1GR4-branch1\Przychodnia\src\main\java\Connection\AdministratorCon\SpisLekarzy.java

@@ -17,6 +17,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Klasa SpisLekarzyController - kontroler do obsługi wyświetlania wszystkich lekarzy
+ */
+
 public class SpisLekarzyController implements Initializable {
 
     public TableView<ModelSpisLekarzy> SpisLekarzyTV;
@@ -37,11 +41,22 @@ public class SpisLekarzyController implements Initializable {
 
     public TextField FiltrTF;
 
+    /**
+     * Metoda initialize inicjująca wypełnienie tabel danymi oraz wyświetlanie danych lekarzy
+     * @param location
+     * @param resources
+     */
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         wypelnijTabele();
         wypelnijCB();
     }
+
+    /**
+     * Metoda handleFiltrujBTAction czyszcząca listę z obecnymi danymi i wypełniająca je danymi z odpowiednim filtrem
+     * @param event
+     */
 
     @FXML
     public void handleFiltrujBTAction(ActionEvent event){
@@ -50,11 +65,22 @@ public class SpisLekarzyController implements Initializable {
         SpisLekarzyTV.setItems(SpisLekarzy.FiltrowaniLekarzeGet(FiltrCB.getValue(), FiltrTF.getText() ));
     }
 
+    /**
+     * Metoda handleWyczyscFiltrBTAction usuwająca filtry nałożone na tabelę
+     * @param event
+     */
+
     @FXML
     public void handleWyczyscFiltrBTAction(ActionEvent event){
         wypelnijTabele();
         FiltrTF.clear();
     }
+
+    /**
+     * Metoda handleExitBTAction obsługująca wyjście do panelu głównego administratora
+     * @param event
+     * @throws IOException
+     */
 
     @FXML
     public void handleExitBTAction(ActionEvent event) throws IOException {
@@ -64,6 +90,10 @@ public class SpisLekarzyController implements Initializable {
         AdministratorGlowna.show();
 
     }
+
+    /**
+     * Metoda wypelnijTabele inicjalizująca wyświetlaną tabelę
+     */
 
     public void wypelnijTabele(){
         ImieTC.setCellValueFactory(new PropertyValueFactory<>("Imie"));
@@ -80,6 +110,10 @@ public class SpisLekarzyController implements Initializable {
 
         SpisLekarzyTV.setItems(SpisLekarzy.WszyscyLekarzeGet());
     }
+
+    /**
+     * Metoda wypelnijCB dodająca dane do wyświetlanej tabeli
+     */
 
     public void wypelnijCB(){
         FiltrCB.getItems().clear();

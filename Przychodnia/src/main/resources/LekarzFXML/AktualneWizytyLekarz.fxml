@@ -19,9 +19,14 @@
                         <Font name="System Bold" size="24.0" />
                     </font>
                 </Label>
-                <Label layoutX="685.0" layoutY="20.0" prefHeight="25.0" prefWidth="244.0" text="Panel Lekarza" textFill="WHITE">
+                <Label layoutX="586.0" layoutY="22.0" prefHeight="25.0" prefWidth="244.0" text="Panel Lekarza" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="19.0" />
+                    </font>
+                </Label>
+                <Label fx:id="NazwaLL" layoutX="734.0" layoutY="24.0" prefHeight="25.0" text="username_doctor" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
                     </font>
                 </Label>
             </children>
@@ -40,8 +45,8 @@
         <JFXTextField fx:id="FiltrTF" layoutX="388.0" layoutY="563.0" prefHeight="37.0" prefWidth="233.0" promptText="Filtr" stylesheets="@../Styles/style.css" />
         <JFXButton fx:id="FiltrujBT" layoutX="644.0" layoutY="558.0" onAction="#handleFiltrujBTAction" prefHeight="46.0" prefWidth="133.0" style="-fx-background-color: #48A5EA;" text="Filtruj" textFill="WHITE" />
         <JFXButton fx:id="WyczyscFiltrBT" layoutX="788.0" layoutY="558.0" onAction="#handleWyczyscFiltrBTAction" prefHeight="46.0" prefWidth="133.0" style="-fx-background-color: #48A5EA;" text="Wyczyść Filtr" textFill="WHITE" />
-      <JFXButton fx:id="FiltrujBT" layoutY="502.0" onAction="#handleZaakceptujBTAction" prefHeight="46.0" prefWidth="133.0" style="-fx-background-color: #48A5EA;" text="Zaakceptuj" textFill="WHITE" AnchorPane.leftAnchor="250.0" />
-      <JFXButton fx:id="FiltrujBT" layoutX="810.0" layoutY="502.0" onAction="#handleOdwolajBTAction" prefHeight="46.0" prefWidth="133.0" style="-fx-background-color: #48A5EA;" text="Odwołaj" textFill="WHITE" AnchorPane.rightAnchor="250.0" />
-      <JFXButton fx:id="FiltrujBT" layoutX="405.0" layoutY="502.0" onAction="#handleZakonczBTAction" prefHeight="46.0" prefWidth="133.0" style="-fx-background-color: #48A5EA;" text="Zakończ" textFill="WHITE" />
+      <JFXButton fx:id="ZaakceptujBT" layoutY="502.0" onAction="#handleZaakceptujBTAction" prefHeight="46.0" prefWidth="133.0" style="-fx-background-color: #48A5EA;" text="Zaakceptuj" textFill="WHITE" AnchorPane.leftAnchor="250.0" />
+      <JFXButton fx:id="OdwolajBT" layoutX="810.0" layoutY="502.0" onAction="#handleOdwolajBTAction" prefHeight="46.0" prefWidth="133.0" style="-fx-background-color: #48A5EA;" text="Odwołaj" textFill="WHITE" AnchorPane.rightAnchor="250.0" />
+      <JFXButton fx:id="ZakonczBT" layoutX="405.0" layoutY="502.0" onAction="#handleZakonczBTAction" prefHeight="46.0" prefWidth="133.0" style="-fx-background-color: #48A5EA;" text="Zakończ" textFill="WHITE" />
     </children>
 </AnchorPane>

@@ -13,9 +13,30 @@ import java.sql.SQLException;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 
+/**
+ * Klasa AktualneWizytyLekarz odpowiadająca za wyświetlanie zbliżających się wizyt w panelu lekarza.
+ */
+
 public class AktualneWizytyLekarz {
+
+    /**
+     * Metoda WszystkieWizytyGet pobierające dane odpowiednich wizyt.
+     * @param LekarzID przechowuje ID lekarza
+     * @return SpisWizytOL
+     */
+
     public static ObservableList<ModelAktualneWizytyLekarz> WszystkieWizytyGet(int LekarzID) {
+
+        /**
+         * @param SpisWizytOL przechowujący wszystkie informacje o wizytach pobrane z bazy danych.
+         */
+
         ObservableList<ModelAktualneWizytyLekarz> SpisWizytOL = FXCollections.observableArrayList();
+
+        /**
+         * @param dtf
+         * @param now
+         */
 
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDateTime now = LocalDateTime.now();
@@ -26,6 +47,11 @@ public class AktualneWizytyLekarz {
                     "SELECT wizyty.Data, wizyty.Godzina, wizyty.Opis, wizyty.Status, pacjenci.Imie, pacjenci.Nazwisko FROM wizyty, pacjenci, lekarze WHERE wizyty.Pacjent_ID = pacjenci.Pacjent_ID AND wizyty.Lekarz_ID = "+ LekarzID +" AND wizyty.Lekarz_ID = lekarze.Lekarz_ID AND wizyty.Data >= '"+ dtf.format(now) +"' ORDER BY wizyty.Data DESC, wizyty.Godzina DESC"
             );
             while (rs.next()) {
+
+                /**
+                 * SpisWizytOL.add funkcja dodająca dane wyciągnięte za pomocą zapytania SQL do listy SpisWizytOL.
+                 */
+
                 SpisWizytOL.add(new ModelAktualneWizytyLekarz(
                         rs.getString(1), //Data
                         rs.getString(2), //Godzina
@@ -41,6 +67,13 @@ public class AktualneWizytyLekarz {
         return SpisWizytOL;
     }
 
+    /**
+     * Metoda FiltrowaneWizytyGet odpowiadająca za działanie filtrów w liśćie wizyt.
+     * @param FiltrCB
+     * @param FiltrTF
+     * @return SpisWizytOL - lista z wybranymi filtrami.
+     */
+
     public static ObservableList<ModelAktualneWizytyLekarz> FiltrowaneWizytyGet(String FiltrCB, String FiltrTF, int LekarzID) {
         ObservableList<ModelAktualneWizytyLekarz> SpisWizytOL = FXCollections.observableArrayList();
         ResultSet FWG;
@@ -50,6 +83,7 @@ public class AktualneWizytyLekarz {
         LocalDateTime now = LocalDateTime.now();
 
         String sql = "SELECT wizyty.Data, wizyty.Godzina, wizyty.Opis, wizyty.Status, pacjenci.Imie, pacjenci.Nazwisko, lekarze.Imie, lekarze.Nazwisko FROM wizyty, pacjenci, lekarze WHERE wizyty.Pacjent_ID = pacjenci.Pacjent_ID AND wizyty.Lekarz_ID = "+ LekarzID +" AND "+ FiltrCB +" = '"+ FiltrTF +"' AND wizyty.Lekarz_ID = lekarze.Lekarz_ID wizyty.Data >= '"+ dtf.format(now) +"' ORDER BY wizyty.Data DESC, wizyty.Godzina DESC";
+
 
         switch(FiltrCB){
             case "Pacjent":
@@ -63,6 +97,11 @@ public class AktualneWizytyLekarz {
             FWG = con.createStatement().executeQuery(sql);
 
             while (FWG.next()) {
+
+                /**
+                 * SpisWizytOL.add funkcja dodająca dane wyciągnięte za pomocą zapytania SQL do listy SpisWizytOL.
+                 */
+
                 SpisWizytOL.add(new ModelAktualneWizytyLekarz(
                         FWG.getString(1), //Data
                         FWG.getString(2), //Godzina

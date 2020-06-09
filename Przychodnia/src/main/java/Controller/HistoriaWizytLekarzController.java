@@ -1,8 +1,7 @@
 package Controller;
 
-import Connection.AdministratorCon.SpisWizyt;
-import Connection.LekarzCon.AktualneWizytyLekarz;
 import Connection.LekarzCon.HistoriaWizytLekarz;
+import Connection.Logowanie;
 import Models.ModelAktualneWizytyLekarz;
 import Models.ModelSpisWizyt;
 import javafx.event.ActionEvent;
@@ -12,16 +11,17 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+/**
+ * Klasa HistoriaWizytLekarzController - kontroler do obsługi wyświetlania przeszłych wizyt lekarza
+ */
 
 public class HistoriaWizytLekarzController implements Initializable {
     public TableView<ModelAktualneWizytyLekarz> SpisWizytTV;
@@ -31,18 +31,42 @@ public class HistoriaWizytLekarzController implements Initializable {
     public TableColumn<ModelSpisWizyt, String> StatusTC;
     public TableColumn<ModelSpisWizyt, String> PacjentTC;
 
+    /**
+     * @param NazwaLL
+     * @param FiltrCB
+     * @param FiltrTF
+     * @param LekarzID
+     */
+
+    @FXML
+    Label NazwaLL;
+
     public ComboBox FiltrCB;
 
     public TextField FiltrTF;
 
     int LekarzID = LogowanieController.getKonto_ID();
 
+    /**
+     * Metoda initialize inicjująca wypełnienie tabel danymi oraz wyświetlanie danych przeszłych wizyt lekarza
+     * @param location
+     * @param resources
+     */
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         wypelnijTabele();
 
         wypelnijCB();
+
+        NazwaLL.setText("");
+        NazwaLL.setText(Logowanie.ImieNazwiskoLekarzGet(LogowanieController.getKonto_ID()));
     }
+
+    /**
+     * Metoda handleFiltrujBTAction czyszcząca listę z obecnymi danymi i wypełniająca je danymi z odpowiednim filtrem
+     * @param event
+     */
 
     @FXML
     public void handleFiltrujBTAction(ActionEvent event){
@@ -51,11 +75,22 @@ public class HistoriaWizytLekarzController implements Initializable {
         SpisWizytTV.setItems(HistoriaWizytLekarz.FiltrowaneWizytyGet((String) FiltrCB.getValue(), FiltrTF.getText(), LekarzID ));
     }
 
+    /**
+     * Metoda handleWyczyscFiltrBTAction usuwająca filtry nałożone na tabelę
+     * @param event
+     */
+
     @FXML
     public void handleWyczyscFiltrBTAction(ActionEvent event){
         wypelnijTabele();
         FiltrTF.clear();
     }
+
+    /**
+     * Metoda handleExitBTAction obsługująca wyjście do panelu głównego lekarza
+     * @param event
+     * @throws IOException
+     */
 
     @FXML
     public void handleExitBTAction(ActionEvent event) throws IOException {
@@ -66,6 +101,10 @@ public class HistoriaWizytLekarzController implements Initializable {
 
     }
 
+    /**
+     * Metoda wypelnijTabele inicjalizująca wyświetlaną tabelę
+     */
+
     public void wypelnijTabele(){
         DataTC.setCellValueFactory(new PropertyValueFactory<>("Data"));
         GodzinaTC.setCellValueFactory(new PropertyValueFactory<>("Godzina"));
@@ -75,6 +114,10 @@ public class HistoriaWizytLekarzController implements Initializable {
 
         SpisWizytTV.setItems(HistoriaWizytLekarz.WszystkieWizytyGet(LekarzID));
     }
+
+    /**
+     * Metoda wypelnijCB dodająca dane do wyświetlanej tabeli
+     */
 
     public void wypelnijCB(){
         FiltrCB.getItems().clear();

@@ -16,7 +16,17 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Klasa DodajLekarzaController - kontroler do obsługi rejestracji lekarza
+ */
+
 public class DodajLekarzaController {
+
+    /**
+     * @param alertBlad
+     * @param WysBlad
+     * @param TrescBledu
+     */
 
     Alert alertBlad = new Alert(Alert.AlertType.ERROR);
 
@@ -49,6 +59,10 @@ public class DodajLekarzaController {
     @FXML
     private TextField NumerDomuTF;
 
+    /**
+     * Metoda handleDodawanieLekarzaBTAction obsługująca przycisk dodawania lekarza
+     * @param event
+     */
 
     @FXML
     public void handleDodawanieLekarzaBTAction(MouseEvent event) {
@@ -79,6 +93,12 @@ public class DodajLekarzaController {
         }
     }
 
+    /**
+     * Metoda handleBackBTAction obsługująca przycisk odpowiadający za powrót do panelu głównego administratora
+     * @param event
+     * @throws IOException
+     */
+
     @FXML
     public void handleBackBTAction(MouseEvent event) throws IOException {
         Parent AG = FXMLLoader.load(getClass().getResource("/AdministratorFXML/AdministratorGlowna.fxml"));
@@ -87,6 +107,11 @@ public class DodajLekarzaController {
         AdministratorGlowna.show();
 
     }
+
+    /**
+     * Metoda sprawdzPola odpowiadająca za sprawdzenie poprawności danych wprowadzonych przez administratora przy rejestracji lekarza
+     * @return WysBlad - true, jeżeli wszystkie dane są wprowadzone poprawnie, w przeciwnym wypadku false z odpowiednim komunikatem
+     */
 
     public Boolean sprawdzPola(){
         WysBlad = false;
