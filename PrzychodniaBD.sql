@@ -115,6 +115,7 @@ ALTER TABLE `adresy`
 --
 ALTER TABLE `konta`
   ADD PRIMARY KEY (`Login`);
+  
 
 --
 -- Indeksy dla tabeli `lekarze`
@@ -161,6 +162,13 @@ ALTER TABLE `pacjenci`
 --
 ALTER TABLE `wizyty`
   MODIFY `Wizyta_ID` int(11) NOT NULL AUTO_INCREMENT;
+  
+--
+-- Insert konta administratora do tabeli `konta`
+--
+ INSERT INTO `konta` (`Login`, `Haslo`, `Administrator`, `Lekarz`, `Pacjent`) VALUES
+(111, 'qqq', 1, 0, 0);
+  
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

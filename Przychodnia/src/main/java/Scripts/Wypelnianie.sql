@@ -43,7 +43,6 @@ INSERT INTO `adresy` (`Adres_ID`, `Ulica`, `Nr_domu`, `Kod_pocztowy`, `Miejscowo
 --
 
 INSERT INTO `konta` (`Login`, `Haslo`, `Administrator`, `Lekarz`, `Pacjent`) VALUES
-(111111, 'qqq', 1, 0, 0),
 (222222, 'www', 0, 1, 0),
 (333333, 'eee', 0, 1, 0),
 (444444, 'rrr', 0, 1, 0),
