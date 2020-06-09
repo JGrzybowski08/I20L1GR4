@@ -64,6 +64,10 @@ CREATE TABLE `konta` (
   `Pacjent` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
+
+INSERT INTO `konta` (`Login`, `Haslo`, `Administrator`, `Lekarz`, `Pacjent`) VALUES
+(111, 'qqq', 1, 0, 0);
+
 -- --------------------------------------------------------
 
 --

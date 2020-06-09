@@ -1,6 +1,6 @@
-package Controller.LekarzController;
+package Controller.PacjentController;
 
-import Connection.LekarzCon.EdytujDaneLekarz;
+import Connection.PacjentCon.EdytujDanePacjent;
 import Connection.Logowanie;
 import Controller.LogowanieController;
 import javafx.event.ActionEvent;
@@ -14,9 +14,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import org.omg.CORBA.PERSIST_STORE;
+
 
 import java.io.IOException;
 import java.net.URL;
@@ -25,10 +24,10 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 /**
- * Klasa EdytujDaneLekarzController - kontroler obsługujący panel edytowania danych lekarza
+ * Klasa EdytujDanePacjentController - kontroler obsługujący panel edytowania danych pacjenta
  */
 
-public class EdytujDaneLekarzController implements Initializable {
+public class EdytujDanePacjentController implements Initializable {
 
     /**
      * @param alertBlad
@@ -45,15 +44,11 @@ public class EdytujDaneLekarzController implements Initializable {
     @FXML
     private TextField ImieTF;
     @FXML
-    private TextField EmailTF;
+    private TextField NazwiskoTF;
     @FXML
     private TextField PeselTF;
     @FXML
-    private TextField NazwiskoTF;
-    @FXML
     private TextField TelefonTF;
-    @FXML
-    private TextField SpecjalizacjaTF;
     @FXML
     private PasswordField HasloPF;
     @FXML
@@ -67,35 +62,33 @@ public class EdytujDaneLekarzController implements Initializable {
     @FXML
     private TextField NumerDomuTF;
     @FXML
-    Label NazwaLL;
+    Label NazwaPL;
 
     /**
-     * Metoda initialize inicjująca wypełnienie tabel danymi oraz wyświetlanie danych lekarza
+     * Metoda initialize inicjująca wypełnienie tabel danymi oraz wyświetlanie danych pacjenta
      * @param location
      * @param resources
      */
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        NazwaLL.setText("");
-        NazwaLL.setText(Logowanie.ImieNazwiskoLekarzGet(LogowanieController.getKonto_ID()));
+        NazwaPL.setText("");
+        NazwaPL.setText(Logowanie.ImieNazwiskopacjentGet(LogowanieController.getKonto_ID()));
 
-        wypełnijPola(EdytujDaneLekarz.PobierzDaneLekarz());
+        wypełnijPola(EdytujDanePacjent.PobierzDanePacjent());
 
     }
 
-    public void wypełnijPola(List<String> DaneLekarza){
-        ImieTF.setText(DaneLekarza.get(0));//Imie
-        NazwiskoTF.setText(DaneLekarza.get(1));//Nazwisko
-        EmailTF.setText(DaneLekarza.get(2));//Email
-        PeselTF.setText(DaneLekarza.get(3));//PESEL
-        TelefonTF.setText(DaneLekarza.get(4));//Telefon
-        SpecjalizacjaTF.setText(DaneLekarza.get(5));//Specjalizacja
-        KodPocztowyTF.setText(DaneLekarza.get(6));//Kod_pocztowy
-        MiejscowoscTF.setText(DaneLekarza.get(7));//Miejscowosc
-        UlicaTF.setText(DaneLekarza.get(8));//Ulica
-        NumerDomuTF.setText(DaneLekarza.get(9));//Numer_Domu
-        HasloPF.setText(DaneLekarza.get(10));//Haslo
+    public void wypełnijPola(List<String> DanePacjenta){
+        ImieTF.setText(DanePacjenta.get(0));//Imie
+        NazwiskoTF.setText(DanePacjenta.get(1));//Nazwisko
+        PeselTF.setText(DanePacjenta.get(2));//PESEL
+        TelefonTF.setText(DanePacjenta.get(3));//Telefon
+        KodPocztowyTF.setText(DanePacjenta.get(4));//Kod_pocztowy
+        MiejscowoscTF.setText(DanePacjenta.get(5));//Miejscowosc
+        UlicaTF.setText(DanePacjenta.get(6));//Ulica
+        NumerDomuTF.setText(DanePacjenta.get(7));//Numer_Domu
+        HasloPF.setText(DanePacjenta.get(8));//Haslo
     }
 
     @FXML
@@ -106,19 +99,17 @@ public class EdytujDaneLekarzController implements Initializable {
         }else {
             String Imie = ImieTF.getText();
             String Nazwisko = NazwiskoTF.getText();
-            String Email = EmailTF.getText();
             String Pesel = PeselTF.getText();
             String Telefon = TelefonTF.getText();
-            String Specjalizacja = SpecjalizacjaTF.getText();
             String Haslo = HasloPF.getText();
             String Miejscowosc = MiejscowoscTF.getText();
             String KodPocztowy = KodPocztowyTF.getText();
             String Ulica = UlicaTF.getText();
             String NumerDomu = NumerDomuTF.getText();
             try {
-                EdytujDaneLekarz.EdytujDane(Imie, Nazwisko, Email, Pesel, Telefon, Specjalizacja, Miejscowosc, KodPocztowy, Ulica, NumerDomu, Haslo);
-                wypełnijPola(EdytujDaneLekarz.PobierzDaneLekarz());
-                NazwaLL.setText(Logowanie.ImieNazwiskoLekarzGet(LogowanieController.getKonto_ID()));
+                EdytujDanePacjent.EdytujDane(Imie, Nazwisko, Pesel, Telefon, Miejscowosc, KodPocztowy, Ulica, NumerDomu, Haslo);
+                wypełnijPola(EdytujDanePacjent.PobierzDanePacjent());
+                NazwaPL.setText(Logowanie.ImieNazwiskopacjentGet(LogowanieController.getKonto_ID()));
             } catch (SQLException e) {
                 System.err.println(e);
             }
@@ -128,10 +119,10 @@ public class EdytujDaneLekarzController implements Initializable {
 
     @FXML
     public void handleBackBTAction(ActionEvent event) throws IOException {
-        Parent LG = FXMLLoader.load(getClass().getResource("/LekarzFXML/LekarzGlowna.fxml"));
-        Stage LekarzGlowna = (Stage)((Node)event.getSource()).getScene().getWindow();
-        LekarzGlowna.setScene(new Scene(LG));
-        LekarzGlowna.show();
+        Parent PG = FXMLLoader.load(getClass().getResource("/PacjentFXML/PacjentGlowna.fxml"));
+        Stage PacjentGlowna = (Stage)((Node)event.getSource()).getScene().getWindow();
+        PacjentGlowna.setScene(new Scene(PG));
+        PacjentGlowna.show();
 
     }
 
@@ -139,7 +130,7 @@ public class EdytujDaneLekarzController implements Initializable {
         WysBlad = false;
         TrescBledu = "";
 
-        alertBlad.setTitle("Błąd przy rejestracji lekarza!");
+        alertBlad.setTitle("Błąd przy edytowaniu danych pacjenta");
         alertBlad.setHeaderText("Wystąpiły następujące błędy: ");
 
         if(ImieTF.getText().isEmpty()){
@@ -149,11 +140,6 @@ public class EdytujDaneLekarzController implements Initializable {
 
         if(NazwiskoTF.getText().isEmpty()){
             TrescBledu = TrescBledu + ("Pole nazwisko jest puste!\n");
-            WysBlad = true;
-        }
-
-        if(EmailTF.getText().isEmpty()){
-            TrescBledu = TrescBledu + ("Pole e-mail jest puste!\n");
             WysBlad = true;
         }
 
@@ -174,11 +160,6 @@ public class EdytujDaneLekarzController implements Initializable {
 
         if(PeselTF.getText().length() != 11){
             TrescBledu = TrescBledu + ("Pole PESEL ma złą długość!\n");
-            WysBlad = true;
-        }
-
-        if(SpecjalizacjaTF.getText().isEmpty()){
-            TrescBledu = TrescBledu + ("Pole specjalizacja jest puste!\n");
             WysBlad = true;
         }
 

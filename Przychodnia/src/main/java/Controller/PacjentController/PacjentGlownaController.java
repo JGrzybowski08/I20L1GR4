@@ -33,7 +33,7 @@ public class PacjentGlownaController implements Initializable {
     @FXML
     private Button HistoriaWizytBT;
     @FXML
-    private Button EdytujDaneBT;
+    private Button btnUpdate;
     @FXML
     private Label IDL;
 
@@ -79,12 +79,10 @@ public class PacjentGlownaController implements Initializable {
 
     @FXML
     public void handleEdytujDaneBTAction(ActionEvent event) throws IOException {
-        FXMLLoader ED = new FXMLLoader(getClass().getResource("/PacjentFXML/EdytujDanePacjent.fxml"));
-        Stage EdytujDane = new Stage();
-        EdytujDane.initOwner(EdytujDaneBT.getScene().getWindow());
-        EdytujDane.setScene(new Scene((Parent) ED.load()));
-
-        EdytujDane.showAndWait();
+        Parent EDP = FXMLLoader.load(getClass().getResource("/PacjentFXML/EdytujDanePacjent.fxml"));
+        Stage EdytujDanePacjent = (Stage)((Node)event.getSource()).getScene().getWindow();
+        EdytujDanePacjent.setScene(new Scene(EDP));
+        EdytujDanePacjent.show();
     }
 
     @FXML

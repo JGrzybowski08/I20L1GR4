@@ -16,11 +16,7 @@
                         <Font name="System Bold" size="24.0" />
                     </font>
                 </Label>
-                <Label layoutX="685.0" layoutY="20.0" prefHeight="25.0" prefWidth="244.0" text="Panel Administratora" textFill="WHITE">
-                    <font>
-                        <Font name="System Bold" size="19.0" />
-                    </font>
-                </Label>
+
             </children>
         </Pane>
         <JFXButton layoutX="33.0" layoutY="558.0" onAction="#handleExitBTAction" prefHeight="46.0" prefWidth="133.0" style="-fx-background-color: #48A5EA;" text="Wróć" textFill="WHITE" />
