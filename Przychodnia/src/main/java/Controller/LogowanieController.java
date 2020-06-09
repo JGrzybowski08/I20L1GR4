@@ -108,7 +108,7 @@ public class LogowanieController {
                     break;
                 case "Pacjent":
                     try {
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/PacjentGlowna.fxml"));
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/PacjentFXML/PacjentGlowna.fxml"));
                         Parent root = (Parent) loader.load();
                         Stage PacjentGlowna = (Stage) ((Node) event.getSource()).getScene().getWindow();
                         PacjentGlowna.setScene(new Scene(root));

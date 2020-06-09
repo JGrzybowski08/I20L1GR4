@@ -85,10 +85,10 @@ public class HistoriaWizytLekarz {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDateTime now = LocalDateTime.now();
 
-        String sql = "SELECT wizyty.Data, wizyty.Godzina, wizyty.Opis, wizyty.Status, pacjenci.Imie, pacjenci.Nazwisko, lekarze.Imie, lekarze.Nazwisko FROM wizyty, pacjenci, lekarze WHERE wizyty.Pacjent_ID = pacjenci.Pacjent_ID AND wizyty.Lekarz_ID = "+ LekarzID +" AND "+ FiltrCB +" = '"+ FiltrTF +"' AND wizyty.Lekarz_ID = lekarze.Lekarz_ID wizyty.Data < '"+ dtf.format(now) +"' ORDER BY wizyty.Data DESC, wizyty.Godzina DESC";
+        String sql = "SELECT wizyty.Data, wizyty.Godzina, wizyty.Opis, wizyty.Status, pacjenci.Imie, pacjenci.Nazwisko, lekarze.Imie, lekarze.Nazwisko FROM wizyty, pacjenci, lekarze WHERE wizyty.Pacjent_ID = pacjenci.Pacjent_ID AND wizyty.Lekarz_ID = "+ LekarzID +" AND "+ FiltrCB +" = '"+ FiltrTF +"' AND wizyty.Lekarz_ID = lekarze.Lekarz_ID AND wizyty.Data < '"+ dtf.format(now) +"' ORDER BY wizyty.Data DESC, wizyty.Godzina DESC";
 
         switch(FiltrCB){
-            case "Pacjent":
+            case "Lekarz":
                 IiN = FiltrTF.split(" ");
                 sql = "SELECT wizyty.Data, wizyty.Godzina, wizyty.Opis, wizyty.Status, pacjenci.Imie, pacjenci.Nazwisko, lekarze.Imie, lekarze.Nazwisko FROM wizyty, pacjenci, lekarze WHERE wizyty.Pacjent_ID = pacjenci.Pacjent_ID AND wizyty.Lekarz_ID = "+ LekarzID +" AND pacjenci.Imie = '"+ IiN[0] + "' AND pacjenci.Nazwisko = '"+ IiN[1] +"' AND wizyty.Lekarz_ID = lekarze.Lekarz_ID AND wizyty.Data < '"+ dtf.format(now) +"' ORDER BY wizyty.Data DESC, wizyty.Godzina DESC";
                 break;

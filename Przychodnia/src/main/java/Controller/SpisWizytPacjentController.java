@@ -87,7 +87,7 @@ public class SpisWizytPacjentController implements Initializable {
 
     @FXML
     public void handleExitBTAction(ActionEvent event) throws IOException {
-        Parent AG = FXMLLoader.load(getClass().getResource("/PacjentGlowna.fxml"));
+        Parent AG = FXMLLoader.load(getClass().getResource("/PacjentFXML/PacjentGlowna.fxml"));
         Stage PacjentGlowna = (Stage)((Node)event.getSource()).getScene().getWindow();
         PacjentGlowna.setScene(new Scene(AG));
         PacjentGlowna.show();
