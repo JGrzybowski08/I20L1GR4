@@ -102,11 +102,9 @@ public class AktualneWizytyLekarzController implements Initializable {
 
     }
 
-<<<<<<< HEAD
     /**
      * Metoda wypelnijTabele inicjalizująca wyświetlaną tabelę
      */
-=======
     @FXML
     public void handleZaakceptujBTAction(ActionEvent event){
         ModelAktualneWizytyLekarz Wizyta = SpisWizytTV.getSelectionModel().getSelectedItem();
@@ -131,7 +129,6 @@ public class AktualneWizytyLekarzController implements Initializable {
         wypelnijTabele();
     }
 
->>>>>>> master
 
     public void wypelnijTabele(){
         SpisWizytTV.getItems().clear();
