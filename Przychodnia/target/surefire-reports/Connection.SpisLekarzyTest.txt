@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: Connection.SpisLekarzyTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.999 sec
+=======
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.547 sec
+>>>>>>> 834ccbd89f32b39f8d269cad93de48ff50a9d39b
