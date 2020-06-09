@@ -145,7 +145,7 @@ public class LogowanieController {
         WysBlad = false;
         TrescBledu = "";
 
-        alertBlad.setTitle("Błąd przy rejestracji lekarza!");
+        alertBlad.setTitle("Błąd przy logowaniu!");
         alertBlad.setHeaderText("Wystąpiły następujące błędy: ");
 
         if(LoginTF.getText().isEmpty()){
