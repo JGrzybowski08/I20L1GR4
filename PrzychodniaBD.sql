@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 04 Cze 2020, 01:58
+-- Czas generowania: 09 Cze 2020, 13:46
 -- Wersja serwera: 10.3.15-MariaDB
 -- Wersja PHP: 7.3.6
 
@@ -34,6 +34,20 @@ CREATE TABLE `adresy` (
   `Nr_domu` varchar(10) COLLATE utf8_polish_ci NOT NULL,
   `Kod_pocztowy` varchar(6) COLLATE utf8_polish_ci NOT NULL,
   `Miejscowosc` varchar(64) COLLATE utf8_polish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `godziny`
+--
+
+CREATE TABLE `godziny` (
+  `Godzina_ID` int(11) NOT NULL,
+  `Lekarz_ID` int(11) NOT NULL,
+  `Dzien_tygodnia` varchar(64) COLLATE utf8_polish_ci NOT NULL,
+  `Godzina_rozpoczecia` varchar(64) COLLATE utf8_polish_ci NOT NULL,
+  `Godzina_zakonczenia` varchar(64) COLLATE utf8_polish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 -- --------------------------------------------------------
@@ -111,11 +125,16 @@ ALTER TABLE `adresy`
   ADD PRIMARY KEY (`Adres_ID`);
 
 --
+-- Indeksy dla tabeli `godziny`
+--
+ALTER TABLE `godziny`
+  ADD PRIMARY KEY (`Godzina_ID`);
+
+--
 -- Indeksy dla tabeli `konta`
 --
 ALTER TABLE `konta`
   ADD PRIMARY KEY (`Login`);
-  
 
 --
 -- Indeksy dla tabeli `lekarze`
@@ -146,6 +165,12 @@ ALTER TABLE `adresy`
   MODIFY `Adres_ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT dla tabeli `godziny`
+--
+ALTER TABLE `godziny`
+  MODIFY `Godzina_ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT dla tabeli `lekarze`
 --
 ALTER TABLE `lekarze`
@@ -162,13 +187,6 @@ ALTER TABLE `pacjenci`
 --
 ALTER TABLE `wizyty`
   MODIFY `Wizyta_ID` int(11) NOT NULL AUTO_INCREMENT;
-  
---
--- Insert konta administratora do tabeli `konta`
---
- INSERT INTO `konta` (`Login`, `Haslo`, `Administrator`, `Lekarz`, `Pacjent`) VALUES
-(111, 'qqq', 1, 0, 0);
-  
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
