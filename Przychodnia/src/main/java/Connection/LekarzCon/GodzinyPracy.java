@@ -10,8 +10,31 @@ import Controller.LogowanieController;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 
+/**
+ * Klasa GodzinyPracy odpowiadająca za wszelkie operacje z godzinami pracy lekarzy
+ */
+
 public class GodzinyPracy {
+
+    /**
+     * Metoda DodajGodzinyPracy - metoda obsługująca dodawanie nowych godzin pracy dla lekarza
+     * @param godzinaRPI - godzina rozpoczęcia nowa
+     * @param godzinaZPI - godzina zakończenia nowa
+     * @param godzinaRP - godzina rozpoczęcia
+     * @param godzinaZP - godzina zakończenia
+     * @param dzienTygodznia - dzień tygodnia
+     */
+
     public static void DodajGodzinyPracy(int godzinaRPI, int godzinaZPI, String godzinaRP, String godzinaZP, String dzienTygodznia) {
+
+        /**
+         * @param LekarzID
+         * @param alertBlad
+         * @param alertInfo
+         * @param alertConfirm
+         * @param WysGP
+         * @param GodzinaID
+         */
 
         int LekarzID = LogowanieController.getKonto_ID();
         Alert alertBlad = new Alert(Alert.AlertType.ERROR);
@@ -199,6 +222,10 @@ public class GodzinyPracy {
         }
         return PonGP;
     }
+
+    /**
+     * Metoda SprawdzGodzinyPracy wyciągająca z bazy danych informacje o godzinach pracy lekarzy
+     */
 
     public static void SprawdzGodzinyPracy(){
         int LekarzID = LogowanieController.getKonto_ID();

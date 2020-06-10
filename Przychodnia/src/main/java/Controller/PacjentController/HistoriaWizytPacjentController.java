@@ -1,8 +1,6 @@
 package Controller.PacjentController;
 
-import Connection.LekarzCon.AktualneWizytyLekarz;
 import Connection.Logowanie;
-import Connection.PacjentCon.AktualneWizytyPacjent;
 import Connection.PacjentCon.HistoriaWizytPacjent;
 import Controller.LogowanieController;
 import Models.ModelAktualneWizytyPacjent;
@@ -20,6 +18,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+/**
+ * Klasa HistoriaWizytPacjentController - kontroler odpowiadający za wyświetlanie spisu przeszłych wizyt pacjenta
+ */
 
 public class HistoriaWizytPacjentController implements Initializable {
     public TableView<ModelAktualneWizytyPacjent> SpisWizytTV;

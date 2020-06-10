@@ -17,11 +17,12 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-//TODO niegotowe
+/**
+ * Klasa PacjentGlownaController - kontroler obsługujący panel główny pacjenta
+ */
 
 public class PacjentGlownaController implements Initializable {
 
-    int ID;
 
     @FXML
     private Button LogoutBT;
@@ -39,6 +40,12 @@ public class PacjentGlownaController implements Initializable {
     @FXML
     Label NazwaPL;
 
+    /**
+     * Metoda handleDodajWizyteBTAction - metoda obsługująca przycisk do rezerwacji nowych wizyt
+     * @param event
+     * @throws IOException
+     */
+
     @FXML
     public void handleDodajWizyteBTAction(ActionEvent event) throws IOException {
         Parent ZW = FXMLLoader.load(getClass().getResource("/PacjentFXML/ZarezerwujWizyte.fxml"));
@@ -47,6 +54,12 @@ public class PacjentGlownaController implements Initializable {
         ZarezerwujWizyte.show();
 
     }
+
+    /**
+     * Metoda handleZobaczWizytyBTAction - metoda obsługująca przycisk do zobaczenia spisu wizyt danego pacjenta
+     * @param event
+     * @throws IOException
+     */
 
     @FXML
     public void handleZobaczWizytyBTAction(ActionEvent event) throws IOException {
@@ -57,6 +70,12 @@ public class PacjentGlownaController implements Initializable {
 
     }
 
+    /**
+     * Metoda handleHistoriaWizytBTAction - metoda obsługująca przycisk do sprawdzenia spisu przeszłych wizyt pacjenta
+     * @param event
+     * @throws IOException
+     */
+
     @FXML
     public void handleHistoriaWizytBTAction(ActionEvent event) throws IOException {
         Parent HWP = FXMLLoader.load(getClass().getResource("/PacjentFXML/HistoriaWizytPacjent.fxml"));
@@ -66,6 +85,12 @@ public class PacjentGlownaController implements Initializable {
 
     }
 
+    /**
+     * Metoda handleEdytujDaneBTAction - metoda obsługująca przycisk przekierowujący do okienka edycji danych pacjenta
+     * @param event
+     * @throws IOException
+     */
+
     @FXML
     public void handleEdytujDaneBTAction(ActionEvent event) throws IOException {
         Parent EDP = FXMLLoader.load(getClass().getResource("/PacjentFXML/EdytujDanePacjent.fxml"));
@@ -73,6 +98,12 @@ public class PacjentGlownaController implements Initializable {
         EdytujDanePacjent.setScene(new Scene(EDP));
         EdytujDanePacjent.show();
     }
+
+    /**
+     * Metoda handleLogooutBTAction - metoda obsługująca wylogowywanie pacjenta z serwisu
+     * @param event
+     * @throws IOException
+     */
 
     @FXML
     public void handleLogoutBTAction(ActionEvent event) throws IOException {
@@ -82,6 +113,12 @@ public class PacjentGlownaController implements Initializable {
         Logowanie.show();
 
     }
+
+    /**
+     * Metoda initialize - metoda inicjująca wyświetlanie imienia i nazwiska pacjenta w panelu pacjenta
+     * @param location
+     * @param resources
+     */
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

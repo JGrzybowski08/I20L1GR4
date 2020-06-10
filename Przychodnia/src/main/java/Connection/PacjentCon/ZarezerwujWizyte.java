@@ -17,11 +17,22 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Klasa ZarezerwujWizyte odpowiadająca za akcje związane z rezerwowaniem wizyty przez pacjenta
+ */
+
 public class ZarezerwujWizyte {
 
-
+    /**
+     * Metoda WszyscyLekarzeGet zwracająca liste z danymi lekarzy
+     * @return SpisLekarzyOL
+     */
 
     public static ObservableList<ModelZarezerwujWizyte> WszyscyLekarzeGet() {
+
+        /**
+         * @param SpisLekarzyOL przechowujący wszystkie informacje o lekarzach pobrane z bazy danych.
+         */
 
         ObservableList<ModelZarezerwujWizyte> SpisLekarzyOL = FXCollections.observableArrayList();
         try {
@@ -31,6 +42,10 @@ public class ZarezerwujWizyte {
             );
 
             while (rs.next()) {
+
+                /**
+                 * SpisLekarzyOL.add funkcja dodająca dane wyciągnięte za pomocą zapytania SQL do listy SpisLekarzyOL.
+                 */
 
                 SpisLekarzyOL.add(new ModelZarezerwujWizyte(
                         rs.getString(1),
@@ -45,6 +60,13 @@ public class ZarezerwujWizyte {
         }
         return SpisLekarzyOL;
     }
+
+    /**
+     * Metoda FiltrowaniLekarzeGet odpowiadająca za działanie filtrów w liśćie lekarzy.
+     * @param filtrCB
+     * @param filtrTF
+     * @return SpisLekarzyOL - lista z wybranymi filtrami.
+     */
 
     public static ObservableList<ModelZarezerwujWizyte> FiltrowaniLekarzeGet(String filtrCB, String filtrTF) {
         ObservableList<ModelZarezerwujWizyte> SpisLekarzyOL = FXCollections.observableArrayList();
@@ -74,7 +96,22 @@ public class ZarezerwujWizyte {
         return SpisLekarzyOL;
     }
 
+    /**
+     * Metoda Zarezerwuj obsługująca rezerwacje pacjenta
+     * @param Data
+     * @param Godzina
+     * @param Opis
+     * @param Lekarz
+     */
+
     public static void Zarezerwuj(String Data, String Godzina, String Opis, ModelZarezerwujWizyte Lekarz){
+
+        /**
+         * @param alertInfo
+         * @param alertErr
+         * @param PacjentID
+         * @param LekarzID
+         */
 
         Alert alertInfo = new Alert(Alert.AlertType.INFORMATION);
 
@@ -109,7 +146,19 @@ public class ZarezerwujWizyte {
 
     }
 
+    /**
+     * Metoda Godziny przechowująca informacje o możliwych godzinach wizyt
+     * @param Data
+     * @param DzienTygodnia
+     * @param Lekarze
+     * @return Godziny
+     */
+
     public static List<String> Godziny(String Data, String DzienTygodnia, ModelZarezerwujWizyte Lekarze){
+
+        /**
+         * @param Godziny - lista przechowująca spis godzin
+         */
 
         List<String> Godziny = new LinkedList<>(Arrays.asList(
                 "08:00", "08:20", "08:40",
@@ -186,7 +235,14 @@ public class ZarezerwujWizyte {
         return Godziny;
     }
 
+    /**
+     * Metoda GetLekarzID metoda zwracająca ID lekarza
+     * @param Lekarze
+     * @return LekarzID
+     */
+
     public static int GetLekarzID(ModelZarezerwujWizyte Lekarze){
+
         int LekarzID = 0;
         String Imie = Lekarze.getImie();
         String Nazwisko = Lekarze.getNazwisko();

@@ -1,6 +1,6 @@
 package Controller.PacjentController;
 
-import Connection.AdministratorCon.SpisLekarzy;
+
 import Connection.PacjentCon.ZarezerwujWizyte;
 import Models.ModelZarezerwujWizyte;
 import javafx.event.ActionEvent;
@@ -18,6 +18,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Klasa ZarezerwujWizyteController - kontroler odpowiadający za rezerwację wizyt przez pacjenta
+ */
+
 public class ZarezerwujWizyteController implements Initializable {
     public TableView<ModelZarezerwujWizyte> SpisLekarzyTV;
     public TableColumn<ModelZarezerwujWizyte, String> ImieTC;
@@ -34,6 +38,11 @@ public class ZarezerwujWizyteController implements Initializable {
 
     Alert alertErr = new Alert(Alert.AlertType.ERROR);
 
+    /**
+     * Metoda getLekarze - metoda zwracająca listę lekarzy
+     * @return
+     */
+
     public static ModelZarezerwujWizyte getLekarze() {
         return Lekarze;
     }
@@ -41,6 +50,12 @@ public class ZarezerwujWizyteController implements Initializable {
     public void setLekarze(ModelZarezerwujWizyte lekarze) {
         Lekarze = lekarze;
     }
+
+    /**
+     * Metoda handleExitBTAction - metoda odpowiadająca za obsługę przycisku cofająca pacjenta do panelu głównego
+     * @param event
+     * @throws IOException
+     */
 
     @FXML
     public void handleExitBTAction(ActionEvent event) throws IOException {
@@ -50,11 +65,22 @@ public class ZarezerwujWizyteController implements Initializable {
         AdministratorGlowna.show();
 
     }
+
+    /**
+     * Metoda handleWyczyscFiltrBTAction - metoda odpowiadająca za obsługę przycisku czyszczącego filtry
+     * @param event
+     */
+
     @FXML
     public void handleWyczyscFiltrBTAction(ActionEvent event){
         wypelnijTabele();
         FiltrTF.clear();
     }
+
+    /**
+     * Metoda handleFiltrujBTAction - metoda odpowiadająca za obsługę przycisku nakładającego filtry
+     * @param event
+     */
 
     @FXML
     public void handleFiltrujBTAction(ActionEvent event){
@@ -62,6 +88,12 @@ public class ZarezerwujWizyteController implements Initializable {
 
         SpisLekarzyTV.setItems(ZarezerwujWizyte.FiltrowaniLekarzeGet(FiltrCB.getValue(), FiltrTF.getText() ));
     }
+
+    /**
+     * Metoda handleWybierzBTAction - metoda odpowiadająca za obsługę przycisku finalizującego rezerwowanie wizyty
+     * @param event
+     * @throws IOException
+     */
 
     @FXML
     public void handleWybierzBTAction(ActionEvent event) throws IOException {
@@ -81,6 +113,10 @@ public class ZarezerwujWizyteController implements Initializable {
 
     }
 
+    /**
+     * Metoda wypelnijTabele - metoda wypełniająca tabelę danymi lekarzy
+     */
+
     public void wypelnijTabele(){
         ImieTC.setCellValueFactory(new PropertyValueFactory<>("Imie"));
         NazwiskoTC.setCellValueFactory(new PropertyValueFactory<>("Nazwisko"));
@@ -90,6 +126,10 @@ public class ZarezerwujWizyteController implements Initializable {
 
         SpisLekarzyTV.setItems(ZarezerwujWizyte.WszyscyLekarzeGet());
     }
+
+    /**
+     * Metoda wypelnijCB - metoda odpowiadająca za wypełnianie tabeli odpowiednimi danymi
+     */
 
     public void wypelnijCB(){
         FiltrCB.getItems().clear();
@@ -102,6 +142,12 @@ public class ZarezerwujWizyteController implements Initializable {
         FiltrCB.getSelectionModel().select(0);
 
     }
+
+    /**
+     * Metoda initialize - metoda inicjująca metody wypełniające tabele
+     * @param location
+     * @param resources
+     */
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

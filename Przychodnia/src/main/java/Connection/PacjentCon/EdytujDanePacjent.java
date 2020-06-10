@@ -9,23 +9,29 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import Connection.Polaczenie;
 
-/*
-Imie
-Nazwisko
-Pesel
-Nr tel
-haslo
-potwierdz haslo
-miejscowosc
-kod pocztowy
-ulica
-numer domu
+/**
+ * Klasa EdytujDanePacjent odpowiadająca za wyświetlanie pacjentowi okienka z jego danymi i umożliwiająca modyfikowanie ich.
  */
 
 public class EdytujDanePacjent {
+
+    /**
+     * Metoda EdytujDane - metoda zczytująca dane i podmieniające je, jeżeli są poprawne.
+     * @param Imie
+     * @param Nazwisko
+     * @param Pesel
+     * @param Telefon
+     * @param Miejscowosc
+     * @param KodPocztowy
+     * @param Ulica
+     * @param NumerDomu
+     * @param Haslo
+     * @return true jeżeli dane są poprawne, w przeciwnym wypadku false
+     * @throws SQLException
+     */
+
     public static boolean EdytujDane(String Imie, String Nazwisko, String Pesel, String Telefon, String Miejscowosc, String KodPocztowy, String Ulica, String NumerDomu, String Haslo) throws SQLException {
         Connection con = Polaczenie.Connect();
 
@@ -111,7 +117,18 @@ public class EdytujDanePacjent {
         }
     }
 
+    /**
+     * Metoda PobierzDanePacjent - pobiera dane pacjenta i umieszcza w liście
+     * @return DanePacjenta
+     */
+
     public static List<String> PobierzDanePacjent(){
+
+        /**
+         * @param PacjentID
+         * @param DanePacjenta - lista przechowująca informacje o pacjencie
+         */
+
         int PacjentID = LogowanieController.getKonto_ID();
         List<String> DanePacjenta = new ArrayList<>();
 
@@ -119,9 +136,18 @@ public class EdytujDanePacjent {
         try {
 
 
+            /**
+             * @param PDPacjenta - zapytanie sql wyciąające z bazy danych informacje o danych pacjenta
+             */
+
             ResultSet PDPacjenta = con.createStatement().executeQuery("SELECT pacjenci.Imie, pacjenci.Nazwisko, pacjenci.PESEL, pacjenci.Telefon, adresy.Kod_Pocztowy, adresy.Miejscowosc, adresy.Ulica, adresy.Nr_domu, konta.Haslo FROM pacjenci, adresy, konta WHERE pacjenci.Adres_ID = adresy.Adres_ID AND pacjenci.Login = konta.Login AND pacjenci.Pacjent_ID = " + PacjentID);
 
             while(PDPacjenta.next()){
+
+                /**
+                 * DanePacjenta.add funkcja dodająca dane wyciągnięte za pomocą zapytania SQL do listy DanePacjenta.
+                 */
+
                 DanePacjenta.add(PDPacjenta.getString(1));//Imie
                 DanePacjenta.add(PDPacjenta.getString(2));//Nazwisko
                 DanePacjenta.add(String.valueOf(PDPacjenta.getLong(3)));//PESEL

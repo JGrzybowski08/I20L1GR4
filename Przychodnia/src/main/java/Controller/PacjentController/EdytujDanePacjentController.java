@@ -75,11 +75,11 @@ public class EdytujDanePacjentController implements Initializable {
         NazwaPL.setText("");
         NazwaPL.setText(Logowanie.ImieNazwiskopacjentGet(LogowanieController.getKonto_ID()));
 
-        wypełnijPola(EdytujDanePacjent.PobierzDanePacjent());
+        wypelnijPola(EdytujDanePacjent.PobierzDanePacjent());
 
     }
 
-    public void wypełnijPola(List<String> DanePacjenta){
+    public void wypelnijPola(List<String> DanePacjenta){
         ImieTF.setText(DanePacjenta.get(0));//Imie
         NazwiskoTF.setText(DanePacjenta.get(1));//Nazwisko
         PeselTF.setText(DanePacjenta.get(2));//PESEL
@@ -108,7 +108,7 @@ public class EdytujDanePacjentController implements Initializable {
             String NumerDomu = NumerDomuTF.getText();
             try {
                 EdytujDanePacjent.EdytujDane(Imie, Nazwisko, Pesel, Telefon, Miejscowosc, KodPocztowy, Ulica, NumerDomu, Haslo);
-                wypełnijPola(EdytujDanePacjent.PobierzDanePacjent());
+                wypelnijPola(EdytujDanePacjent.PobierzDanePacjent());
                 NazwaPL.setText(Logowanie.ImieNazwiskopacjentGet(LogowanieController.getKonto_ID()));
             } catch (SQLException e) {
                 System.err.println(e);

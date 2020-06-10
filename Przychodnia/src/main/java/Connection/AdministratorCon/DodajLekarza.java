@@ -29,7 +29,18 @@ public class DodajLekarza {
      */
 
     public static boolean Rejestruj(String Imie, String Nazwisko, String Email, String Pesel, String Telefon, String Specjalizacja, String Haslo, String Miejscowosc, String KodPocztowy, String Ulica, String NumerDomu) throws SQLException {
+
+        /**
+         * @param con
+         */
+
         Connection con = Polaczenie.Connect();
+
+        /**
+         * @param alertBlad
+         * @param alertInfo
+         * @param Login
+         */
 
         Alert alertBlad = new Alert(Alert.AlertType.ERROR);
         Alert alertInfo = new Alert(Alert.AlertType.INFORMATION);

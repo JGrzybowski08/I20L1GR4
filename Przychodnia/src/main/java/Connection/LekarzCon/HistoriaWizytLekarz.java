@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 import Connection.Polaczenie;
 
 /**
- * Klasa HIstoriaWizytLekarz odpowiadająca za wyświetlanie przeszłych wizyt w panelu lekarza.
+ * Klasa HistoriaWizytLekarz odpowiadająca za wyświetlanie przeszłych wizyt w panelu lekarza.
  */
 
 public class HistoriaWizytLekarz {

@@ -12,7 +12,29 @@ import java.util.List;
 import java.util.Random;
 import Connection.Polaczenie;
 
+/**
+ * Klasa EdytujDaneLekarz odpowiadająca za wyświetlanie lekarzowi okienka z jego danymi i umożliwiająca modyfikowanie ich.
+ */
+
 public class EdytujDaneLekarz {
+
+    /**
+     * Metoda EdytujDane - metoda zczytująca dane i podmieniające je, jeżeli są poprawne.
+     * @param Imie
+     * @param Nazwisko
+     * @param Email
+     * @param Pesel
+     * @param Telefon
+     * @param Specjalizacja
+     * @param Miejscowosc
+     * @param KodPocztowy
+     * @param Ulica
+     * @param NumerDomu
+     * @param Haslo
+     * @return true jeżeli dane są poprawne, w przeciwnym wypadku false
+     * @throws SQLException
+     */
+
     public static boolean EdytujDane(String Imie, String Nazwisko, String Email, String Pesel, String Telefon, String Specjalizacja, String Miejscowosc, String KodPocztowy, String Ulica, String NumerDomu, String Haslo) throws SQLException {
         Connection con = Polaczenie.Connect();
 
@@ -54,7 +76,7 @@ public class EdytujDaneLekarz {
 
             spLekarza = con.createStatement().executeQuery("SELECT * FROM lekarze WHERE PESEL = " + Pesel);
             if(spLekarza.next() && OldPesel != Long.parseLong(Pesel)) {
-                alertBlad.setTitle("Błąd przy rejestracji lekarza!");
+                alertBlad.setTitle("Błąd przy edycji danych lekarza!");
                 alertBlad.setHeaderText("Lekarz o takim PESELU istnieje już w bazie!");
                 alertBlad.showAndWait();
                 WysBlad = true;
@@ -97,7 +119,18 @@ public class EdytujDaneLekarz {
         }
     }
 
+    /**
+     * Metoda PobierzDaneLekarz - pobiera dane lekarza i umieszcza w liście
+     * @return DaneLekarza
+     */
+
     public static List<String> PobierzDaneLekarz(){
+
+        /**
+         * @param LekarzID
+         * @param DaneLekarza - lista przechowująca informacje o lekarzu
+         */
+
         int LekarzID = LogowanieController.getKonto_ID();
         List<String> DaneLekarza = new ArrayList<>();
 

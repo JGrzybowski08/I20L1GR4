@@ -1,11 +1,10 @@
 package Controller.LekarzController;
 
-import Connection.AdministratorCon.SpisWizyt;
+
 import Connection.LekarzCon.AktualneWizytyLekarz;
 import Connection.Logowanie;
 import Controller.LogowanieController;
 import Models.ModelAktualneWizytyLekarz;
-import Models.ModelSpisWizyt;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -104,8 +103,10 @@ public class AktualneWizytyLekarzController implements Initializable {
     }
 
     /**
-     * Metoda wypelnijTabele inicjalizująca wyświetlaną tabelę
+     * Metoda handleZaakceptujBTAction obsługująca przycisk akceptowania wizyty
+     * @param event
      */
+
     @FXML
     public void handleZaakceptujBTAction(ActionEvent event){
         ModelAktualneWizytyLekarz Wizyta = SpisWizytTV.getSelectionModel().getSelectedItem();
@@ -113,6 +114,11 @@ public class AktualneWizytyLekarzController implements Initializable {
 
         wypelnijTabele();
     }
+
+    /**
+     * Metoda handleOdwolajBTAction obsługująca przycisk odwoływania wizyt
+     * @param event
+     */
 
     @FXML
     public void handleOdwolajBTAction(ActionEvent event){
@@ -122,6 +128,11 @@ public class AktualneWizytyLekarzController implements Initializable {
         wypelnijTabele();
     }
 
+    /**
+     * Metoda handleZakonczBTAction obsługująca przycisk zamykający
+     * @param event
+     */
+
     @FXML
     public void handleZakonczBTAction(ActionEvent event){
         ModelAktualneWizytyLekarz Wizyta = SpisWizytTV.getSelectionModel().getSelectedItem();
@@ -130,6 +141,9 @@ public class AktualneWizytyLekarzController implements Initializable {
         wypelnijTabele();
     }
 
+    /**
+     * Metoda wypelnijTabele odpowiadająca za wypełnianie tabeli wizyt lekarzy
+     */
 
     public void wypelnijTabele(){
         SpisWizytTV.getItems().clear();

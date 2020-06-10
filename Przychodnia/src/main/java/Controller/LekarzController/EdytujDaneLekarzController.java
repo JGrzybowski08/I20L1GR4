@@ -80,11 +80,16 @@ public class EdytujDaneLekarzController implements Initializable {
         NazwaLL.setText("");
         NazwaLL.setText(Logowanie.ImieNazwiskoLekarzGet(LogowanieController.getKonto_ID()));
 
-        wypełnijPola(EdytujDaneLekarz.PobierzDaneLekarz());
+        wypelnijPola(EdytujDaneLekarz.PobierzDaneLekarz());
 
     }
 
-    public void wypełnijPola(List<String> DaneLekarza){
+    /**
+     * Metoda wypelnijPola wypełniająca listę danymi lekarza
+     * @param DaneLekarza przechowuje dane lekarza
+     */
+
+    public void wypelnijPola(List<String> DaneLekarza){
         ImieTF.setText(DaneLekarza.get(0));//Imie
         NazwiskoTF.setText(DaneLekarza.get(1));//Nazwisko
         EmailTF.setText(DaneLekarza.get(2));//Email
@@ -97,6 +102,12 @@ public class EdytujDaneLekarzController implements Initializable {
         NumerDomuTF.setText(DaneLekarza.get(9));//Numer_Domu
         HasloPF.setText(DaneLekarza.get(10));//Haslo
     }
+
+    /**
+     * Metoda handleEdytujBTAction - obsługuje przycisk służący do edycji danych
+     * @param event
+     * @throws IOException
+     */
 
     @FXML
     public void handleEdytujBTAction(ActionEvent event) throws IOException {
@@ -117,7 +128,7 @@ public class EdytujDaneLekarzController implements Initializable {
             String NumerDomu = NumerDomuTF.getText();
             try {
                 EdytujDaneLekarz.EdytujDane(Imie, Nazwisko, Email, Pesel, Telefon, Specjalizacja, Miejscowosc, KodPocztowy, Ulica, NumerDomu, Haslo);
-                wypełnijPola(EdytujDaneLekarz.PobierzDaneLekarz());
+                wypelnijPola(EdytujDaneLekarz.PobierzDaneLekarz());
                 NazwaLL.setText(Logowanie.ImieNazwiskoLekarzGet(LogowanieController.getKonto_ID()));
             } catch (SQLException e) {
                 System.err.println(e);
@@ -125,6 +136,12 @@ public class EdytujDaneLekarzController implements Initializable {
         }
 
     }
+
+    /**
+     * Metoda handleBackBTAction - metoda odpowiadają za obsługę przycisku do cofania się do strony głównej lekarza
+     * @param event
+     * @throws IOException
+     */
 
     @FXML
     public void handleBackBTAction(ActionEvent event) throws IOException {
@@ -134,6 +151,11 @@ public class EdytujDaneLekarzController implements Initializable {
         LekarzGlowna.show();
 
     }
+
+    /**
+     * Metoda sprawdzPola - metoda sprawdzająca czy dane w polach są poprawne
+     * @return
+     */
 
     public Boolean sprawdzPola(){
         WysBlad = false;

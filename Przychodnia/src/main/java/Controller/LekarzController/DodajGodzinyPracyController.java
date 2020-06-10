@@ -16,6 +16,10 @@ import java.net.URL;
 import java.sql.Connection;
 import java.util.ResourceBundle;
 
+/**
+ * Klasa DodajGodzinyPracyController - kontroler służący do dodawania godzin pracy lekarzy
+ */
+
 public class DodajGodzinyPracyController implements Initializable {
     public ComboBox<String> DzienTygodniaCB;
     public ComboBox<String> GodzinaRPCB;
@@ -24,6 +28,10 @@ public class DodajGodzinyPracyController implements Initializable {
 
     int godzinaRPI, godzinaZPI;
     String dzienTygodnia, godzinaRP, godzinaZP;
+
+    /**
+     * Metoda wypelnijDzienTygodniaCB - metoda wypelniająca listę odpowiednimi dniami tygodnia
+     */
 
     public void wypelnijDzienTygodniaCB(){
         DzienTygodniaCB.getItems().clear();
@@ -36,6 +44,10 @@ public class DodajGodzinyPracyController implements Initializable {
                 "Sobota");
         DzienTygodniaCB.getSelectionModel().select(0);
     }
+
+    /**
+     * Metoda wypelnijGodzinaRPCB - metoda wypelniająca listę odpowiednimi godzinami rozpoczęcia
+     */
 
     public void wypelnijGodzinaRPCB(){
         GodzinaRPCB.getItems().clear();
@@ -52,6 +64,10 @@ public class DodajGodzinyPracyController implements Initializable {
         GodzinaRPCB.getSelectionModel().select(0);
     }
 
+    /**
+     * Metoda wypelnijGodzinaZPCB - metoda wypelniająca listę odpowiednimi godzinami zakończenia
+     */
+
     public void wypelnijGodzinaZPCB(){
         GodzinaZPCB.getItems().clear();
         GodzinaZPCB.getItems().addAll(
@@ -67,6 +83,12 @@ public class DodajGodzinyPracyController implements Initializable {
     }
 
 
+    /**
+     * Metoda initialize - metoda inicjalizująca metody wypełniające danymi
+     * @param location
+     * @param resources
+     */
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         wypelnijDzienTygodniaCB();
@@ -75,6 +97,12 @@ public class DodajGodzinyPracyController implements Initializable {
 
 
     }
+
+    /**
+     * Metoda handleDodajGPBTAction - metoda obsługująca przycisk dodający godziny pracy
+     * @param event
+     * @throws IOException
+     */
 
     @FXML
     public void handleDodajGPBTAction(ActionEvent event) throws IOException {
@@ -92,6 +120,12 @@ public class DodajGodzinyPracyController implements Initializable {
 
 
     }
+
+    /**
+     * Metoda handleExitBTAction - metoda obsługująca przycisk służący do wyjścia z panelu
+     * @param event
+     * @throws IOException
+     */
 
     @FXML
     public void handleExitBTAction(ActionEvent event) throws IOException {

@@ -76,7 +76,11 @@ public class LekarzGlownaController implements Initializable {
         HistoriaWizyt.show();
     }
 
-    //TODO niegotowe
+    /**
+     * Metoda handleGodzinyPracyBTAction obsługująca przycisk do dodawania godzin pracy lekarza
+     * @param event
+     * @throws IOException
+     */
 
     @FXML
     public void handleGodzinyPracyBTAction(ActionEvent event) throws IOException {
@@ -85,6 +89,12 @@ public class LekarzGlownaController implements Initializable {
         GodzinyPracy.setScene(new Scene(GP));
         GodzinyPracy.show();
     }
+
+    /**
+     * Metoda handleEdytujDaneBTAction obsługująca przycisk do edytowania danych lekarza
+     * @param event
+     * @throws IOException
+     */
 
     @FXML
     public void handleEdytujDaneBTAction(ActionEvent event) throws IOException {

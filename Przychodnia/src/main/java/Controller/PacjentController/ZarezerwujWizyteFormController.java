@@ -20,6 +20,10 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
+/**
+ * Klasa ZarezerwujWizyteFormController - kontroler odpowiedający za formularz rezerwowania wizyty
+ */
+
 public class ZarezerwujWizyteFormController implements Initializable {
     public DatePicker DataDP;
 
@@ -34,6 +38,12 @@ public class ZarezerwujWizyteFormController implements Initializable {
     public Label NazwaPP;
 
 
+    /**
+     * Metoda handleExitBTAction - metoda odpowiadająca za cofanie pacjenta spowrotem do panelu głównego
+     * @param event
+     * @throws IOException
+     */
+
     @FXML
     public void handleExitBTAction(ActionEvent event) throws IOException {
         Parent AG = FXMLLoader.load(getClass().getResource("/PacjentFXML/PacjentGlowna.fxml"));
@@ -42,6 +52,12 @@ public class ZarezerwujWizyteFormController implements Initializable {
         AdministratorGlowna.show();
 
     }
+
+    /**
+     * Metoda initialize - metoda inicjująca pozostałe metody
+     * @param location
+     * @param resources
+     */
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -71,6 +87,13 @@ public class ZarezerwujWizyteFormController implements Initializable {
 
     }
 
+
+    /**
+     * Metoda handleZarezerwujBTAction - metoda obsługująca przycisk wyświetlający formularz do rezerwowania wizyt
+     * @param event
+     * @throws IOException
+     */
+
         @FXML
         public void handleZarezerwujBTAction(ActionEvent event) throws IOException {
             ZarezerwujWizyte.Zarezerwuj(getDataWizyty(), (String)GodzinaCB.getValue(), OpisTF.getText(), ZarezerwujWizyteController.getLekarze());
@@ -82,6 +105,11 @@ public class ZarezerwujWizyteFormController implements Initializable {
 
         }
 
+    /**
+     * Metoda getDataWizyty - metoda pozyskująca datę
+     * @return Data
+     */
+
     public String getDataWizyty(){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate DataLD = DataDP.getValue();
@@ -89,6 +117,11 @@ public class ZarezerwujWizyteFormController implements Initializable {
         String Data = formatter.format(DataLD);
         return Data;
     }
+
+    /**
+     * Metoda getDzienTygodnia - metoda pozyskująca dzień tygodnia
+     * @return DzienTygodnia
+     */
 
     public String getDzienTygodnia(){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EE");

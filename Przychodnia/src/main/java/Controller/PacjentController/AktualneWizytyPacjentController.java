@@ -20,6 +20,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Klasa AktualneWizytyPacjentController - kontroler do obsługi aktualnych wizyt pacjenta
+ */
+
 public class AktualneWizytyPacjentController implements Initializable {
     public TableView<ModelAktualneWizytyPacjent> SpisWizytTV;
     public TableColumn<ModelAktualneWizytyPacjent, String> DataTC;
@@ -99,7 +103,8 @@ public class AktualneWizytyPacjentController implements Initializable {
     }
 
     /**
-     * Metoda wypelnijTabele inicjalizująca wyświetlaną tabelę
+     * Metoda handleOdwolajBTAction - metoda obsługująca przycisk służący do odwoływania wizyt
+     * @param event
      */
 
     @FXML
@@ -111,6 +116,9 @@ public class AktualneWizytyPacjentController implements Initializable {
     }
 
 
+    /**
+     * Metoda wypelnijTabele inicjalizująca wyświetlaną tabelę
+     */
 
     public void wypelnijTabele(){
         SpisWizytTV.getItems().clear();

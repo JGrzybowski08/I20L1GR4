@@ -1,0 +1,11 @@
+
+Connection
+Connection.AdministratorCon
+Connection.LekarzCon
+Connection.PacjentCon
+Controller
+Controller.AdministratorController
+Controller.LekarzController
+Controller.PacjentController
+Exceptions
+Models
